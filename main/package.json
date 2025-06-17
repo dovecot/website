@@ -1,0 +1,32 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "Dovecot Website",
+  "homepage": "https://github.com/dovecot/website#readme",
+  "bugs": {
+    "url": "https://github.com/dovecot/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dovecot/website.git"
+  },
+  "license": "ISC",
+  "author": "Dovecot Authors",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
+    "@unocss/preset-web-fonts": "^66.2.1",
+    "@unocss/preset-wind4": "^66.2.1",
+    "unocss": "^66.2.1",
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.16",
+    "vueperslides": "^3.6.0"
+  }
+}
