@@ -16,3 +16,8 @@ Adding new one
 --------------
 
 Use `npm init -w ./name` to add new website. This should get added into package.json too
+
+Testing
+-------
+Push changes first to `develop` branch to make sure they work, this will deploy as https://wwwdev.dovecot.org.
+Once you've checked your changes, create pull request to main branch.
