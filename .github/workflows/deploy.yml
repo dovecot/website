@@ -29,7 +29,7 @@ jobs:
         HOST: dovecot.org
         USER: website
         LOCALPATH: /main/.vitepress/dist/.
-        REMOTEPATH: public_html/${{ GITHUB_REF }}
+        REMOTEPATH: public_html/${{ github.ref_name }}
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       if: env.DEPLOY_KEY
       env:
