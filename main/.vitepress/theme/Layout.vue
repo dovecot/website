@@ -68,7 +68,7 @@ const nav = (theme.value.nav as NavItem[]) || []
     </div>
 
    <footer class="max-w-full w-full py-4 text-center text-sm text-gray-500 bg-white">
-	   &copy; Dovecot - See <a class="underline" href="https://github.com/dovecot/frontpage/">https://github.com/dovecot/frontpage/</a>
+	   &copy; Dovecot - See <a class="underline" href="https://github.com/dovecot/website">https://github.com/dovecot/website</a>
   </footer>
   </div>
 </template>
