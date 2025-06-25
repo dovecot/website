@@ -14,16 +14,34 @@
       link: frontmatter?.link ?? 'Missing',
     }
   }).sort((a, b) => {
-    if (a.path < b.path) return 1
-    else if (a.path > b.path) return -1
-    else return 0
+    const elem_a = a.path.split('.')[0].split('-')
+    const elem_b = b.path.split('.')[0].split('-')
+    var i = 0
+
+    while(i < elem_a.length)
+    {
+          var ea = elem_a[i]
+      var eb = elem_b[i]
+          if (elem_a[i] != 'CVE') {
+         ea = parseInt(ea)
+         eb = parseInt(eb)
+      }
+      if (ea < eb) return 1
+      else if (ea > eb) return -1
+      i = i + 1
+    }
+
+    return 0
   })
 </script>
 
 <template>
-<div class="text-center max-w-4xl">
-  <ul class="list-none">
-	  <li v-for="(item) in cveItems"><span class="text-green font-bold text-xl"><i class="i-heroicons-exclamation-circle-solid"></i>{{ item.date }}</span><span class="m-x-4"><a :href="item.link" class="hover:underline">{{ item.excerpt }}</a></span></li>
+ <div class="justify-center">
+   <ul class="gap-2" v-for="(item) in cveItems">
+    <li class="gap-4 flex-container flex">
+      <div class="text-left flex-col w-48"><span class="text-green font-bold text-xl"><i class="mx-4 i-heroicons-exclamation-circle-solid"></i>{{ item.date }}</span></div>
+        <div class="flex-col"><span class="text-xl"><a :href="item.link" class="hover:underline">{{ item.title }}: {{ item.excerpt }}</a></span></div>
+    </li>
   </ul>
 </div>
 </template>
