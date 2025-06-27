@@ -1,0 +1,127 @@
+debian:
+  bookworm:
+    title: "Bookworm (12)"
+    codename: bookworm
+    keyring: true
+    format: sources
+    dovecot_version: latest
+    signed_by: DOVECOT-2.4-GPG
+  bullseye:
+    title: "Bullseye (11)"
+    codename: bullseye
+    keyring: true
+    format: list
+    dovecot_version: latest
+    signed_by: DOVECOT-2.4-GPG
+redhat:
+  rhel9:
+    title: "RHEL9"
+    codename: 9
+    keyring: true
+    dovecot_version: latest
+    signed_by: DOVECOT-2.4-GPG
+  rhel8:
+    title: "RHEL8"
+    codename: 8
+    keyring: true
+    dovecot_version: latest
+    signed_by: DOVECOT-2.4-GPG
+ubuntu:
+  noble:
+    title: "Noble (24.04 LTS)"
+    codename: noble
+    keyring: true
+    format: sources
+    dovecot_version: latest
+    signed_by: DOVECOT-2.4-GPG
+  jammy:
+    title: "Jammy (22.04 LTS)"
+    codename: jammy
+    keyring: true
+    format: list
+    dovecot_version: latest
+    signed_by: DOVECOT-2.4-GPG
+debian_2_3:
+  bullseye:
+    title: "Bullseye (11) with Dovecot 2.3"
+    codename: bullseye
+    keyring: true
+    format: list
+    dovecot_version: 2.3.21.1
+    signed_by: DOVECOT-2.3-GPG
+  buster:
+    title: "Buster (10)"
+    codename: buster
+    keyring: false
+    format: list
+    dovecot_version: 2.3.21.1
+    signed_by: DOVECOT-2.3-GPG
+  stretch:
+    title: "Stretch (9)"
+    codename: stretch
+    keyring: false
+    format: list
+    dovecot_version: 2.3.17.1
+    signed_by: DOVECOT-2.3-GPG
+  jessie:
+    title: "Jessie (8)"
+    codename: jessie
+    keyring: false
+    format: list
+    dovecot_version: 2.3.8
+    signed_by: DOVECOT-2.3-GPG
+redhat_2_3:
+  rhel8:
+    title: "RHEL8 with Dovecot 2.3"
+    codename: 8
+    keyring: true
+    dovecot_version: 2.3.21.1
+    signed_by: DOVECOT-2.3-GPG
+centos_2_3:
+  centos8:
+    title: "CentOS 8"
+    codename: 8
+    keyring: true
+    dovecot_version: 2.3.21.1
+    signed_by: DOVECOT-2.3-GPG
+  centos7:
+    title: "CentOS 7"
+    codename: 7
+    keyring: true
+    dovecot_version: 2.3.17
+    signed_by: DOVECOT-2.3-GPG
+  centos6:
+    title: "CentOS 6"
+    codename: 6
+    keyring: true
+    dovecot_version: 2.3.11.3
+    signed_by: DOVECOT-2.3-GPG
+ubuntu_2_3:
+  focal:
+    title: "Focal (20.04 LTS) with Dovecot 2.3"
+    codename: focal
+    keyring: false
+    format: list
+    dovecot_version: 2.3.21.1
+    signed_by: DOVECOT-2.3-GPG
+  bionic:
+    title: "Bionic (18.04 lts)"
+    codename: bionic
+    keyring: false
+    format: list
+    dovecot_version: 2.3.21.1
+    signed_by: dovecot-2.3-gpg
+  xenial:
+    title: "Xenial (16.04 LTS)"
+    codename: focal
+    keyring: false
+    format: list
+    dovecot_version: 2.3.11.3
+    signed_by: DOVECOT-2.3-GPG
+  trusty:
+    title: "Trusty (14.04 LTS)"
+    codename: trusty
+    keyring: false
+    format: list
+    dovecot_version: 2.3.8
+

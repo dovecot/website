@@ -1,0 +1,24 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "CC-BY-ND-4.0",
+  "author": "Dovecot Authors",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "yaml": "^2.8.1",
+    "@iconify-json/heroicons": "^1.2.2",
+    "@unocss/preset-web-fonts": "^66.3.3",
+    "@unocss/preset-wind4": "^66.3.3",
+    "unocss": "^66.3.3",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
+  }
+}
