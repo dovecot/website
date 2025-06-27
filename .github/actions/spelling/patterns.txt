@@ -165,3 +165,6 @@ key=[0-9a-f]+:\w+\}\s*=\s*(?:[0-9a-f$]+|pass)
 # Ignore links to mailing list
 https://dovecot.org/mailman3/\S*
 https://dovecot.org/pipermail/\S*
+
+# Ignore integrity checksums
+sha384-\S+

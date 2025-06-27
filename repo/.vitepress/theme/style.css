@@ -1,0 +1,69 @@
+body {
+  font-size: 16px;
+  font-family: OpenSans,ui-sans-serif,system-ui,sans-serif;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+h1 {
+  @apply text-4xl m-t-8;
+}
+
+h2 {
+  @apply text-3xl m-t-8;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl m-t-8;
+}
+
+p {
+  @apply m-t-2;
+}
+
+samp {
+  @apply text-red-400;
+}
+
+pre {
+  @apply text-red-400 rounded bg-gray-200 p-4 m-2 overflow-x-auto pr-10 relative;
+}
+
+.nav .title {
+  @apply text-2xl
+}
+
+.tabpanel {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.warning {
+  @apply p-xl bg-orange-200 rounded;
+}
+
+a:not(.nolink) {
+  @apply text-blue text-underline;
+}
+
+.copy-button {
+  @apply absolute top-2 right-2 p-2 z-10 cursor-pointer bg-transparent border-none;
+}
+
+.copy-button:hover {
+  @apply text-black;
+}
+
+.copy-button i {
+  @apply pointer-events-none inline-block align-middle text-gray-800 h-4 w-4;
+}
+
+.copy-container {
+  position: relative;
+}

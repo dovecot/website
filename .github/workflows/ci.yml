@@ -23,3 +23,6 @@ jobs:
     - name: Build main with VitePress
       run: |
         npm run -w main docs:build
+    - name: Build repo with VitePress
+      run: |
+        npm run -w repo docs:build
