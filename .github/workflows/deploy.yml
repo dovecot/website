@@ -19,9 +19,12 @@ jobs:
         cache: npm
     - name: Install Dependencies
       run: npm ci --no-fund --no-audit
-    - name: Build with VitePress
+    - name: Build dovecot.org with VitePress
       run: |
         npm run -w main docs:build
+    - name: Build repo.dovecot.org with VitePress
+      run: |
+        npm run -w repo docs:build
     - name: Deploy dovecot.org
       uses: dovecot/rsync-deployments@v2.0.2
       with:
@@ -30,6 +33,18 @@ jobs:
         USER: website
         LOCALPATH: /main/.vitepress/dist/.
         REMOTEPATH: public_html/main/${{ github.ref_name }}
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      if: env.DEPLOY_KEY
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+    - name: Deploy repo.dovecot.org
+      uses: dovecot/rsync-deployments@v2.0.2
+      with:
+        FLAGS: -azr --delete
+        HOST: repo.dovecot.org
+        USER: website
+        LOCALPATH: /repo/.vitepress/dist/.
+        REMOTEPATH: public_html/${{ github.ref_name }}
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       if: env.DEPLOY_KEY
       env:
