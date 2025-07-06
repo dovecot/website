@@ -22,7 +22,7 @@ const { site, frontmatter } = useData()
         Dovecot Pro is a full-service email platform that delivers dynamic scalability, high performance, efficient utilization of hardware, and outstanding support to the world’s largest Telcos, ISP’s, and Hosters.
       </p>
       <p>
-        <a href="https://www.dovecotpro.com/" class="inline-block bg-problue uppercase font-bold text-white px-4 py-2 rounded hover:bg-problue transition text-xl">
+        <a href="https://www.dovecotpro.com/" class="inline-block bg-problue uppercase font-bold text-white px-4 py-2 rounded hover:bg-problue transition text-xl" rel="external" target="_blank">
   Explore Dovecot Pro
         </a>
       </p>
@@ -55,7 +55,7 @@ const { site, frontmatter } = useData()
           <p class="text-lg">
             Dovecot is among the <b>best performing</b> IMAP servers while still supporting the
             <b>standard</b> mbox and
-            <a href="https://doc.dovecot.org/main/core/config/mailbox/formats/maildir.html" class="underline">
+            <a href="https://doc.dovecot.org/main/core/config/mailbox/formats/maildir.html" class="underline"  rel="external" target="_blank">
               Maildir
             </a> formats. The mailboxes are transparently indexed, giving excellent performance and full compatibility.
           </p>
@@ -69,7 +69,7 @@ const { site, frontmatter } = useData()
           </h3>
           <p class="text-lg">
             Dovecot’s user authentication is extremely flexible and feature-rich, supporting many different
-	    <a class="underline" href="https://doc.dovecot.org/main/core/config/auth/overview.html">authentication databases and mechanisms</a>.
+	    <a class="underline" href="https://doc.dovecot.org/main/core/config/auth/overview.html" rel="external" target="_blank">authentication databases and mechanisms</a>.
           </p> 
 	</div>
       </div>
@@ -116,7 +116,7 @@ const { site, frontmatter } = useData()
             Easy migration
           </h3>
           <p class="text-lg">
-            Dovecot supports <a class="underline" href="https://doc.dovecot.org/main/core/admin/migration.html">easy migration from many existing IMAP and POP3 servers</a>, allowing the change to be transparent to existing users.
+            Dovecot supports <a class="underline" href="https://doc.dovecot.org/main/core/admin/migration.html" rel="external" target="_blank">easy migration from many existing IMAP and POP3 servers</a>, allowing the change to be transparent to existing users.
 	  </p>
         </div>
       </div>
@@ -139,7 +139,7 @@ const { site, frontmatter } = useData()
 	      Workarounds support
           </h3>
           <p class="text-lg">
-	    Dovecot supports <a class="underline" href="https://doc.dovecot.org/main/core/config/quick.html#client-workarounds">workarounds</a> for several bugs in IMAP and POP3 clients.
+	    Dovecot supports <a class="underline" href="https://doc.dovecot.org/main/core/config/quick.html#client-workarounds" rel="external" target="_blank">workarounds</a> for several bugs in IMAP and POP3 clients.
 	    Since the workarounds may cause the protocol exchange to be sub-optimal, you can enable only the workarounds you need.
 	  </p>
         </div>
@@ -165,7 +165,7 @@ const { site, frontmatter } = useData()
           </h3>
           <p class="text-lg">
 	    Dovecot’s design and implementation is highly focused on security.
-	    You can report any security vulnerabilities via our <a class="underline" href="https://vdp.open-xchange.com/">YesWeHack program</a>
+	    You can report any security vulnerabilities via our <a class="underline" href="https://vdp.open-xchange.com/" rel="external" target="_blank">YesWeHack program</a>
 	    or via email to <a class="underline" href="mailto:security@dovecot.org">security@dovecot.org</a>.
 	  </p>
         </div>
@@ -181,7 +181,7 @@ const { site, frontmatter } = useData()
           <p class="text-lg">	
             Dovecot allows mailboxes and their indexes to be modified by multiple computers at the same time, while still performing well.
 	    This means that Dovecot works well with <b>clustered filesystems</b>.
-	    <a class="underline" href="https://doc.dovecot.org/main/core/config/guides/nfs.html">NFS has caching problems</a>, but you can work around them with Dovecot cluster.
+	    <a class="underline" href="https://doc.dovecot.org/main/core/config/guides/nfs.html" rel="external" target="_blank">NFS has caching problems</a>, but you can work around them with Dovecot cluster.
 	  </p>
         </div> 
         <!-- Right: Easily extensible -->
