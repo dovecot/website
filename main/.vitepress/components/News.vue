@@ -41,7 +41,7 @@
       >
       <template #content>
         <div class="max-w-2xl mx-auto text-white bg-green">
-          <a :href="item.link" class="hover:underline text-white bg-green text-xl">
+          <a :href="item.link" class="hover:underline text-white bg-green text-xl" rel="external" target="_blank">
             <h3 class="text-lg font-bold">{{ item.title }}</h3>
             <p class="text-sm">{{ item.date }}</p>
           </a>
