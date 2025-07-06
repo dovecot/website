@@ -17,7 +17,7 @@ const { site, frontmatter } = useData()
 			 <br/>Commercial support
 		 </h2>
 		 <p class="text-xl">
-		 Learn more about the commercial version <a href="https://www.dovecotpro.com" class="underline">Dovecot Pro</a>, including carrier-grade support.
+		 Learn more about the commercial version <a href="https://www.dovecotpro.com" class="underline" rel="external" target="_blank">Dovecot Pro</a>, including carrier-grade support.
 		 </p>
 	 </div>
 	 <div class="w-1/4 px-4 py-2 text-center items-center">
@@ -27,7 +27,7 @@ const { site, frontmatter } = useData()
 		 </h2>
 		 <p class="text-xl">
 		 You can also contact us over OFTC IRC on channel <a href="irc://irc.oftc.net/#dovecot" class="underline">#dovecot</a>. You need to authenticate with services before you can write to the channel.
-		 We encourage you to read <a href="https://workaround.org/getting-help-on-irc" class="underline">https://workaround.org/getting-help-on-irc</a> prior asking.
+		 We encourage you to read <a href="https://workaround.org/getting-help-on-irc" class="underline" rel="external" target="_blank">https://workaround.org/getting-help-on-irc</a> prior asking.
 		 </p>
 	 </div>
 	 <div class="w-1/4 px-4 py-2 text-center items-center">
@@ -36,7 +36,7 @@ const { site, frontmatter } = useData()
 			 <br/>Mailing lists
 		 </h2>
 		 <p class="text-xl">
-		 Find detailed information about our <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline">Mailing List</a>.
+		 Find detailed information about our <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline" rel="external" target="_blank">Mailing List</a>.
 		 </p>
 
 	 </div>
@@ -46,7 +46,7 @@ const { site, frontmatter } = useData()
 			 <br/>Commercial support
 		 </h2>
 		 <p class="text-xl">
-		 Send <a href="https://doc.dovecot.org/main/issues.html" class="underline">bug reports</a> to <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline">Mailing List</a>.
+		 Send <a href="https://doc.dovecot.org/main/issues.html" class="underline">bug reports</a> to <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline" rel="external" target="_blank">Mailing List</a>.
 		 </p>
 
 	 </div>

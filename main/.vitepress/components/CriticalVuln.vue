@@ -40,7 +40,7 @@
    <ul class="gap-2" v-for="(item) in cveItems">
     <li class="gap-4 flex-container flex">
       <div class="text-left flex-col w-48"><span class="text-green font-bold text-xl"><i class="mx-4 i-heroicons-exclamation-circle-solid"></i>{{ item.date }}</span></div>
-        <div class="flex-col"><span class="text-xl"><a :href="item.link" class="hover:underline">{{ item.title }}: {{ item.excerpt }}</a></span></div>
+        <div class="flex-col"><span class="text-xl"><a :href="item.link" class="hover:underline" rel="external" target="_blank">{{ item.title }}: {{ item.excerpt }}</a></span></div>
     </li>
   </ul>
 </div>
