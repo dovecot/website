@@ -166,5 +166,12 @@ key=[0-9a-f]+:\w+\}\s*=\s*(?:[0-9a-f$]+|pass)
 https://dovecot.org/mailman3/\S*
 https://dovecot.org/pipermail/\S*
 
+# Ignore PGP keys
+[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}\s[A-F0-9]{4}
+
 # Ignore integrity checksums
 sha384-\S+
+
+# JavaScript regular expressions
+# javascript test regex
+/.*/[gim]*\.test\(
