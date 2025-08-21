@@ -22,7 +22,7 @@ export default defineConfig({
     presetWebFonts({
 	provider: 'bunny',
 	fonts: {
-	  sans: 'Raleway',
+	  sans: 'OpenSans',
 	},
     })
   ],
@@ -36,10 +36,10 @@ export default defineConfig({
       problue: 'rgb(75, 155, 215)',
     },
     fontFamily: {
-      sans: [ 'Raleway', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      sans: [ 'OpenSans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
     },
     fontSize: {
-      base: '16px', 
+      base: '16px',
     },
   },
 });
