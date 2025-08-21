@@ -26,7 +26,7 @@ jobs:
       run: |
         npm run -w repo docs:build
     - name: Deploy dovecot.org
-      uses: dovecot/rsync-deployments@v2.0.2
+      uses: dovecot/rsync-deployments@v2.0.3
       with:
         FLAGS: -azr --delete
         HOST: dovecot.org
@@ -38,7 +38,7 @@ jobs:
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
     - name: Deploy repo.dovecot.org
-      uses: dovecot/rsync-deployments@v2.0.2
+      uses: dovecot/rsync-deployments@v2.0.3
       with:
         FLAGS: -azr --delete
         HOST: repo.dovecot.org
