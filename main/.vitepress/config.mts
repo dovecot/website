@@ -14,11 +14,11 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-	{ 'text': 'Download', link: 'https://repo.dovecot.org/' },
-	{ 'text': 'Documentation', link: 'https://doc.dovecot.org/' },
-	{ 'text': 'Support', link: '/support' },
-	{ 'text': 'Security', link: '/security' },
-//	{ 'text': 'Clients', link: '/clients' },
+      { 'text': 'Download', link: 'https://repo.dovecot.org/' },
+      { 'text': 'Documentation', link: 'https://doc.dovecot.org/' },
+      { 'text': 'Support', link: '/support' },
+      { 'text': 'Security', link: '/security' },
+//    { 'text': 'Clients', link: '/clients' },
     ],
   },
 
