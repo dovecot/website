@@ -26,3 +26,6 @@ jobs:
     - name: Build repo with VitePress
       run: |
         npm run -w repo docs:build
+    - name: Build pigeonhole with VitePress
+      run: |
+        npm run -w pigeonhole docs:build
