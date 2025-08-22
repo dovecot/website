@@ -7,6 +7,7 @@ Map of websites
 
  - main => dovecot.org website
  - repo => repo.dovecot.org
+ - pigeonhole => pigeonhole.dovecot.org
 
 Building a website
 ------------------

@@ -3,6 +3,7 @@
   "license": "CC-BY-ND-4.0",
   "workspaces": [
     "main",
-    "repo"
+    "repo",
+    "pigeonhole"
   ]
 }
