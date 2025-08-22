@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/dovecot/website.git"
   },
-  "license": "ISC",
+  "license": "CC-BY-ND-4.0",
   "author": "Dovecot Authors",
   "type": "commonjs",
   "main": "index.js",
