@@ -43,7 +43,7 @@ const { site, frontmatter } = useData()
 	 <div class="w-1/4 px-4 py-2 text-center items-center">
 		 <h2 class="text-2xl font-bold m-y-4">
 			 <img src="/22222-100x100.jpg" class="mx-auto mb-2 w-auto"/>
-			 <br/>Commercial support
+			 <br/>Bug reports
 		 </h2>
 		 <p class="text-xl">
 		 Send <a href="https://doc.dovecot.org/main/issues.html" class="underline">bug reports</a> to <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline" rel="external" target="_blank">Mailing List</a>.
