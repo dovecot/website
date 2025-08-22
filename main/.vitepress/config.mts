@@ -16,6 +16,7 @@ export default defineConfig({
     nav: [
       { 'text': 'Download', link: 'https://repo.dovecot.org/' },
       { 'text': 'Documentation', link: 'https://doc.dovecot.org/' },
+      { 'text': 'Pigeonhole', link: 'https://pigeonhole.dovecot.org/' },
       { 'text': 'Support', link: '/support' },
       { 'text': 'Security', link: '/security' },
 //    { 'text': 'Clients', link: '/clients' },
