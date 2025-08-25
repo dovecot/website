@@ -1,5 +1,9 @@
 {
- "name": "dovecot-website",
- "license": "CC-BY-ND-4.0",
- "workspaces": ["main"]
+  "name": "dovecot-website",
+  "license": "CC-BY-ND-4.0",
+  "workspaces": [
+    "main",
+    "repo",
+    "pigeonhole"
+  ]
 }

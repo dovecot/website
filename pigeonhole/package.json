@@ -1,0 +1,31 @@
+{
+  "name": "pigeonhole",
+  "version": "1.0.0",
+  "description": "Pigenhole Website",
+  "homepage": "https://github.com/dovecot/website#readme",
+  "bugs": {
+    "url": "https://github.com/dovecot/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dovecot/website.git"
+  },
+  "license": "CC-BY-ND-4.0",
+  "author": "Dovecot Authors",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
+    "@unocss/preset-web-fonts": "^66.3.3",
+    "@unocss/preset-wind4": "^66.3.3",
+    "unocss": "^66.3.3",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
+  }
+}

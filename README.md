@@ -6,6 +6,8 @@ This repository is for maintaining Dovecot's public websites.
 Map of websites
 
  - main => dovecot.org website
+ - repo => repo.dovecot.org
+ - pigeonhole => pigeonhole.dovecot.org
 
 Building a website
 ------------------
