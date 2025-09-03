@@ -17,7 +17,7 @@ const { site, frontmatter } = useData()
   <div class="container h-full w-full max-w-7xl mx-auto">
     <div class="flex items-center text-center w-full">
       <div class="flex-col mx-2">
-        <a href="https://dovecot.org">
+        <a target="_blank" href="https://dovecot.org">
           <img src="/dovecot.gif" alt="Dovecot" title="Dovecot"/>
         </a>
       </div>
@@ -34,11 +34,11 @@ const { site, frontmatter } = useData()
         If you have problems with these packages please contact our mailing list or IRC channel.
       </p>
       <p>
-        You can find pre-built imaptest binary from <a href="https://github.com/dovecot/imaptest">https://github.com/dovecot/imaptest</a>.
+        You can find pre-built imaptest binary from <a target="_blank" href="https://github.com/dovecot/imaptest">https://github.com/dovecot/imaptest</a>.
       </p>
       <h2>Dovecot 2.4</h2>
       <p>
-        All packages are cryptographically signed with a PGP key at <a href="https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4">https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4</a>.
+        All packages are cryptographically signed with a PGP key at <a target="_blank" href="https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4">https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4</a>.
         You are also encouraged to use https instead of http in repository URLs where supported.
         </p>
       <p>
@@ -47,7 +47,7 @@ const { site, frontmatter } = useData()
         </p>
       <h2>Dovecot 2.3</h2>
       <p>
-        All packages are cryptographically signed with a PGP key at <a href="https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3">https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3</a>.
+        All packages are cryptographically signed with a PGP key at <a target="_blank" href="https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3">https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3</a>.
         You are also encouraged to use https instead of http in repository URLs where supported.
         </p>
       <p>
@@ -56,7 +56,7 @@ const { site, frontmatter } = useData()
         </p>
       <h2>Docker</h2>
       <p>
-        We also provide Docker images on <a href="https://hub.docker.com/r/dovecot/dovecot">Docker Hub</a>.
+        We also provide Docker images on <a target="_blank" href="https://hub.docker.com/r/dovecot/dovecot">Docker Hub</a>.
       </p>
     </div>
     <div class="container p-8 mx-auto">
@@ -69,7 +69,7 @@ const { site, frontmatter } = useData()
             <h3>Generic instructions</h3>
             <p class="text">
                   For release candidates, follow instructions for the given distribution,
-                  but replace the repository location to point into <a href="https://repo.dovecot.org/rc/">https://repo.dovecot.org/rc/</a>.
+                  but replace the repository location to point into <a target="_blank" href="https://repo.dovecot.org/rc/">https://repo.dovecot.org/rc/</a>.
                   Please check the location for available release candidates.
                   </p>
           </div>
