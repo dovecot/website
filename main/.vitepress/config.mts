@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 import UnoCSS from 'unocss/vite'
 import unoConfig from './unocss.config.mts'
+import { addSriToDist } from './plugins/sri-post'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,7 +20,7 @@ export default defineConfig({
       { 'text': 'Pigeonhole', link: 'https://pigeonhole.dovecot.org/' },
       { 'text': 'Support', link: '/support' },
       { 'text': 'Security', link: '/security' },
-//    { 'text': 'Clients', link: '/clients' },
+      //    { 'text': 'Clients', link: '/clients' },
     ],
   },
 
@@ -35,5 +36,9 @@ export default defineConfig({
     plugins: [
       UnoCSS(unoConfig),
     ],
+  },
+  async buildEnd(ctx) {
+    console.log("[vitepress-sri] post-processing outDir=", ctx.outDir);
+    await addSriToDist(ctx.outDir);
   },
 })
