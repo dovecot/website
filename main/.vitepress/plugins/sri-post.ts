@@ -1,4 +1,4 @@
-/* Copyright (C) 2025 Open-Xchange Gmbh
+/* Copyright (C) 2025 Open-Xchange GmbH
    This file is licensed with CC-BY-SA-4.0
    See https://creativecommons.org/licenses/by-sa/4.0/deed.en
 */
