@@ -25,7 +25,7 @@ redhat:
     codename: 8
     keyring: true
     dovecot_version: latest
-    signed_by: DOVECOT-REPO-GPG-2.4
+    signed_by: DOVECOT-REPO-GPG-2.3
 ubuntu:
   noble:
     title: "Noble (24.04 LTS)"
