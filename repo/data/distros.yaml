@@ -110,7 +110,7 @@ ubuntu_2_3:
     keyring: false
     format: list
     dovecot_version: 2.3.21.1
-    signed_by: dovecot-2.3-gpg
+    signed_by: DOVECOT-REPO-GPG-2.3
   xenial:
     title: "Xenial (16.04 LTS)"
     codename: focal
@@ -124,4 +124,5 @@ ubuntu_2_3:
     keyring: false
     format: list
     dovecot_version: 2.3.8
+    signed_by: DOVECOT-REPO-GPG-2.3
 
