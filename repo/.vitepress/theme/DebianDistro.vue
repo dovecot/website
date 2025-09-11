@@ -24,7 +24,7 @@
       <p>Create <code>/etc/apt/sources.list.d/dovecot.sources</code>. If you want to use https, make sure you have installed <code>apt-transport-https</code>.</p>
 
       <div class="container copy-container"><pre><code v-if="distro.dovecot_version == 'latest'">Types: deb
-URIs: https://repo.dovecot.org/{{ props.latestDir }}
+URIs: https://repo.dovecot.org/{{ props.latestDir }}/{{ family }}/{{ distro.codename }}
 Suites: {{ distro.codename }}
 Components: main
 Signed-By: /usr/share/keyrings/dovecot.gpg</code><code v-else>
