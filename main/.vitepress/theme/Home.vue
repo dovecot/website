@@ -181,7 +181,7 @@ const { site, frontmatter } = useData()
           <p class="text-lg">	
             Dovecot allows mailboxes and their indexes to be modified by multiple computers at the same time, while still performing well.
 	    This means that Dovecot works well with <b>clustered filesystems</b>.
-	    <a class="underline" href="https://doc.dovecot.org/main/core/config/guides/nfs.html" rel="external" target="_blank">NFS has caching problems</a>, but you can work around them with Dovecot cluster.
+	    <a class="underline" href="https://doc.dovecot.org/latest/core/config/nfs.html" rel="external" target="_blank">NFS has caching problems</a>, but you can work around them with Dovecot cluster.
 	  </p>
         </div> 
         <!-- Right: Easily extensible -->
