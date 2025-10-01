@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "yaml": "^2.8.1",
-    "@iconify-json/heroicons": "^1.2.2",
+    "@iconify-json/heroicons": "^1.2.3",
     "@unocss/preset-web-fonts": "^66.3.3",
     "@unocss/preset-wind4": "^66.3.3",
     "unocss": "^66.3.3",
