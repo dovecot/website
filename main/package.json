@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.2",
-    "@unocss/preset-web-fonts": "^66.5.0",
+    "@unocss/preset-web-fonts": "^66.5.2",
     "@unocss/preset-wind4": "^66.5.0",
     "unocss": "^66.5.0",
     "vitepress": "^1.6.4",
