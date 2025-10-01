@@ -26,7 +26,7 @@
     "@unocss/preset-wind4": "^66.5.2",
     "unocss": "^66.5.2",
     "vitepress": "^1.6.4",
-    "vue": "^3.5.20",
+    "vue": "^3.5.22",
     "vueperslides": "^3.6.0"
   }
 }
