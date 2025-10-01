@@ -24,7 +24,7 @@
     "@iconify-json/heroicons": "^1.2.3",
     "@unocss/preset-web-fonts": "^66.5.0",
     "@unocss/preset-wind4": "^66.5.0",
-    "unocss": "^66.5.0",
+    "unocss": "^66.5.2",
     "vitepress": "^1.6.4",
     "vue": "^3.5.20",
     "vueperslides": "^3.6.0"
