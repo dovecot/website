@@ -1,4 +1,11 @@
 debian:
+  trixie:
+    title: "Trixie (13)"
+    codename: trixie
+    keyring: true
+    format: sources
+    dovecot_version: latest
+    signed_by: DOVECOT-REPO-GPG-2.4
   bookworm:
     title: "Bookworm (12)"
     codename: bookworm
@@ -11,9 +18,15 @@ debian:
     codename: bullseye
     keyring: true
     format: list
-    dovecot_version: latest
+    dovecot_version: 2.4.1
     signed_by: DOVECOT-REPO-GPG-2.4
 redhat:
+  rhel10:
+    title: "RHEL10"
+    codename: 10
+    keyring: true
+    dovecot_version: latest
+    signed_by: DOVECOT-REPO-GPG-2.4
   rhel9:
     title: "RHEL9"
     codename: 9
@@ -24,7 +37,7 @@ redhat:
     title: "RHEL8"
     codename: 8
     keyring: true
-    dovecot_version: latest
+    dovecot_version: 2.4.1
     signed_by: DOVECOT-REPO-GPG-2.3
 ubuntu:
   noble:
