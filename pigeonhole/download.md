@@ -10,7 +10,7 @@ All releases before 0.5.5 are signed with public key 3DFBB4F4 (full signature: <
 
 ### Stable releases
 
--   Download [v2.4.1 **sources**](https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.1-4.tar.gz) for Dovecot v2.4.1 \[[PGP signature](https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.1-4.tar.gz.sig)\] \[[changes](https://raw.githubusercontent.com/dovecot/pigeonhole/2.4.1/NEWS)\].
+-   Download [v2.4.2 **sources**](https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.2.tar.gz) for Dovecot v2.4.2 \[[PGP signature](https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.2.tar.gz.sig)\] \[[changes](https://raw.githubusercontent.com/dovecot/pigeonhole/2.4.2/NEWS)\].
 -   Download binary packages from [https://repo.dovecot.org](https://repo.dovecot.org/)
 -   Find Docker image at <https://hub.docker.com/r/dovecot/dovecot>
 
