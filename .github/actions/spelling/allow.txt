@@ -1,3 +1,4 @@
+adv
 Attributify
 basearch
 Bcc
@@ -67,6 +68,8 @@ NSS
 NTLM
 oftc
 oldstable
+oxdc
+passdb
 passdbs
 pgp
 pipermail
@@ -87,10 +90,12 @@ tabpanel
 tabpanels
 tarballs
 Telcos
+trixie
 trojaned
 uno
 unocss
 usedata
+userdb
 vdp
 virustest
 vitepress
