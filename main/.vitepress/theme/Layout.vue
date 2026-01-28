@@ -48,6 +48,7 @@ const nav = (theme.value.nav as NavItem[]) || []
             <a
               v-for="item in nav"
               :key="item.link"
+              :target="item.link.startsWith('http') ? '_blank' : ''"
 	      :href="item.link.startsWith('http') ? item.link : withBase(item.link)"
               class="text-gray-700 hover:underline text-lg"
             >
