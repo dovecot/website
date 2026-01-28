@@ -20,7 +20,7 @@ export default defineConfig({
       { 'text': 'Pigeonhole', link: 'https://pigeonhole.dovecot.org/' },
       { 'text': 'Support', link: '/support' },
       { 'text': 'Security', link: '/security' },
-      { 'text': 'Mailing list', link: '/mailman3' },
+      { 'text': 'Mailing list', link: 'https://dovecot.org/mailman3' },
       //    { 'text': 'Clients', link: '/clients' },
     ],
   },
