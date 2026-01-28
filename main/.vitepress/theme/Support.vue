@@ -36,7 +36,7 @@ const { site, frontmatter } = useData()
 			 <br/>Mailing lists
 		 </h2>
 		 <p class="text-xl">
-                 Find detailed information about our <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline" rel="external" target="_blank">Mailing List</a>. In case of abuse or other techincal issues, contact <a href="mailto:dovecot-owner@dovecot.org">dovecot-owner@dovecot.org</a> or <a href="https://www.open-xchange.com/contact-us/report-abuse" target="_blank">Open-Xchange</a>.
+                 Find detailed information about our <a href="https://dovecot.org/mailman3/mailman3/lists/dovecot.dovecot.org/" class="underline" rel="external" target="_blank">Mailing List</a>. In case of abuse or other techincal issues, contact <a href="mailto:dovecot-owner@dovecot.org" class="underline" rel="external">dovecot-owner@dovecot.org</a> or <a href="https://www.open-xchange.com/contact-us/report-abuse" class="underline" rel="external" target="_blank">Open-Xchange</a>.
 		 </p>
 
 	 </div>
