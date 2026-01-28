@@ -13,7 +13,7 @@
     "docs:preview": "vitepress preview ."
   },
   "devDependencies": {
-    "yaml": "^2.8.1",
+    "yaml": "^2.8.2",
     "@iconify-json/heroicons": "^1.2.3",
     "@unocss/preset-web-fonts": "^66.5.9",
     "@unocss/preset-wind4": "^66.6.0",
