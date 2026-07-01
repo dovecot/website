@@ -15,7 +15,7 @@
   "devDependencies": {
     "yaml": "^2.9.0",
     "@iconify-json/heroicons": "^1.2.3",
-    "@unocss/preset-web-fonts": "^66.7.0",
+    "@unocss/preset-web-fonts": "^66.7.4",
     "@unocss/preset-wind4": "^66.7.0",
     "unocss": "^66.7.0",
     "vitepress": "^1.6.4",
