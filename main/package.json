@@ -1,7 +1,8 @@
 {
   "name": "main",
+  "type": "module",
   "version": "1.0.0",
-  "description": "Dovecot Website",
+  "description": "Dovecot CE Website",
   "homepage": "https://github.com/dovecot/website#readme",
   "bugs": {
     "url": "https://github.com/dovecot/website/issues"
@@ -12,21 +13,26 @@
   },
   "license": "CC-BY-ND-4.0",
   "author": "Dovecot Authors",
-  "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev .",
-    "docs:build": "vitepress build .",
-    "docs:preview": "vitepress preview ."
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@iconify-json/heroicons": "^1.2.3",
-    "@unocss/preset-web-fonts": "^66.7.5",
-    "@unocss/preset-wind4": "^66.7.5",
-    "unocss": "^66.7.5",
-    "vitepress": "^1.6.4",
-    "vue": "^3.5.40",
-    "vueperslides": "^3.6.0"
+    "@dovecot/shared-ui": "*",
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/enhanced-img": "^0.11.0",
+    "@sveltejs/kit": "^2.63.0",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/vite": "^4.3.0",
+    "gray-matter": "^4.0.3",
+    "svelte": "^5.56.1",
+    "svelte-check": "^4.6.0",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
   }
 }

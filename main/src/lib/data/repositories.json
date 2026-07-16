@@ -1,0 +1,223 @@
+{
+  "distributions": [
+    {
+      "id": "debian",
+      "name": "Debian GNU/Linux",
+      "icon": "terminal",
+      "packages": [
+        "dovecot-core", "dovecot-imapd", "dovecot-pop3d", "dovecot-lmtpd", "dovecot-sieve",
+        "dovecot-managesieved", "dovecot-auth-lua", "dovecot-lua", "dovecot-mysql", "dovecot-pgsql",
+        "dovecot-sqlite", "dovecot-ldap", "dovecot-gssapi", "dovecot-solr", "dovecot-flatcurve",
+        "dovecot-dev", "dovecot-dbg", "dovecot-pigeonhole-dbg", "dovecot-sieve-dev"
+      ],
+      "installCmd": "apt update\napt upgrade",
+      "versions": {
+        "2.4": [
+          {
+            "codename": "Trixie (13)",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.sources",
+            "sourcesContent": "Types: deb\nURIs: https://repo.dovecot.org/ce-2.4-latest/debian/trixie\nSuites: trixie\nComponents: main\nSigned-By: /usr/share/keyrings/dovecot.gpg"
+          },
+          {
+            "codename": "Bookworm (12)",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.sources",
+            "sourcesContent": "Types: deb\nURIs: https://repo.dovecot.org/ce-2.4-latest/debian/bookworm\nSuites: bookworm\nComponents: main\nSigned-By: /usr/share/keyrings/dovecot.gpg"
+          },
+          {
+            "codename": "Bullseye (11)",
+            "warning": "Last released version is 2.4.1",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/usr/share/keyrings/dovecot.gpg] https://repo.dovecot.org/ce-2.4.1/debian/bullseye bullseye main"
+          }
+        ],
+        "2.3": [
+          {
+            "codename": "Bullseye (11) with Dovecot 2.3",
+            "warning": "Last released version is 2.3.21.1",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/usr/share/keyrings/dovecot.gpg] https://repo.dovecot.org/ce-2.3.21.1/debian/bullseye bullseye main"
+          },
+          {
+            "codename": "Buster (10)",
+            "warning": "Last released version is 2.3.21.1",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.21.1/debian/buster buster main"
+          },
+          {
+            "codename": "Stretch (9)",
+            "warning": "Last released version is 2.3.17.1",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.17.1/debian/stretch stretch main"
+          },
+          {
+            "codename": "Jessie (8)",
+            "warning": "Last released version is 2.3.8",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.8/debian/jessie jessie main"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ubuntu",
+      "name": "Ubuntu Linux",
+      "icon": "terminal",
+      "packages": [
+        "dovecot-auth-lua", "dovecot-core", "dovecot-dbg", "dovecot-dev", "dovecot-flatcurve",
+        "dovecot-gssapi", "dovecot-imapd", "dovecot-ldap", "dovecot-lmtpd", "dovecot-lua",
+        "dovecot-managesieved", "dovecot-mysql", "dovecot-pgsql", "dovecot-pigeonhole-dbg",
+        "dovecot-pop3d", "dovecot-sieve", "dovecot-sieve-dev", "dovecot-solr", "dovecot-sqlite",
+        "dovecot-submissiond"
+      ],
+      "installCmd": "sudo apt-get update\nsudo apt-get install dovecot-imapd dovecot-pop3d",
+      "versions": {
+        "2.4": [
+          {
+            "codename": "Noble (24.04 LTS)",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.sources",
+            "sourcesContent": "Types: deb\nURIs: https://repo.dovecot.org/ce-2.4-latest/ubuntu/noble\nSuites: noble\nComponents: main\nSigned-By: /usr/share/keyrings/dovecot.gpg"
+          },
+          {
+            "codename": "Jammy (22.04 LTS)",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/usr/share/keyrings/dovecot.gpg] https://repo.dovecot.org/ce-2.4-latest/ubuntu/jammy jammy main"
+          }
+        ],
+        "2.3": [
+          {
+            "codename": "Focal (20.04 LTS)",
+            "warning": "Last released version is 2.3.21.1",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.21.1/ubuntu/focal focal main"
+          },
+          {
+            "codename": "Bionic (18.04 LTS)",
+            "warning": "Last released version is 2.3.21.1",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.21.1/ubuntu/bionic bionic main"
+          },
+          {
+            "codename": "Xenial (16.04 LTS)",
+            "warning": "Last released version is 2.3.11.3",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.11.3/ubuntu/xenial xenial main"
+          },
+          {
+            "codename": "Trusty (14.04 LTS)",
+            "warning": "Last released version is 2.3.8",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /etc/apt/trusted.gpg.d/dovecot.gpg",
+            "gpgPath": "/etc/apt/trusted.gpg.d/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
+            "sourcesContent": "deb [signed-by=/etc/apt/trusted.gpg.d/dovecot.gpg] https://repo.dovecot.org/ce-2.3.8/ubuntu/trusty trusty main"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rhel",
+      "name": "Red Hat Enterprise",
+      "icon": "terminal",
+      "packages": [
+        "dovecot", "dovecot-devel", "dovecot-flatcurve", "dovecot-gssapi", "dovecot-imapd",
+        "dovecot-ldap", "dovecot-lmtpd", "dovecot-lua", "dovecot-managesieved", "dovecot-mysql",
+        "dovecot-pgsql", "dovecot-pop3d", "dovecot-sieve", "dovecot-sieve-devel", "dovecot-solr",
+        "dovecot-sqlite", "dovecot-submissiond"
+      ],
+      "installCmd": "yum makecache\nyum update\nyum install dovecot",
+      "versions": {
+        "2.4": [
+          {
+            "codename": "RHEL 10",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.4-latest]\nname=Dovecot 2.4 RHEL $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.4-latest/rhel/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4\ngpgcheck=1\nenabled=1"
+          },
+          {
+            "codename": "RHEL 9",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.4-latest]\nname=Dovecot 2.4 RHEL $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.4-latest/rhel/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4\ngpgcheck=1\nenabled=1"
+          },
+          {
+            "codename": "RHEL 8",
+            "warning": "Last released version is 2.4.1",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.4.1]\nname=Dovecot 2.4.1 RHEL $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.4.1/rhel/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4\ngpgcheck=1\nenabled=1"
+          }
+        ],
+        "2.3": [
+          {
+            "codename": "RHEL 8 with Dovecot 2.3",
+            "warning": "Last released version is 2.3.21.1",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.3.21.1]\nname=Dovecot 2.3.21.1 RHEL $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.3.21.1/rhel/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3\ngpgcheck=1\nenabled=1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "centos",
+      "name": "CentOS Linux",
+      "icon": "terminal",
+      "packages": [
+        "dovecot", "dovecot-devel", "dovecot-imaptest", "dovecot-lua", "dovecot-mysql",
+        "dovecot-pgsql", "dovecot-pigeonhole", "dovecot-pigeonhole-devel"
+      ],
+      "installCmd": "yum makecache\nyum update\nyum install dovecot",
+      "versions": {
+        "2.3": [
+          {
+            "codename": "CentOS 8",
+            "warning": "Last released version is 2.3.21.1",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.3.21.1]\nname=Dovecot 2.3.21.1 CENTOS $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.3.21.1/centos/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3\ngpgcheck=1\nenabled=1"
+          },
+          {
+            "codename": "CentOS 7",
+            "warning": "Last released version is 2.3.17",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.3.17]\nname=Dovecot 2.3.17 CENTOS $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.3.17/centos/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3\ngpgcheck=1\nenabled=1"
+          },
+          {
+            "codename": "CentOS 6",
+            "warning": "Last released version is 2.3.11.3",
+            "repoPath": "/etc/yum.repos.d/dovecot.repo",
+            "repoContent": "[dovecot-2.3.11.3]\nname=Dovecot 2.3.11.3 CENTOS $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.3.11.3/centos/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3\ngpgcheck=1\nenabled=1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rc",
+      "name": "Release Candidates",
+      "icon": "science",
+      "isSpecial": true,
+      "description": "If you want to test upcoming releases, you can point to the release candidate package repository index.",
+      "instructionTitle": "Generic RC Instructions:",
+      "instructionText": "For release candidates, follow instructions for the given distribution above, but replace the repository location to point into:",
+      "instructionLink": "https://repo.dovecot.org/rc/"
+    }
+  ]
+}

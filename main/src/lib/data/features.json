@@ -1,0 +1,47 @@
+[
+	{
+		"icon": "rocket_launch",
+		"title": "Fast Performance, Built-In",
+		"desc": "Dovecot is engineered for speed. By leveraging advanced indexing and intelligent caching out-of-the-box, it delivers elite performance and lightning-fast response times without requiring complex manual tuning."
+	},
+	{
+		"icon": "verified",
+		"title": "Standards Compliance",
+		"desc": "Dovecot isn’t just compliant—it’s the benchmark. Through exhaustive testing and continuous community feedback, we ensure full adherence to the rigorous standards required to power a modern email server."
+	},
+	{
+		"icon": "speed",
+		"title": "Self-Optimizing",
+		"desc": "Dovecot’s metadata and indexes are self-optimizing. They adapt in real-time to provide exactly what the client needs—no more and no less."
+	},
+	{
+		"icon": "healing",
+		"title": "Self-Healing",
+		"desc": "Dovecot is designed to be resilient. It proactively identifies and repairs common issues — like corrupted index files — on the fly. While the system handles the fix, everything is logged in detail, giving you total visibility into the \"why\" without the emergency."
+	},
+	{
+		"icon": "shield_lock",
+		"title": "Security Focused",
+		"desc": "Security is engineered into Dovecot’s core through a strict multi-process architecture that isolates tasks, ensuring that a vulnerability in one component cannot compromise the entire system."
+	},
+	{
+		"icon": "extension",
+		"title": "Modular Architecture",
+		"desc": "Dovecot is designed for flexibility. The robust plugin system allows you to easily extend functionality — whether you're adding new commands, modifying existing behaviors, or introducing support for custom mailbox formats. Tailor your server to your exact specifications."
+	},
+	{
+		"icon": "monitoring",
+		"title": "Logging and Telemetry",
+		"desc": "Get deep insights into your server's health via sophisticated logging and real-time event emission. From pinpointing rare edge cases to monitoring traffic patterns, Dovecot delivers the high-fidelity data you need to run your system with total confidence."
+	},
+	{
+		"icon": "filter_alt",
+		"title": "Powerful Mail Filtering",
+		"desc": "Through the integrated <a href='https://pigeonhole.dovecot.org/' class='link-subtle'>Pigeonhole</a> project, Dovecot provides comprehensive server-side filtering using the standardized Sieve language. Users can securely sort, forward, and automate responses along with managing this filtering using standardized remote protocols."
+	},
+	{
+		"icon": "search",
+		"title": "Fast Full Text Search",
+		"desc": "Dovecot’s integrated Full-Text Search integration provides instant message body and substring searches without complicated or confusing setup."
+	}
+]
