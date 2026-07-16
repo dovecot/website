@@ -23,12 +23,9 @@ jobs:
         cache: npm
     - name: Install Dependencies
       run: npm ci --no-fund --no-audit
-    - name: Build main with VitePress
+    - name: Build main with Sveltekit
       run: |
-        npm run -w main docs:build
-    - name: Build repo with VitePress
-      run: |
-        npm run -w repo docs:build
+        npm run -w main build
     - name: Build pigeonhole with VitePress
       run: |
         npm run -w pigeonhole docs:build
