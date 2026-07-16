@@ -9,7 +9,7 @@ Map of websites
 
 ## Building a Website
 
-You can use npm run -w <website> run docs:build
+`npm run -w <website> build`
 
 ## Adding New Website
 
