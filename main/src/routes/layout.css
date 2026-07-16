@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Ubuntu+Sans:wght@400;500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+@import 'tailwindcss';
+@source "../../../packages/shared-ui/src/**/*.svelte";
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --color-on-surface: #1a1c1c;
+  --color-secondary-container: #c2e7e0;
+  --color-surface-bright: #f9f9f9;
+  --color-on-background: #1a1c1c;
+  --color-primary-fixed-dim: #75d7c8;
+  --color-on-secondary-container: #476963;
+  --color-background: #f9f9f9;
+  --color-primary-fixed: #92f4e4;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #c5eae2;
+  --color-inverse-surface: #2f3131;
+  --color-primary-container: #56b9ab;
+  --color-primary: #006a60;
+  --color-surface-container-high: #e8e8e8;
+  --color-on-tertiary-container: #6a2a16;
+  --color-on-error-container: #93000a;
+  --color-tertiary-container: #ed9176;
+  --color-secondary: #42655f;
+  --color-on-tertiary-fixed: #3a0a00;
+  --color-surface: #f9f9f9;
+  --color-on-primary-fixed: #00201c;
+  --color-surface-tint: #006a60;
+  --color-error-container: #ffdad6;
+  --color-surface-container: #eeeeed;
+  --color-tertiary-fixed-dim: #ffb59f;
+  --color-surface-container-low: #f4f3f3;
+  --color-on-primary: #ffffff;
+  --color-inverse-primary: #75d7c8;
+  --color-on-surface-variant: #3e4947;
+  --color-surface-container-highest: #e2e2e2;
+  --color-on-secondary-fixed-variant: #2b4d47;
+  --color-on-error: #ffffff;
+  --color-on-primary-container: #00463f;
+  --color-tertiary: #934933;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-on-surface: #f1f1f0;
+  --color-on-primary-fixed-variant: #005048;
+  --color-surface-variant: #e2e2e2;
+  --color-on-tertiary-fixed-variant: #76321e;
+  --color-on-secondary-fixed: #00201c;
+  --color-tertiary-fixed: #ffdbd1;
+  --color-error: #ba1a1a;
+  --color-secondary-fixed-dim: #a9cec7;
+  --color-surface-dim: #dadad9;
+  --color-outline-variant: #bdc9c6;
+  --color-outline: #6e7a77;
+
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --spacing-margin-mobile: 16px;
+  --spacing-gutter: 24px;
+  --spacing-base: 4px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-desktop: 64px;
+
+  --font-label-md: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Manrope", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-headline-xl: "Manrope", sans-serif;
+  --font-headline-lg: "Manrope", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+
+  --font-size-label-md: 12px;
+  --font-size-headline-lg-mobile: 24px;
+  --font-size-body-md: 16px;
+  --font-size-headline-xl: 48px;
+  --font-size-headline-lg: 32px;
+  --font-size-body-sm: 14px;
+}
+
+/* Custom Grid Background Pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image:
+    linear-gradient(to right, rgba(0, 106, 96, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 106, 96, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(146, 244, 228, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(146, 244, 228, 0.04) 1px, transparent 1px);
+}
+
+/* Smooth active state transitions — avoid 'all' to keep focus rings instant (WCAG 2.4.7) */
+a, button {
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Keep focus visible — instant outline, no animation */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar to match theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-container);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-container);
+}
+
+@utility link-subtle {
+  @apply underline decoration-dotted decoration-primary/50 dark:decoration-primary-fixed/50 hover:text-primary dark:hover:text-primary-fixed transition-colors;
+}
