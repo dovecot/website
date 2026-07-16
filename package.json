@@ -3,6 +3,7 @@
   "license": "CC-BY-ND-4.0",
   "workspaces": [
     "main",
-    "packages/shared-ui"
+    "packages/shared-ui",
+    "pigeonhole"
   ]
 }

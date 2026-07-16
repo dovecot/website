@@ -26,6 +26,6 @@ jobs:
     - name: Build main with Sveltekit
       run: |
         npm run -w main build
-    - name: Build pigeonhole with VitePress
+    - name: Build pigeonhole with Sveltekit
       run: |
-        npm run -w pigeonhole docs:build
+        npm run -w pigeonhole build
