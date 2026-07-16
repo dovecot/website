@@ -22,9 +22,9 @@ jobs:
     - name: Build dovecot.org with Sveltekit
       run: |
         npm run -w main build
-    - name: Build pigeonhole with VitePress
+    - name: Build pigeonhole with Sveltekit
       run: |
-        npm run -w pigeonhole docs:build
+        npm run -w pigeonhole build
     - name: Deploy dovecot.org
       uses: dovecot/rsync-deployments@v2.0.3
       with:
@@ -43,7 +43,7 @@ jobs:
         FLAGS: -azr --delete
         HOST: pigeonhole.dovecot.org
         USER: website
-        LOCALPATH: /pigeonhole/.vitepress/dist/.
+        LOCALPATH: /pigeonhole/build/.
         REMOTEPATH: public_html/pigeonhole/${{ github.ref_name }}
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       if: env.DEPLOY_KEY
