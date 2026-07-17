@@ -11,6 +11,7 @@
 (?:^|/)vendor/
 (?:^|/|\b)requirements(?:-dev|-doc|-test|)\.txt$
 -lock\.yaml$
+/static/gpgkeys/[^/]+$
 \.a$
 \.ai$
 \.all-contributorsrc$
@@ -80,6 +81,6 @@
 \.xpm$
 \.xz$
 \.zip$
-ignore$
 ^\.github/
 ^\.vitepress/
+ignore$
