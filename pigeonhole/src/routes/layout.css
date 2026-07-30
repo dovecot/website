@@ -87,12 +87,6 @@
     linear-gradient(to bottom, rgba(40, 117, 171, 0.04) 1px, transparent 1px);
 }
 
-.dark .bg-grid-pattern {
-  background-image:
-    linear-gradient(to right, rgba(116, 178, 224, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(116, 178, 224, 0.04) 1px, transparent 1px);
-}
-
 /* Smooth active state transitions — avoid 'all' to keep focus rings instant (WCAG 2.4.7) */
 a, button {
   transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
@@ -126,5 +120,5 @@ a:focus-visible, button:focus-visible {
 }
 
 @utility link-subtle {
-  @apply underline decoration-dotted decoration-primary/50 dark:decoration-primary-fixed/50 hover:text-primary dark:hover:text-primary-fixed transition-colors;
+  @apply underline decoration-dotted decoration-primary/50 hover:text-primary transition-colors;
 }
