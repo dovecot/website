@@ -10,9 +10,9 @@
 	const slides = [
 		{
 			tagText: "",
-			tagClass: "text-primary dark:text-primary-fixed-dim border-primary-container/30 dark:border-white/10 bg-primary-container/10 dark:bg-primary/20",
+			tagClass: "text-primary border-primary-container/30 bg-primary-container/10",
 			badge: "Sieve Mail Filtering",
-			badgeClass: "text-primary dark:text-primary-fixed",
+			badgeClass: "text-primary",
 			badgeIcon: "filter_alt",
 			headline: "Sorting and filing email messages with absolute precision and safety.",
 			description: "<strong>Pigeonhole</strong> adds <a href='http://www.sieve.info/' target='_blank' rel='noreferrer' class='link-subtle'>Sieve mail filtering</a> and the <a href='http://tools.ietf.org/html/rfc5804' target='_blank' rel='noreferrer' class='link-subtle'>ManageSieve protocol</a> to <a href='https://dovecot.org/' target='_blank' rel='noreferrer' class='link-subtle'>Dovecot</a>. Securely compile and execute mail filters at delivery time, keeping your mail store organized and safe.",
@@ -107,7 +107,7 @@
 				<div class="col-start-1 row-start-1 flex flex-col items-start gap-gutter transition-all duration-700 ease-in-out transform {activeSlide === idx ? 'opacity-100 translate-x-0 z-10 pointer-events-auto' : 'opacity-0 -translate-x-4 z-0 pointer-events-none'}" aria-hidden={activeSlide !== idx}>
 					<div class="flex flex-col items-start gap-3">
 						<div class="flex flex-wrap items-center gap-x-3 gap-y-2">
-							<span class="inline-block font-headline-xl text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container dark:from-primary-fixed-dim dark:to-primary-fixed select-none  leading-snug">
+							<span class="inline-block font-headline-xl text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container select-none  leading-snug">
 								Pigeonhole
 							</span>
 							{#if slide.tagText}
@@ -116,7 +116,7 @@
 								</span>
 							{/if}
 						</div>
-						<div class="inline-block bg-surface-container-highest dark:bg-inverse-surface px-3 py-1 rounded-full border border-outline-variant/30">
+						<div class="inline-block bg-surface-container-highest px-3 py-1 rounded-full border border-outline-variant/30">
 							<span class="font-label-md text-label-md tracking-widest uppercase flex items-center gap-1.5 {slide.badgeClass}">
 								{#if slide.badgeIcon}
 									<span aria-hidden="true" class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">{slide.badgeIcon}</span>
@@ -125,10 +125,10 @@
 							</span>
 						</div>
 					</div>
-					<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background dark:text-white max-w-2xl font-bold leading-tight">
+					<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background max-w-2xl font-bold leading-tight">
 						{slide.headline}
 					</h1>
-					<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant max-w-xl">
+					<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
 						{@html slide.description}
 					</p>
 
@@ -142,7 +142,7 @@
 							Download
 						</a>
 						<a
-							class="inline-flex items-center justify-center bg-surface hover:bg-surface-dim text-primary border border-outline-variant dark:bg-inverse-surface dark:text-primary-fixed dark:border-white/10 dark:hover:bg-white/5 font-body-md text-body-md font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer gap-2"
+							class="inline-flex items-center justify-center bg-surface hover:bg-surface-dim text-primary border border-outline-variant font-body-md text-body-md font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer gap-2"
 							href="https://github.com/dovecot/pigeonhole"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -151,7 +151,7 @@
 							Code
 						</a>
 						<a
-							class="inline-flex items-center justify-center bg-surface hover:bg-surface-dim text-primary border border-outline-variant dark:bg-inverse-surface dark:text-primary-fixed dark:border-white/10 dark:hover:bg-white/5 font-body-md text-body-md font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer"
+							class="inline-flex items-center justify-center bg-surface hover:bg-surface-dim text-primary border border-outline-variant font-body-md text-body-md font-semibold px-6 py-3 rounded-lg transition-colors cursor-pointer"
 							href="https://doc.dovecot.org/"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -182,13 +182,13 @@
 			{#each slides as _, idx}
 				<button
 					onclick={() => { activeSlide = idx; resetInterval(); }}
-					class="w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer {activeSlide === idx ? 'bg-primary dark:bg-primary-fixed w-6' : 'bg-outline-variant/60 hover:bg-outline-variant'}"
+					class="w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer {activeSlide === idx ? 'bg-primary w-6' : 'bg-outline-variant/60 hover:bg-outline-variant'}"
 					aria-label="Go to slide {idx + 1}"
 				></button>
 			{/each}
 			<button
 				onclick={togglePause}
-				class="ml-2 p-1.5 rounded-full bg-white/10 dark:bg-white/5 hover:bg-white/20 dark:hover:bg-white/10 text-on-surface dark:text-white transition-colors cursor-pointer"
+				class="ml-2 p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-on-surface transition-colors cursor-pointer"
 				aria-label={isPaused ? 'Resume carousel' : 'Pause carousel'}
 			>
 				<span aria-hidden="true" class="material-symbols-outlined text-sm">{isPaused ? 'play_arrow' : 'pause'}</span>
@@ -203,25 +203,25 @@
 </section>
 
 <!-- Features Grid Section -->
-<section class="py-16 px-gutter bg-surface dark:bg-inverse-surface/30">
+<section class="py-16 px-gutter bg-surface">
 	<div class="max-w-container-max mx-auto">
 		<div class="text-center mb-12 flex flex-col items-center">
-			<div class="w-16 h-16 bg-primary/10 dark:bg-primary-fixed-dim/15 rounded-full flex items-center justify-center mb-4 text-primary dark:text-primary-fixed shadow-sm">
+			<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary shadow-sm">
 				<span aria-hidden="true" class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
 			</div>
-			<h2 class="font-headline-xl text-3xl md:text-5xl text-on-background dark:text-white font-extrabold tracking-tight mb-4">Key Features</h2>
-			<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant max-w-2xl mx-auto">
+			<h2 class="font-headline-xl text-3xl md:text-5xl text-on-background font-extrabold tracking-tight mb-4">Key Features</h2>
+			<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
 				Built with reliability and extensibility at its core, mimicking Dovecot's robust design.
 			</p>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 			{#each features as feat}
-				<div class="bg-surface-container-lowest dark:bg-inverse-surface/50 rounded-2xl p-gutter border border-outline-variant dark:border-white/5 shadow-[0px_4px_20px_rgba(26,31,43,0.02)] hover:shadow-[0px_8px_30px_rgba(26,31,43,0.06)] transition-shadow duration-300">
-					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary dark:text-primary-fixed">
+				<div class="bg-surface-container-lowest rounded-2xl p-gutter border border-outline-variant shadow-[0px_4px_20px_rgba(26,31,43,0.02)] hover:shadow-[0px_8px_30px_rgba(26,31,43,0.06)] transition-shadow duration-300">
+					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
 						<span aria-hidden="true" class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">{feat.icon}</span>
 					</div>
-					<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface dark:text-white mb-3">{feat.title}</h3>
-					<p class="font-body-md text-sm text-on-surface-variant dark:text-outline-variant leading-relaxed">{feat.desc}</p>
+					<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-3">{feat.title}</h3>
+					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">{feat.desc}</p>
 				</div>
 			{/each}
 		</div>
@@ -229,16 +229,16 @@
 </section>
 
 <!-- License CTA -->
-<section class="py-12 px-gutter bg-surface-container-low dark:bg-inverse-surface/40 border-t border-outline-variant/30">
+<section class="py-12 px-gutter bg-surface-container-low border-t border-outline-variant/30">
 	<div class="max-w-2xl mx-auto">
 		<!-- License Card -->
-		<div class="bg-surface-bright dark:bg-inverse-surface/20 p-6 rounded-2xl border border-outline-variant/30 flex flex-col justify-between">
+		<div class="bg-surface-bright p-6 rounded-2xl border border-outline-variant/30 flex flex-col justify-between">
 			<div>
 				<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 text-primary">
 					<span aria-hidden="true" class="material-symbols-outlined text-2xl">verified_user</span>
 				</div>
-				<h3 class="font-headline-lg text-xl text-on-background dark:text-white font-bold mb-3">Open Source License</h3>
-				<p class="font-body-md text-sm text-on-surface-variant dark:text-outline-variant leading-relaxed mb-6">
+				<h3 class="font-headline-lg text-xl text-on-background font-bold mb-3">Open Source License</h3>
+				<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
 					Pigeonhole is open source and distributed under the same license as Dovecot: the GNU Lesser General Public License (LGPL) version 2.1.
 				</p>
 			</div>
@@ -247,7 +247,7 @@
 					href="https://raw.githubusercontent.com/dovecot/pigeonhole/refs/heads/main/COPYING.LGPL"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 dark:bg-inverse-surface dark:text-primary-fixed dark:border-outline/40 dark:hover:bg-white/5 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
+					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
 				>
 					View LGPL v2.1 License
 				</a>
