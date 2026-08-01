@@ -24,7 +24,7 @@
     "@iconify-json/heroicons": "^1.2.3",
     "@unocss/preset-web-fonts": "^66.7.5",
     "@unocss/preset-wind4": "^66.7.5",
-    "unocss": "^66.7.0",
+    "unocss": "^66.7.5",
     "vue": "^3.5.40"
   }
 }
