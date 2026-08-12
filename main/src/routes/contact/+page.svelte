@@ -27,7 +27,7 @@
 				<a
 					href="https://www.dovecotpro.com"
 					target="_blank"
-					rel="noreferrer"
+					rel="noopener noreferrer"
 					class="font-semibold link-subtle"
 				>
 					Dovecot Pro Queries
