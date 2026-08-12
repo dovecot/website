@@ -228,30 +228,15 @@
 	</div>
 </section>
 
-<!-- License CTA -->
-<section class="py-12 px-gutter bg-surface-container-low border-t border-outline-variant/30">
-	<div class="max-w-2xl mx-auto">
-		<!-- License Card -->
-		<div class="bg-surface-bright p-6 rounded-2xl border border-outline-variant/30 flex flex-col justify-between">
-			<div>
-				<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 text-primary">
-					<span aria-hidden="true" class="material-symbols-outlined text-2xl">verified_user</span>
-				</div>
-				<h3 class="font-headline-lg text-xl text-on-background font-bold mb-3">Open Source License</h3>
-				<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
-					Pigeonhole is open source and distributed under the same license as Dovecot: the GNU Lesser General Public License (LGPL) version 2.1.
-				</p>
-			</div>
-			<div>
-				<a
-					href="https://raw.githubusercontent.com/dovecot/pigeonhole/refs/heads/main/COPYING.LGPL"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
-				>
-					View LGPL v2.1 License
-				</a>
-			</div>
+<!-- Open Source -->
+<section class="py-10 px-gutter border-t border-outline-variant/30">
+	<div class="max-w-container-max mx-auto flex justify-center items-center gap-3">
+		<div class="w-8 h-8 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+			<span aria-hidden="true" class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
 		</div>
+		<p class="font-body-md text-base text-on-surface-variant text-center">
+			Pigeonhole is open source, distributed under the
+			<a class="text-primary font-semibold hover:text-primary-container transition-colors" href="https://raw.githubusercontent.com/dovecot/pigeonhole/refs/heads/main/COPYING.LGPL" target="_blank" rel="noopener noreferrer">LGPLv2.1 license</a>.
+		</p>
 	</div>
 </section>
