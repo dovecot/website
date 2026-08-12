@@ -7,7 +7,6 @@
 	let { children } = $props();
 
 	const navItems = [
-		{ name: 'About', href: '/about' },
 		{ name: 'Download', href: '/download' },
 		{ name: 'Documentation', href: 'https://doc.dovecot.org/', target: '_blank' },
 		{ name: 'Support', href: '/support' },
