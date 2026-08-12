@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "svelte": "^5.56.1",
     "svelte-check": "^4.6.0",
+    "svelte-sitemap": "^4.0.4",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.16"
