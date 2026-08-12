@@ -85,7 +85,7 @@
 				{#each filteredNews as item}
 					<a
 						id={item.id}
-						href="#{item.id}"
+						href={item.href}
 						class="group flex flex-col justify-between bg-surface-bright rounded-xl p-6 border border-outline-variant/40 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
 					>
 						{#if item.isSecurity}

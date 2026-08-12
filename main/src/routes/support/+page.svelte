@@ -33,7 +33,7 @@
 				<a
 					href="https://dovecot.org/mailman/listinfo/dovecot"
 					target="_blank"
-					rel="noreferrer"
+					rel="noopener noreferrer"
 					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
 				>
 					Mailing List Info
@@ -54,7 +54,7 @@
 				<a
 					href="https://github.com/dovecot/core/issues"
 					target="_blank"
-					rel="noreferrer"
+					rel="noopener noreferrer"
 					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
 				>
 					Submit GitHub Issue

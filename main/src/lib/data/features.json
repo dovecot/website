@@ -37,7 +37,7 @@
 	{
 		"icon": "filter_alt",
 		"title": "Powerful Mail Filtering",
-		"desc": "Through the integrated <a href='https://pigeonhole.dovecot.org/' class='link-subtle'>Pigeonhole</a> project, Dovecot provides comprehensive server-side filtering using the standardized Sieve language. Users can securely sort, forward, and automate responses along with managing this filtering using standardized remote protocols."
+		"desc": "Through the integrated <a href='https://pigeonhole.dovecot.org/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Pigeonhole</a> project, Dovecot provides comprehensive server-side filtering using the standardized Sieve language. Users can securely sort, forward, and automate responses along with managing this filtering using standardized remote protocols."
 	},
 	{
 		"icon": "search",
