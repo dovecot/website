@@ -5,6 +5,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { parseMarkdownPlugin } from './scripts/parse-markdown.js';
 import { enhancedImages } from '@sveltejs/enhanced-img';
+import { svelteSitemap } from 'svelte-sitemap/vite';
 
 export default defineConfig({
 	plugins: [
@@ -22,7 +23,8 @@ export default defineConfig({
 				// @ts-ignore
 				base: typeof process !== 'undefined' && process.env.BASE_PATH ? process.env.BASE_PATH : ''
 			}
-		})
+		}),
+		svelteSitemap({ domain: 'https://dovecot.org' }),
 	]
 });
 
