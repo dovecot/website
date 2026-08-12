@@ -45,7 +45,7 @@
 					<a
 						href="https://vdp.open-xchange.com/"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center bg-error hover:bg-error/90 text-white font-semibold px-6 py-3 rounded-lg shadow transition-colors text-sm cursor-pointer"
 					>
 						YesWeHack Program
@@ -69,7 +69,7 @@
 					<a
 						href="https://doc.dovecot.org/latest/issues.html"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-6 py-3 rounded-lg shadow-sm transition-colors text-sm cursor-pointer"
 					>
 						Bug Reporting Guidelines
@@ -145,7 +145,7 @@
 								<a
 									href={adv.link}
 									target="_blank"
-									rel="noreferrer"
+									rel="noopener noreferrer"
 									class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/60 text-on-surface px-3 py-1.5 rounded-lg font-semibold hover:-translate-y-0.5 active:translate-y-0 transition-all text-[11px] cursor-pointer"
 								>
 									View Full Advisory

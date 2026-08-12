@@ -89,8 +89,8 @@
 							{#if key.link}
 								<a 
 									href={key.link} 
-									target="_blank" 
-									rel="noreferrer"
+									target="_blank"
+									rel="noopener noreferrer"
 									class="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded font-semibold hover:underline"
 								>
 									Download Key
@@ -247,7 +247,7 @@
 					<a
 						href="https://dovecot.org/releases/"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-fit inline-flex items-center justify-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface font-semibold px-5 py-3 rounded-lg text-sm transition-all cursor-pointer"
 					>
 						<span aria-hidden="true" class="material-symbols-outlined text-base">download</span>
@@ -256,7 +256,7 @@
 					<a
 						href="https://github.com/dovecot/core"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-fit inline-flex items-center justify-center gap-2 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface font-semibold px-5 py-3 rounded-lg text-sm transition-all cursor-pointer"
 					>
 						<GitHubIcon iconClass="w-4 h-4 fill-current" />
@@ -265,7 +265,7 @@
 					<a
 						href="https://doc.dovecot.org/latest/installation/installation.html"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-fit inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-5 py-3 rounded-lg text-sm shadow hover:shadow-md transition-all cursor-pointer"
 					>
 						Installation Guide
@@ -291,7 +291,7 @@
 					<a
 						href="https://hub.docker.com/r/dovecot/dovecot"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
 					>
 						<span aria-hidden="true" class="material-symbols-outlined text-base">grid_view</span>
@@ -317,7 +317,7 @@
 					<a
 						href="https://github.com/dovecot/imaptest"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
 					>
 						<GitHubIcon iconClass="w-4 h-4 fill-current" />

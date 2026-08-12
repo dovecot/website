@@ -76,7 +76,7 @@
 				<a
 					class="h-full flex items-center relative font-body-md text-body-md hover:text-primary-fixed transition-all duration-200 cursor-pointer active:opacity-80 {isActive ? 'text-primary-fixed-dim font-semibold' : 'text-on-primary'}"
 					href={resolved}
-					{...item.target ? { target: item.target, rel: 'noreferrer noopener' } : {}}
+					{...item.target ? { target: item.target, rel: 'noopener noreferrer' } : {}}
 					{...isActive ? { 'aria-current': 'page' } : {}}
 				>
 					{item.name}
@@ -90,7 +90,7 @@
 			<a
 				href={githubUrl}
 				target="_blank"
-				rel="noreferrer noopener"
+				rel="noopener noreferrer"
 				class="h-full flex items-center font-body-md text-body-md hover:text-primary-fixed transition-colors duration-200 cursor-pointer active:opacity-80 text-on-primary"
 				aria-label="GitHub Repository"
 			>
@@ -127,7 +127,7 @@
 					onclick={() => mobileMenuOpen = false}
 					class="font-body-md text-body-md py-2 px-3 rounded-lg hover:bg-white/5 active:bg-white/10 transition-colors {isActive ? 'text-primary-fixed font-semibold bg-white/5' : 'text-on-primary'}"
 					href={resolved}
-					{...item.target ? { target: item.target, rel: 'noreferrer noopener' } : {}}
+					{...item.target ? { target: item.target, rel: 'noopener noreferrer' } : {}}
 					{...isActive ? { 'aria-current': 'page' } : {}}
 				>
 					{item.name}
@@ -136,7 +136,7 @@
 			<a
 				href={githubUrl}
 				target="_blank"
-				rel="noreferrer noopener"
+				rel="noopener noreferrer"
 				onclick={() => mobileMenuOpen = false}
 				class="font-body-md text-body-md py-2 px-3 rounded-lg hover:bg-white/5 text-on-primary flex items-center gap-2"
 				aria-label="GitHub Repository"

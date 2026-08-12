@@ -17,22 +17,22 @@
 	}
 </script>
 
-<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant/30 transition-colors duration-300 w-full">
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30 transition-colors duration-300 w-full">
 	<div class="max-w-container-max mx-auto px-gutter py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-		<div class="text-body-md text-on-surface-variant dark:text-outline-variant">
+		<div class="text-body-md text-on-surface-variant">
 			<span>© {new Date().getFullYear()} {copyrightName}</span>
 		</div>
 		<div class="flex items-center gap-6">
 			<a
 				href={resolveHref('/legal')}
-				class="text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+				class="text-body-md text-on-surface-variant hover:text-primary transition-colors"
 			>
 				Legal
 			</a>
 			{#if contactUrl}
 				<a
 					href={resolveHref(contactUrl)}
-					class="text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+					class="text-body-md text-on-surface-variant hover:text-primary transition-colors"
 				>
 					Contact
 				</a>
@@ -40,8 +40,8 @@
 			<a
 				href={githubUrl}
 				target="_blank"
-				rel="noreferrer"
-				class="flex items-center gap-2 text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+				rel="noopener noreferrer"
+				class="flex items-center gap-2 text-body-md text-on-surface-variant hover:text-primary transition-colors"
 			>
 				<GitHubIcon iconClass="w-5 h-5 fill-current" />
 				Website Source
