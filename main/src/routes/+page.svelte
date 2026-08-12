@@ -177,29 +177,27 @@
 </section>
 
 <!-- Dovecot Pro Promo Section -->
-<section class="pt-4 pb-4 px-gutter bg-surface-container-low border-y border-outline-variant/30">
-	<div class="max-w-container-max mx-auto">
-		<div class="bg-gradient-to-r from-[#0e0d10] via-[#2d1543] to-[#3c036d] border border-[#861be4]/30 rounded-2xl p-gutter md:p-12 flex flex-col md:flex-row items-center justify-between gap-gutter shadow-xl relative overflow-hidden">
-			<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#861be4]/20 via-transparent to-transparent pointer-events-none"></div>
-			<div class="flex-1 relative z-10">
-				<div class="bg-white/10 backdrop-blur-sm inline-block p-4 rounded-xl mb-6 border border-white/10">
-					<img alt="Dovecot Pro" class="h-10 w-auto object-contain" src={proLogoSrc}>
-				</div>
-				<h2 class="font-['Space_Grotesk',sans-serif] text-2xl md:text-4xl font-medium tracking-[0.02em] leading-tight text-white mb-4">Need Enterprise-Grade Scalability?</h2>
-				<p class="font-['Ubuntu_Sans',sans-serif] text-base md:text-lg leading-[1.75] text-white/85 max-w-2xl">
-					Dovecot Pro is a full-service email platform that delivers dynamic scalability, high performance, efficient utilization of hardware, and outstanding support to the world’s largest Telcos, ISPs, and Hosters.
-				</p>
+<section class="bg-gradient-to-r from-[#0e0d10] via-[#2d1543] to-[#3c036d] relative overflow-hidden">
+	<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#861be4]/20 via-transparent to-transparent pointer-events-none"></div>
+	<div class="max-w-container-max mx-auto px-gutter py-gutter md:py-12 flex flex-col md:flex-row items-center justify-between gap-gutter relative z-10">
+		<div class="flex-1">
+			<div class="bg-white/10 backdrop-blur-sm inline-block p-4 rounded-xl mb-6 border border-white/10">
+				<img alt="Dovecot Pro" class="h-10 w-auto object-contain" src={proLogoSrc}>
 			</div>
-			<div class="shrink-0 w-full md:w-auto text-center relative z-10">
-				<a
-					class="font-['Space_Grotesk',sans-serif] text-base font-medium tracking-[0.02em] inline-flex items-center justify-center bg-[#861be4] hover:bg-[#4a117b] text-white px-8 py-4 rounded-[14px] transition-all shadow-lg shadow-[#861be4]/30 hover:shadow-[#861be4]/50 cursor-pointer w-full md:w-auto border border-white/10"
-					href="https://www.dovecotpro.com"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn More about Dovecot Pro
-				</a>
-			</div>
+			<h2 class="font-['Space_Grotesk',sans-serif] text-2xl md:text-4xl font-medium tracking-[0.02em] leading-tight text-white mb-4">Need Enterprise-Grade Scalability?</h2>
+			<p class="font-['Ubuntu_Sans',sans-serif] text-base md:text-lg leading-[1.75] text-white/85 max-w-2xl">
+				Dovecot Pro is a full-service email platform that delivers dynamic scalability, high performance, efficient utilization of hardware, and outstanding support to the world's largest Telcos, ISPs, and Hosters.
+			</p>
+		</div>
+		<div class="shrink-0 w-full md:w-auto text-center">
+			<a
+				class="font-['Space_Grotesk',sans-serif] text-base font-medium tracking-[0.02em] inline-flex items-center justify-center bg-[#861be4] hover:bg-[#4a117b] text-white px-8 py-4 rounded-[14px] transition-all shadow-lg shadow-[#861be4]/30 hover:shadow-[#861be4]/50 cursor-pointer w-full md:w-auto border border-white/10"
+				href="https://www.dovecotpro.com"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Learn More about Dovecot Pro
+			</a>
 		</div>
 	</div>
 </section>
