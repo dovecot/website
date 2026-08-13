@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { svelteSitemap } from 'svelte-sitemap/vite';
 import { defineConfig } from 'vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 
@@ -17,10 +18,11 @@ export default defineConfig({
 			},
 			adapter: adapter(),
 			paths: {
-				// @ts-ignore
+				// @ts-expect-error
 				base: typeof process !== 'undefined' && process.env.BASE_PATH ? process.env.BASE_PATH : ''
 			}
-		})
+		}),
+		svelteSitemap({ domain: 'https://pigeonhole.dovecot.org' }),
 	]
 });
 
