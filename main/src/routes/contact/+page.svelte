@@ -12,10 +12,6 @@
 	</h1>
 
 	<div class="space-y-6 font-body-md text-on-surface-variant text-sm leading-relaxed">
-		<p>
-			Need to reach the Dovecot Team or Open-Xchange for sales, licensing or general commercial inquiries?
-		</p>
-
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
 			<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/40">
 				<h2 class="font-headline-md text-lg text-on-background font-bold mb-2">General Inquiry</h2>
