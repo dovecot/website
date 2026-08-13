@@ -24,7 +24,7 @@
 		<p>
 			Pigeonhole is distributed under the GNU Lesser General Public License version 2.1 (LGPLv2.1), the same license as Dovecot.
 			The software license is independent of the website content license described below.
-			For full licensing details, see the <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/refs/heads/main/COPYING.LGPL" target="_blank" rel="noreferrer" class="link-subtle">COPYING.LGPL file in the source repository</a>.
+			For full licensing details, see the <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/refs/heads/main/COPYING.LGPL" target="_blank" rel="noopener noreferrer" class="link-subtle">COPYING.LGPL file in the source repository</a>.
 		</p>
 
 		<h2 class="font-headline-md text-xl text-on-background font-bold mt-8 mb-2">Website Content License</h2>

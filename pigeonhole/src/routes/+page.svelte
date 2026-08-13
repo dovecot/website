@@ -15,7 +15,7 @@
 			badgeClass: "text-primary",
 			badgeIcon: "filter_alt",
 			headline: "Sorting and filing email messages with absolute precision and safety.",
-			description: "<strong>Pigeonhole</strong> adds <a href='http://www.sieve.info/' target='_blank' rel='noreferrer' class='link-subtle'>Sieve mail filtering</a> and the <a href='http://tools.ietf.org/html/rfc5804' target='_blank' rel='noreferrer' class='link-subtle'>ManageSieve protocol</a> to <a href='https://dovecot.org/' target='_blank' rel='noreferrer' class='link-subtle'>Dovecot</a>. Securely compile and execute mail filters at delivery time, keeping your mail store organized and safe.",
+			description: "<strong>Pigeonhole</strong> adds <a href='http://www.sieve.info/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Sieve mail filtering</a> and the <a href='https://tools.ietf.org/html/rfc5804' target='_blank' rel='noopener noreferrer' class='link-subtle'>ManageSieve protocol</a> to <a href='https://dovecot.org/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Dovecot</a>. Securely compile and execute mail filters at delivery time, keeping your mail store organized and safe.",
 			image: artworkSrc,
 			imageAlt: "Pigeonhole Sorting Illustration",
 			imageClass: "shadow-2xl border border-outline-variant/30"
@@ -107,7 +107,7 @@
 				<div class="col-start-1 row-start-1 flex flex-col items-start gap-gutter transition-all duration-700 ease-in-out transform {activeSlide === idx ? 'opacity-100 translate-x-0 z-10 pointer-events-auto' : 'opacity-0 -translate-x-4 z-0 pointer-events-none'}" aria-hidden={activeSlide !== idx}>
 					<div class="flex flex-col items-start gap-3">
 						<div class="flex flex-wrap items-center gap-x-3 gap-y-2">
-							<span class="inline-block font-headline-xl text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container select-none  leading-snug">
+							<span class="inline-block font-headline-xl text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container select-none  leading-snug" role="heading" aria-level="1">
 								Pigeonhole
 							</span>
 							{#if slide.tagText}
@@ -125,9 +125,9 @@
 							</span>
 						</div>
 					</div>
-					<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background max-w-2xl font-bold leading-tight">
+					<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background max-w-2xl font-bold leading-tight">
 						{slide.headline}
-					</h1>
+					</h2>
 					<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
 						{@html slide.description}
 					</p>

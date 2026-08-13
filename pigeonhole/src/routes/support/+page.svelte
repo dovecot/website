@@ -28,9 +28,9 @@
 				</div>
 				<div>
 					<a
-						href="http://dovecot.org/support"
+						href="https://dovecot.org/support"
 						target="_blank"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 						class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
 					>
 						Dovecot Mailing Lists
