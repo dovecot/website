@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Admin & User Friendly",
+    "desc": "Common error messages are made as clear as possible. The compiler reports multiple script errors at once to make debugging more efficient.",
+    "icon": "display_settings"
+  },
+  {
+    "title": "Highly Extensible",
+    "desc": "Modular design supports third-party Sieve capability plugins through a generic extension interface without changes to core engine code.",
+    "icon": "extension"
+  },
+  {
+    "title": "Backwards Compatible",
+    "desc": "Completely backwards compatible with the legacy CMUSieve plugin, including support for deprecated Sieve extensions when enabled.",
+    "icon": "history"
+  },
+  {
+    "title": "Sequential Scripts",
+    "desc": "Supports executing multiple Sieve scripts sequentially. Admins can run scripts before and after personal user scripts safely.",
+    "icon": "splitscreen"
+  },
+  {
+    "title": "Comprehensive Test Suite",
+    "desc": "Includes an extensible test suite written as a Sieve language extension, ensuring reliable execution and compiler correctness.",
+    "icon": "fact_check"
+  },
+  {
+    "title": "Local Debugging CLI",
+    "desc": "Ships with the sieve-test tool, a command-line utility that simplifies compiling, executing, and debugging Sieve scripts locally.",
+    "icon": "terminal"
+  }
+]

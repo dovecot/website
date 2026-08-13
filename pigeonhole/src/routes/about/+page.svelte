@@ -1,64 +1,7 @@
 <script lang="ts">
-	const rfcExtensions = [
-		{ name: "encoded-character", rfc: "RFC 5228; Section 2.4.2.4", link: "https://tools.ietf.org/html/rfc5228#section-2.4.2.4" },
-		{ name: "fileinto", rfc: "RFC 5228; Section 4.1", link: "https://tools.ietf.org/html/rfc5228#section-4.1" },
-		{ name: "envelope", rfc: "RFC 5228; Section 5.4", link: "https://tools.ietf.org/html/rfc5228#section-5.4" },
-		{ name: "copy", rfc: "RFC 3894", link: "https://tools.ietf.org/html/rfc3894/" },
-		{ name: "body", rfc: "RFC 5173", link: "https://tools.ietf.org/html/rfc5173/" },
-		{ name: "environment", rfc: "RFC 5183", version: "v0.4.0+", link: "https://tools.ietf.org/html/rfc5183/" },
-		{ name: "variables", rfc: "RFC 5229", link: "https://tools.ietf.org/html/rfc5229/" },
-		{ name: "vacation", rfc: "RFC 5230", link: "https://tools.ietf.org/html/rfc5230/" },
-		{ name: "vacation-seconds", rfc: "RFC 6131", version: "v0.2.3+", link: "https://tools.ietf.org/html/rfc6131" },
-		{ name: "relational", rfc: "RFC 5231", link: "https://tools.ietf.org/html/rfc5231/" },
-		{ name: "imap4flags", rfc: "RFC 5232", link: "https://tools.ietf.org/html/rfc5232/" },
-		{ name: "subaddress", rfc: "RFC 5233", link: "https://tools.ietf.org/html/rfc5233/" },
-		{ name: "spamtest", rfc: "RFC 5235", version: "v0.1.16+", link: "https://tools.ietf.org/html/rfc5235/" },
-		{ name: "virustest", rfc: "RFC 5235", version: "v0.1.16+", link: "https://tools.ietf.org/html/rfc5235/" },
-		{ name: "date", rfc: "RFC 5260; Section 4", version: "v0.1.12+", link: "https://tools.ietf.org/html/rfc5260#section-4" },
-		{ name: "index", rfc: "RFC 5260; Section 6", version: "v0.4.7+", link: "https://tools.ietf.org/html/rfc5260#section-6" },
-		{ name: "editheader", rfc: "RFC 5293", version: "v0.3.0+", link: "https://tools.ietf.org/html/rfc5293/" },
-		{ name: "reject", rfc: "RFC 5429; Section 2.2", link: "https://tools.ietf.org/html/rfc5429#section-2.2" },
-		{ name: "enotify", rfc: "RFC 5435", version: "v0.1.3+", link: "https://tools.ietf.org/html/rfc5435/" },
-		{ name: "mailto (enotify)", rfc: "RFC 5436", version: "v0.1.3+", link: "https://tools.ietf.org/html/rfc5436/" },
-		{ name: "ihave", rfc: "RFC 5463", version: "v0.2.4+", link: "https://tools.ietf.org/html/rfc5463" },
-		{ name: "mailbox", rfc: "RFC 5490; Section 3", version: "v0.1.10+", link: "https://tools.ietf.org/html/rfc5490#section-3" },
-		{ name: "mboxmetadata", rfc: "RFC 5490", version: "v0.4.7+", link: "https://tools.ietf.org/html/rfc5490" },
-		{ name: "servermetadata", rfc: "RFC 5490", version: "v0.4.7+", link: "https://tools.ietf.org/html/rfc5490" },
-		{ name: "foreverypart", rfc: "RFC 5703; Section 3", version: "v0.4.10+", link: "https://tools.ietf.org/html/rfc5703#section-3" },
-		{ name: "mime", rfc: "RFC 5703; Section 4", version: "v0.4.10+", link: "https://tools.ietf.org/html/rfc5703#section-4" },
-		{ name: "extracttext", rfc: "RFC 5703; Section 7", version: "v0.4.12+", link: "https://tools.ietf.org/html/rfc5703#section-7" },
-		{ name: "include", rfc: "RFC 6609", version: "v0.4.0+", link: "https://tools.ietf.org/html/rfc6609" },
-		{ name: "imapsieve", rfc: "RFC 6785", version: "v0.4.14+", link: "https://tools.ietf.org/html/rfc6785" },
-		{ name: "duplicate", rfc: "RFC 7352", version: "v0.4.3+", link: "https://tools.ietf.org/html/rfc7352" },
-		{ name: "regex", rfc: "draft v08", link: "https://tools.ietf.org/html/draft-murchison-sieve-regex-08/" }
-	];
-
-	const dovecotExtensions = [
-		{ name: "vnd.dovecot.debug", spec: "specification", version: "v0.3.0+", link: "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-debug.txt", desc: "Allows logging custom debug messages within Sieve scripts." },
-		{ name: "vnd.dovecot.environment", spec: "specification", version: "v0.4.14+", link: "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-dovecot-environment.txt", desc: "Extends standard environment extension with Dovecot metadata and variables namespace." },
-		{ name: "vnd.dovecot.execute", spec: "specification", version: "v0.4.0+", link: "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-extprograms.txt", desc: "Executes a pre-defined set of external programs and processes string data." },
-		{ name: "vnd.dovecot.filter", spec: "specification", version: "v0.4.0+", link: "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-extprograms.txt", desc: "Filters complete email messages through a pre-defined set of external programs." },
-		{ name: "vnd.dovecot.pipe", spec: "specification", version: "v0.4.0+", link: "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-extprograms.txt", desc: "Pipes email messages directly to external program inputs." },
-		{ name: "vnd.dovecot.report", spec: "specification", version: "v0.4.14+", link: "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-report.txt", desc: "Implements sending Messaging Abuse Reporting Format (MARF) reports (RFC 5965)." }
-	];
-
-	const otherExtensions = {
-		deprecated: [
-			{ name: "imapflags", rfc: "obsolete draft", version: "v0.1.3+", link: "https://tools.ietf.org/html/draft-melnikov-sieve-imapflags-03" },
-			{ name: "notify", rfc: "obsolete draft", version: "v0.1.15+", link: "https://tools.ietf.org/html/draft-martin-sieve-notify-01" }
-		],
-		underDev: [
-			{ name: "ereject", rfc: "RFC 5429; Section 2.1", link: "https://tools.ietf.org/html/rfc5429#section-2.1", status: "implemented, but currently equal to reject" },
-			{ name: "xmpp (enotify)", rfc: "RFC 5437", link: "https://tools.ietf.org/html/rfc5437/", status: "under development, will become available as plugin" }
-		],
-		planned: [
-			{ name: "replace", rfc: "RFC 5703; Section 5", link: "https://tools.ietf.org/html/rfc5703#section-5" },
-			{ name: "enclose", rfc: "RFC 5703; Section 6", link: "https://tools.ietf.org/html/rfc5703#section-6" },
-			{ name: "envelope-dsn / redirect-dsn", rfc: "RFC 6009", link: "https://tools.ietf.org/html/rfc6009", note: "depends on lib-smtp changes in Dovecot" },
-			{ name: "extlists", rfc: "RFC 6134", link: "https://tools.ietf.org/html/rfc6134" },
-			{ name: "convert", rfc: "RFC 6558", link: "https://tools.ietf.org/html/rfc6558" }
-		]
-	};
+	import rfcExtensions from '$lib/data/rfc-extensions.json';
+	import dovecotExtensions from '$lib/data/dovecot-extensions.json';
+	import otherExtensions from '$lib/data/other-extensions.json';
 </script>
 
 <svelte:head>
