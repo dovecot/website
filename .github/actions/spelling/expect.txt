@@ -25,6 +25,7 @@ opsz
 prerender
 proactively
 rce
+sitemap
 SLAs
 splitscreen
 wght
