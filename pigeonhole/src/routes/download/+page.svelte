@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { CodeBlock } from '@dovecot/shared-ui';
+	import { base } from '$app/paths';
 	import releases from '$lib/data/releases.json';
 	import pgpKeys from '$lib/data/pgp-keys.json';
+	import { GitHubIcon } from '@dovecot/shared-ui';
 </script>
 
 <svelte:head>
@@ -12,226 +13,254 @@
 	<div class="max-w-container-max mx-auto">
 		<!-- Header -->
 		<div class="text-center max-w-3xl mx-auto mb-12">
+			<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+				Download
+			</span>
 			<h1 class="font-headline-xl text-4xl text-on-background font-extrabold mt-4 mb-4">
-				Download Pigeonhole Sieve
+				Download Pigeonhole
 			</h1>
 			<p class="font-body-md text-on-surface-variant leading-relaxed">
-				Access stable and legacy source code releases, binary repositories, and the Git source.
+				Download Pigeonhole via source tarballs, the Dovecot package repositories, Docker images, or the Git repository.
 			</p>
 		</div>
 
-		<!-- Warning / PGP verification check info box -->
-		<div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 mb-12 max-w-4xl mx-auto flex gap-4 items-start shadow-sm">
-			<span aria-hidden="true" class="material-symbols-outlined text-amber-600 text-2xl shrink-0">security</span>
+		<h2 class="font-headline-xl text-2xl text-on-background font-bold mb-6 max-w-4xl mx-auto">Packages</h2>
+
+		<!-- Package Installation Notice -->
+		<div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 mb-6 max-w-4xl mx-auto flex gap-4 items-start">
+			<span aria-hidden="true" class="material-symbols-outlined text-amber-500 text-2xl shrink-0">warning</span>
 			<div>
-				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">Verify Signatures</h3>
+				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">Community Support Notice</h3>
 				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
-					All tarballs are signed with public PGP keys.
-					Verify downloads using the keys listed below.
+					Packages are provided as a benefit to the community. They are provided with no official support, warranty, or SLAs. See <a href="{base}/support" class="link-subtle font-bold">Community support options</a>.
 				</p>
 			</div>
 		</div>
 
-		<!-- Main Download Grid -->
-		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-			
-			<!-- Left/Top: Releases & Git -->
-			<div class="lg:col-span-8 space-y-8">
-				
-				<!-- Stable Releases -->
-				<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 space-y-6">
-					<div class="flex items-center gap-3">
-						<span aria-hidden="true" class="material-symbols-outlined text-primary text-3xl">verified</span>
-						<h2 class="font-headline-xl text-2xl text-on-background font-bold">Stable Release</h2>
+		<!-- Package Installation -->
+		<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 max-w-4xl mx-auto mb-12 space-y-6">
+			<div class="flex items-center gap-3">
+				<span aria-hidden="true" class="material-symbols-outlined text-primary text-3xl">dns</span>
+				<h2 class="font-headline-xl text-2xl text-on-background font-bold">Package Installation</h2>
+			</div>
+
+			<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+				Pigeonhole is bundled with Dovecot and available through the official Dovecot package repositories. Follow the Dovecot installation guide for your distribution to install Pigeonhole alongside Dovecot.
+			</p>
+
+			<div class="flex flex-wrap gap-3">
+				<a
+					href="https://dovecot.org/download"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-5 py-3 rounded-lg text-sm shadow hover:shadow-md transition-all cursor-pointer"
+				>
+					<span aria-hidden="true" class="material-symbols-outlined text-base">dns</span>
+					Dovecot Download Page
+				</a>
+				<a
+					href="https://repo.dovecot.org/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface font-semibold px-5 py-3 rounded-lg text-sm transition-all cursor-pointer"
+				>
+					<span aria-hidden="true" class="material-symbols-outlined text-base">folder_open</span>
+					Browse Repository
+				</a>
+			</div>
+
+			<!-- PGP Signing Keys Subsection -->
+			<div class="border-t border-outline-variant/30 pt-6 space-y-4">
+				<div class="flex items-center gap-3">
+					<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+						<span aria-hidden="true" class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
 					</div>
-					
-					<div class="p-6 bg-surface rounded-xl border border-outline-variant/30 space-y-4">
-						<div class="flex justify-between items-center flex-wrap gap-2">
-							<div>
-								<span class="text-xs uppercase font-bold tracking-wider text-primary">Latest Release</span>
-								<h3 class="font-mono text-xl font-extrabold text-on-background mt-1">
-									dovecot-pigeonhole-{releases.stable.version}
-								</h3>
-							</div>
-							<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold font-mono">
-								For Dovecot {releases.stable.dovecotVersion}
+					<div>
+						<h3 class="font-headline-lg text-lg text-on-background font-bold">PGP Signing Keys</h3>
+						<p class="font-body-md text-xs text-amber-700 leading-relaxed">
+							All tarballs are signed with public PGP keys.
+						</p>
+						<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+							Pigeonhole 2.4.0+ uses the Dovecot <a href="https://dovecot.org/download" class="link-subtle" target="_blank" rel="noopener noreferrer"><code class="font-mono text-xs bg-black/10 px-1 py-0.5 rounded">4EDC5219</code></a> key.
+						</p>
+						<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+							Pigeonhole 0.5.5x uses the Dovecot <a href="https://dovecot.org/download" class="link-subtle" target="_blank" rel="noopener noreferrer"><code class="font-mono text-xs bg-black/10 px-1 py-0.5 rounded">ED409DA1</code></a> key.
+						</p>
+					</div>
+				</div>
+
+				{#each pgpKeys as key}
+					<div class="p-4 bg-surface rounded-xl border border-outline-variant/20 space-y-2 ml-0 md:ml-14">
+						<div class="flex justify-between items-start flex-wrap gap-1 border-b border-outline-variant/10 pb-2">
+							<span class="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full border border-secondary/20">
+								{key.period}
 							</span>
+							{#if key.link}
+								<a
+									href="{base}{key.link}"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded font-semibold hover:underline"
+								>
+									Download Key
+								</a>
+							{/if}
 						</div>
 
-						<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-							Download source code to compile with Dovecot. Direct binary distributions can also be fetched from the official Dovecot repositories.
-						</p>
-
-						<div class="flex flex-wrap gap-3 pt-2">
-							<a 
-								href={releases.stable.tarball} 
-								class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-primary hover:bg-primary/95 text-on-primary transition-all shadow-sm"
-							>
-								<span aria-hidden="true" class="material-symbols-outlined text-sm">download</span>
-								Download Sources
-							</a>
-							<a 
-								href={releases.stable.sig} 
-								class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
-							>
-								<span aria-hidden="true" class="material-symbols-outlined text-sm">enhanced_encryption</span>
-								PGP Signature
-							</a>
-							<a 
-								href={releases.stable.news} 
-								target="_blank" 
-								rel="noopener noreferrer"
-								class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
-							>
-								<span aria-hidden="true" class="material-symbols-outlined text-sm">description</span>
-								Change Log
-							</a>
+						<div class="space-y-1">
+							<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Key ID</span>
+							<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
+								{key.id}
+							</code>
+							<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Fingerprint</span>
+							<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
+								{key.fingerprint}
+							</code>
 						</div>
 					</div>
+				{/each}
+			</div>
+		</div>
 
-					<!-- Binaries and Docker -->
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-						<div class="p-5 bg-surface rounded-xl border border-outline-variant/30 space-y-2">
-							<h4 class="font-headline-lg text-sm text-on-background font-bold flex items-center gap-2">
-								<span aria-hidden="true" class="material-symbols-outlined text-primary text-base">dns</span>
-								Binary Packages
-							</h4>
-							<p class="text-xs text-on-surface-variant leading-relaxed">
-								Pre-built packages of Dovecot Sieve can be installed directly from the Dovecot package repository.
-							</p>
-							<a href="https://repo.dovecot.org/" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-bold link-subtle items-center gap-1 pt-2">
-								Visit package repository <span aria-hidden="true" class="material-symbols-outlined text-xs">arrow_forward</span>
-							</a>
-						</div>
+		<h2 class="font-headline-xl text-2xl text-on-background font-bold mb-6 max-w-4xl mx-auto mt-16">Source Code Downloads</h2>
 
-						<div class="p-5 bg-surface rounded-xl border border-outline-variant/30 space-y-2">
-							<h4 class="font-headline-lg text-sm text-on-background font-bold flex items-center gap-2">
-								<span aria-hidden="true" class="material-symbols-outlined text-primary text-base">grid_view</span>
-								Docker Containers
-							</h4>
-							<p class="text-xs text-on-surface-variant leading-relaxed">
-								Official Docker image comes with full Pigeonhole Sieve support.
-							</p>
-							<a href="https://hub.docker.com/r/dovecot/dovecot" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-bold link-subtle items-center gap-1 pt-2">
-								View on Docker Hub <span aria-hidden="true" class="material-symbols-outlined text-xs">arrow_forward</span>
-							</a>
-						</div>
+		<!-- Stable Release -->
+		<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 max-w-4xl mx-auto mb-6 space-y-6">
+			<div class="flex items-center gap-3">
+				<span aria-hidden="true" class="material-symbols-outlined text-primary text-3xl">download</span>
+				<h3 class="font-headline-xl text-2xl text-on-background font-bold">Stable Release</h3>
+			</div>
+
+			<div class="p-6 bg-surface rounded-xl border border-outline-variant/30 space-y-4">
+				<div class="flex justify-between items-center flex-wrap gap-2">
+					<div>
+						<span class="text-xs uppercase font-bold tracking-wider text-primary">Latest Release</span>
+						<h4 class="font-mono text-xl font-extrabold text-on-background mt-1">
+							dovecot-pigeonhole-{releases.stable.version}
+						</h4>
 					</div>
+					<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold font-mono">
+						For Dovecot {releases.stable.dovecotVersion}
+					</span>
 				</div>
 
-				<!-- Old Stable Releases -->
-				<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 space-y-6">
-					<div class="flex items-center gap-3">
-						<span aria-hidden="true" class="material-symbols-outlined text-on-surface-variant text-3xl">history</span>
-						<h2 class="font-headline-xl text-2xl text-on-background font-bold">Old Stable Releases</h2>
-					</div>
-
-					<div class="space-y-4">
-						{#each releases.legacy as rel}
-							<div class="p-5 bg-surface rounded-xl border border-outline-variant/30 flex justify-between items-center flex-wrap gap-4">
-								<div class="space-y-1">
-									<h3 class="font-mono text-sm font-extrabold text-on-background">
-										dovecot-{rel.version}
-									</h3>
-									<p class="text-xs text-on-surface-variant">
-										Sieve support package for Dovecot {rel.dovecotVersion}
-									</p>
-								</div>
-
-								<div class="flex flex-wrap gap-2">
-									<a 
-										href={rel.tarball} 
-										class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
-									>
-										<span aria-hidden="true" class="material-symbols-outlined text-xs">download</span>
-										Sources
-									</a>
-									<a 
-										href={rel.sig} 
-										class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
-									>
-										<span aria-hidden="true" class="material-symbols-outlined text-xs">lock</span>
-										Signature
-									</a>
-									<a 
-										href={rel.news} 
-										target="_blank" 
-										rel="noopener noreferrer"
-										class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
-									>
-										<span aria-hidden="true" class="material-symbols-outlined text-xs">description</span>
-										News
-									</a>
-								</div>
-							</div>
-						{/each}
-					</div>
-				</div>
-
-				<!-- Git Repository -->
-				<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 space-y-6">
-					<div class="flex items-center gap-3">
-						<span aria-hidden="true" class="material-symbols-outlined text-primary text-3xl">developer_mode</span>
-						<h2 class="font-headline-xl text-2xl text-on-background font-bold">Git Repository</h2>
-					</div>
-					
-					<div class="space-y-4">
-						<CodeBlock 
-							code="git clone https://github.com/dovecot/pigeonhole.git"
-							copyId="git_clone"
-							label="Clone Repository"
-						/>
-						
-						<p class="text-xs text-on-surface-variant leading-relaxed">
-							Refer to the <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/main/README" target="_blank" rel="noopener noreferrer" class="link-subtle font-bold">README</a> and <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/main/INSTALL" target="_blank" rel="noopener noreferrer" class="link-subtle font-bold">INSTALL</a> instructions files inside the repository for custom compilation flags and setup details.
-						</p>
-					</div>
+				<div class="flex flex-wrap gap-3">
+					<a
+						href={releases.stable.tarball}
+						class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-primary hover:bg-primary/95 text-on-primary transition-all shadow-sm"
+					>
+						<span aria-hidden="true" class="material-symbols-outlined text-sm">download</span>
+						Download Sources
+					</a>
+					<a
+						href={releases.stable.sig}
+						class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
+					>
+						<span aria-hidden="true" class="material-symbols-outlined text-sm">enhanced_encryption</span>
+						PGP Signature
+					</a>
+					<a
+						href={releases.stable.news}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
+					>
+						<span aria-hidden="true" class="material-symbols-outlined text-sm">description</span>
+						Change Log
+					</a>
 				</div>
 			</div>
 
-			<!-- Right/Bottom: PGP keys -->
-			<div class="lg:col-span-4 space-y-6">
-				<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 space-y-4">
-					<div>
-						<h3 class="font-headline-lg text-lg text-on-background font-bold mb-1">PGP Signing Keys</h3>
-						<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
-							Use these GPG public keys to verify downloaded Sieve files:
-						</p>
+			<!-- Legacy Releases -->
+			<div class="space-y-3">
+				<span class="text-sm font-bold text-on-background">Old Releases</span>
+				{#each releases.legacy as rel}
+					<div class="p-4 bg-surface rounded-xl border border-outline-variant/30 flex justify-between items-center flex-wrap gap-4">
+						<div>
+							<h4 class="font-mono text-sm font-extrabold text-on-background">
+								dovecot-pigeonhole-{rel.version}
+							</h4>
+							<p class="text-xs text-on-surface-variant">For Dovecot {rel.dovecotVersion}</p>
+						</div>
+						<div class="flex flex-wrap gap-2">
+							<a
+								href={rel.tarball}
+								class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
+							>
+								<span aria-hidden="true" class="material-symbols-outlined text-xs">download</span>
+								Sources
+							</a>
+							<a
+								href={rel.sig}
+								class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
+							>
+								<span aria-hidden="true" class="material-symbols-outlined text-xs">lock</span>
+								Signature
+							</a>
+							<a
+								href={rel.news}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
+							>
+								<span aria-hidden="true" class="material-symbols-outlined text-xs">description</span>
+								News
+							</a>
+						</div>
 					</div>
+				{/each}
+			</div>
+		</div>
 
-					<div class="space-y-4">
-						{#each pgpKeys as key}
-							<div class="p-4 bg-surface rounded-xl border border-outline-variant/20 space-y-2">
-								<div class="flex justify-between items-start flex-wrap gap-1 border-b border-outline-variant/10 pb-2">
-									<div>
-										<h4 class="font-mono text-xs font-bold text-on-background">
-											Key ID: {key.id}
-										</h4>
-										<span class="text-xs text-on-surface-variant/70 italic">
-											{key.period}
-										</span>
-									</div>
-									{#if key.link}
-										<a 
-											href={key.link} 
-											target="_blank" 
-											rel="noopener noreferrer"
-											class="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded font-semibold hover:underline"
-										>
-											Download Key
-										</a>
-									{/if}
-								</div>
+		<!-- Alternative Download Options -->
+		<div class="mt-16 pt-12 border-t border-outline-variant/30 max-w-4xl mx-auto">
+			<h2 class="font-headline-xl text-2xl text-on-background font-bold mb-6">Other Download Options</h2>
 
-								<div class="space-y-1">
-<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Fingerprint</span>
-									<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
-										{key.fingerprint}
-									</code>
-								</div>
-							</div>
-						{/each}
+			<!-- Source Code -->
+			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
+				<div class="space-y-2 flex-1">
+					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+						Source Code
 					</div>
+					<h2 class="font-headline-lg text-xl text-on-background font-bold">Access Source Code & Build from Source</h2>
+					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+						Download source tarballs or clone the Git repository to build Pigeonhole from source alongside Dovecot.
+					</p>
+				</div>
+				<div class="shrink-0 w-full md:w-auto flex flex-wrap justify-center gap-3">
+					<a
+						href="https://github.com/dovecot/pigeonhole"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="w-fit inline-flex items-center justify-center gap-2 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface font-semibold px-5 py-3 rounded-lg text-sm transition-all cursor-pointer"
+					>
+						<GitHubIcon iconClass="w-4 h-4 fill-current" />
+						GitHub Repository
+					</a>
+				</div>
+			</div>
+
+			<!-- Docker Hub Images -->
+			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
+				<div class="space-y-2 flex-1">
+					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+						Container Image
+					</div>
+					<h2 class="font-headline-lg text-xl text-on-background font-bold">Official Docker Hub Images</h2>
+					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+						Official pre-built Docker containers come with full Pigeonhole Sieve support, configured with secure defaults and optimized for easy deployment.
+					</p>
+				</div>
+				<div class="shrink-0 w-full md:w-auto">
+					<a
+						href="https://hub.docker.com/r/dovecot/dovecot"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
+					>
+						<span aria-hidden="true" class="material-symbols-outlined text-base">grid_view</span>
+						Docker Hub Images
+					</a>
 				</div>
 			</div>
 		</div>
