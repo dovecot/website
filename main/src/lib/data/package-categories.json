@@ -1,0 +1,9 @@
+{
+	"Core": ["dovecot-core", "dovecot-lua", "dovecot"],
+	"Protocol": ["dovecot-imapd", "dovecot-pop3d", "dovecot-lmtpd", "dovecot-submissiond"],
+	"Authentication": ["dovecot-auth-lua", "dovecot-ldap", "dovecot-gssapi"],
+	"Database": ["dovecot-mysql", "dovecot-pgsql", "dovecot-sqlite"],
+	"Search": ["dovecot-solr", "dovecot-flatcurve"],
+	"Sieve": ["dovecot-sieve", "dovecot-managesieved", "dovecot-pigeonhole"],
+	"Development": ["dovecot-dev", "dovecot-dbg", "dovecot-pigeonhole-dbg", "dovecot-sieve-dev", "dovecot-devel", "dovecot-sieve-devel", "dovecot-pigeonhole-devel", "dovecot-imaptest"]
+}
