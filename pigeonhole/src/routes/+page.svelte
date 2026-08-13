@@ -2,25 +2,15 @@
 	import { base } from '$app/paths';
 	import artworkSrc from '$lib/assets/pigeonhole_artwork.jpg?enhanced';
 	import { GitHubIcon } from '@dovecot/shared-ui';
+	import rawSlides from '$lib/data/slides.json';
+	import rawFeatures from '$lib/data/features.json';
 
 	let activeSlide = $state(0);
 	let intervalId: any;
 	let isPaused = $state(false);
 
-	const slides = [
-		{
-			tagText: "",
-			tagClass: "text-primary border-primary-container/30 bg-primary-container/10",
-			badge: "Sieve Mail Filtering",
-			badgeClass: "text-primary",
-			badgeIcon: "filter_alt",
-			headline: "Sorting and filing email messages with absolute precision and safety.",
-			description: "<strong>Pigeonhole</strong> adds <a href='http://www.sieve.info/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Sieve mail filtering</a> and the <a href='https://tools.ietf.org/html/rfc5804' target='_blank' rel='noopener noreferrer' class='link-subtle'>ManageSieve protocol</a> to <a href='https://dovecot.org/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Dovecot</a>. Securely compile and execute mail filters at delivery time, keeping your mail store organized and safe.",
-			image: artworkSrc,
-			imageAlt: "Pigeonhole Sorting Illustration",
-			imageClass: "shadow-2xl border border-outline-variant/30"
-		},
-	];
+	const slides = rawSlides.map(s => ({ ...s, image: artworkSrc }));
+	const features = rawFeatures;
 
 	function startInterval() {
 		if (slides.length <= 1 || isPaused) return;
@@ -57,38 +47,7 @@
 		};
 	});
 
-	const features = [
-		{
-			title: "Admin & User Friendly",
-			desc: "Common error messages are made as clear as possible. The compiler reports multiple script errors at once to make debugging more efficient.",
-			icon: "display_settings"
-		},
-		{
-			title: "Highly Extensible",
-			desc: "Modular design supports third-party Sieve capability plugins through a generic extension interface without changes to core engine code.",
-			icon: "extension"
-		},
-		{
-			title: "Backwards Compatible",
-			desc: "Completely backwards compatible with the legacy CMUSieve plugin, including support for deprecated Sieve extensions when enabled.",
-			icon: "history"
-		},
-		{
-			title: "Sequential Scripts",
-			desc: "Supports executing multiple Sieve scripts sequentially. Admins can run scripts before and after personal user scripts safely.",
-			icon: "splitscreen"
-		},
-		{
-			title: "Comprehensive Test Suite",
-			desc: "Includes an extensible test suite written as a Sieve language extension, ensuring reliable execution and compiler correctness.",
-			icon: "fact_check"
-		},
-		{
-			title: "Local Debugging CLI",
-			desc: "Ships with the sieve-test tool, a command-line utility that simplifies compiling, executing, and debugging Sieve scripts locally.",
-			icon: "terminal"
-		}
-	];
+
 </script>
 
 <svelte:head>

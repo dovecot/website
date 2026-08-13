@@ -1,0 +1,17 @@
+{
+  "deprecated": [
+    { "name": "imapflags", "rfc": "obsolete draft", "version": "v0.1.3+", "link": "https://tools.ietf.org/html/draft-melnikov-sieve-imapflags-03" },
+    { "name": "notify", "rfc": "obsolete draft", "version": "v0.1.15+", "link": "https://tools.ietf.org/html/draft-martin-sieve-notify-01" }
+  ],
+  "underDev": [
+    { "name": "ereject", "rfc": "RFC 5429; Section 2.1", "link": "https://tools.ietf.org/html/rfc5429#section-2.1", "status": "implemented, but currently equal to reject" },
+    { "name": "xmpp (enotify)", "rfc": "RFC 5437", "link": "https://tools.ietf.org/html/rfc5437/", "status": "under development, will become available as plugin" }
+  ],
+  "planned": [
+    { "name": "replace", "rfc": "RFC 5703; Section 5", "link": "https://tools.ietf.org/html/rfc5703#section-5" },
+    { "name": "enclose", "rfc": "RFC 5703; Section 6", "link": "https://tools.ietf.org/html/rfc5703#section-6" },
+    { "name": "envelope-dsn / redirect-dsn", "rfc": "RFC 6009", "link": "https://tools.ietf.org/html/rfc6009", "note": "depends on lib-smtp changes in Dovecot" },
+    { "name": "extlists", "rfc": "RFC 6134", "link": "https://tools.ietf.org/html/rfc6134" },
+    { "name": "convert", "rfc": "RFC 6558", "link": "https://tools.ietf.org/html/rfc6558" }
+  ]
+}
