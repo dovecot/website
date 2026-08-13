@@ -110,17 +110,22 @@
 						</p>
 					</div>
 
-					<div class="space-y-2">
+					<div class="grid grid-cols-1 gap-3">
 						{#each dovecotExtensions as ext}
-							<div class="p-3 bg-surface rounded-xl border border-outline-variant/20 space-y-1">
+							<a
+								href={ext.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex flex-col p-3 rounded-xl bg-surface hover:bg-surface-dim border border-outline-variant/30 transition-all hover:scale-[1.01] hover:border-primary/50 group"
+							>
 								<div class="flex justify-between items-center">
-									<a href={ext.link} target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold link-subtle">
+									<span class="font-mono text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
 										{ext.name}
-									</a>
-									<span class="text-[11px] bg-slate-100 text-on-surface-variant px-1.5 py-0.5 rounded font-mono font-bold">{ext.version}</span>
+									</span>
+									<span class="text-[11px] bg-primary/10 text-primary px-1.5 py-0.5 rounded font-bold">{ext.version}</span>
 								</div>
-								<p class="text-xs text-on-surface-variant leading-relaxed">{ext.desc}</p>
-							</div>
+								<span class="text-[11px] text-on-surface-variant/70 font-mono mt-1">{ext.desc}</span>
+							</a>
 						{/each}
 					</div>
 				</div>
