@@ -1,7 +1,6 @@
 <script lang="ts">
 	import rfcExtensions from '$lib/data/rfc-extensions.json';
 	import dovecotExtensions from '$lib/data/dovecot-extensions.json';
-	import otherExtensions from '$lib/data/other-extensions.json';
 </script>
 
 <svelte:head>
@@ -126,44 +125,6 @@
 					</div>
 				</div>
 
-				<!-- Roadmap and Roadmap Drafts -->
-				<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 space-y-4">
-					<div>
-						<h3 class="font-headline-lg text-lg text-on-background font-bold mb-1">Under Development & Planned</h3>
-						<p class="font-body-md text-xs text-on-surface-variant">
-							Future additions and features being developed for upcoming releases.
-						</p>
-					</div>
-
-					<div class="space-y-3 text-xs text-on-surface-variant">
-						<!-- Under dev -->
-						<div>
-							<h4 class="font-bold text-on-background mb-1.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Under Development</h4>
-							<ul class="space-y-1.5 pl-3 list-disc">
-								{#each otherExtensions.underDev as item}
-									<li>
-										<a href={item.link} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] underline hover:text-primary">{item.name}</a>: <span class="italic">{item.status}</span>
-									</li>
-								{/each}
-							</ul>
-						</div>
-
-						<!-- Planned -->
-						<div class="border-t border-outline-variant/20 pt-3">
-							<h4 class="font-bold text-on-background mb-1.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Planned Extensions</h4>
-							<ul class="space-y-1 pl-3 list-disc">
-								{#each otherExtensions.planned as item}
-									<li>
-										<a href={item.link} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] underline hover:text-primary">{item.name}</a> ({item.rfc})
-										{#if item.note}
-											- <span class="italic text-xs text-amber-600">{item.note}</span>
-										{/if}
-									</li>
-								{/each}
-							</ul>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
