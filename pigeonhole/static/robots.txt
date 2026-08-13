@@ -1,5 +1,5 @@
-
-Sitemap: https://pigeonhole.dovecot.org/sitemap.xml
 # allow crawling everything by default
 User-agent: *
 Disallow:
+
+Sitemap: https://pigeonhole.dovecot.org/sitemap.xml
