@@ -1,0 +1,8 @@
+[
+  { "name": "vnd.dovecot.debug", "spec": "specification", "version": "v0.3.0+", "link": "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-debug.txt", "desc": "Allows logging custom debug messages within Sieve scripts." },
+  { "name": "vnd.dovecot.environment", "spec": "specification", "version": "v0.4.14+", "link": "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-dovecot-environment.txt", "desc": "Extends standard environment extension with Dovecot metadata and variables namespace." },
+  { "name": "vnd.dovecot.execute", "spec": "specification", "version": "v0.4.0+", "link": "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-extprograms.txt", "desc": "Executes a pre-defined set of external programs and processes string data." },
+  { "name": "vnd.dovecot.filter", "spec": "specification", "version": "v0.4.0+", "link": "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-extprograms.txt", "desc": "Filters complete email messages through a pre-defined set of external programs." },
+  { "name": "vnd.dovecot.pipe", "spec": "specification", "version": "v0.4.0+", "link": "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-extprograms.txt", "desc": "Pipes email messages directly to external program inputs." },
+  { "name": "vnd.dovecot.report", "spec": "specification", "version": "v0.4.14+", "link": "https://raw.githubusercontent.com/dovecot/pigeonhole/master/doc/rfc/spec-bosch-sieve-report.txt", "desc": "Implements sending Messaging Abuse Reporting Format (MARF) reports (RFC 5965)." }
+]

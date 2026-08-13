@@ -1,52 +1,7 @@
 <script lang="ts">
 	import { CodeBlock } from '@dovecot/shared-ui';
-
-	const releases = {
-		stable: {
-			version: "v2.4.3",
-			dovecotVersion: "v2.4.3",
-			tarball: "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.3.tar.gz",
-			sig: "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.3.tar.gz.sig",
-			news: "https://raw.githubusercontent.com/dovecot/pigeonhole/2.4.3/NEWS"
-		},
-		legacy: [
-			{
-				version: "v0.5.21.1",
-				dovecotVersion: "v2.3",
-				tarball: "https://pigeonhole.dovecot.org/releases/2.3/dovecot-2.3-pigeonhole-0.5.21.1.tar.gz",
-				sig: "https://pigeonhole.dovecot.org/releases/2.3/dovecot-2.3-pigeonhole-0.5.21.1.tar.gz.sig",
-				news: "https://raw.githubusercontent.com/dovecot/pigeonhole/0.5.21.1/NEWS"
-			},
-			{
-				version: "v0.4.24.2",
-				dovecotVersion: "v2.2",
-				tarball: "https://pigeonhole.dovecot.org/releases/2.2/dovecot-2.2-pigeonhole-0.4.24.2.tar.gz",
-				sig: "https://pigeonhole.dovecot.org/releases/2.2/dovecot-2.2-pigeonhole-0.4.24.2.tar.gz.sig",
-				news: "https://raw.githubusercontent.com/dovecot/pigeonhole/0.4.24.2/NEWS"
-			}
-		]
-	};
-
-	const pgpKeys = [
-		{
-			id: "4EDC5219",
-			period: "Releases since 2.4.0",
-			fingerprint: "EF08 8207 9FD4 ED32 BF8B 23B2 A1B0 9EF8 4EDC 5219",
-			link: "https://dovecot.org/gpgkeys/DOVECOT-REPO-GPG-2.4"
-		},
-		{
-			id: "ED409DA1",
-			period: "Releases since 0.5.5",
-			fingerprint: "2BE7 4AAB 3EE7 54DF B9C8 0D33 18A3 48AE ED40 9DA1",
-			link: "https://dovecot.org/gpgkeys/DOVECOT-REPO-GPG-2.3"
-		},
-		{
-			id: "3DFBB4F4",
-			period: "Releases before 0.5.5",
-			fingerprint: "42F3 CD50 D4F2 5A41 833B EE37 04D6 2B1E 3DFB B4F4",
-			link: "https://dovecot.org/gpgkeys/PIGEONHOLE-OLD"
-		}
-	];
+	import releases from '$lib/data/releases.json';
+	import pgpKeys from '$lib/data/pgp-keys.json';
 </script>
 
 <svelte:head>
