@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import repoData from '$lib/data/repositories.json';
 	import packageCategories from '$lib/data/package-categories.json';
+	import pgpData from '$lib/data/pgp-keys.json';
 	import { CodeBlock, GitHubIcon } from '@dovecot/shared-ui';
 
 	let activeDist = $state('debian');
@@ -22,20 +23,8 @@
 			.filter(g => g.packages.length > 0);
 	});
 
-	const pgpKeys = [
-		{
-			id: "4EDC5219",
-			period: "Releases since 2.4.0",
-			fingerprint: "EF08 8207 9FD4 ED32 BF8B 23B2 A1B0 9EF8 4EDC 5219",
-			link: `${base}/gpgkeys/DOVECOT-REPO-GPG-2.4`
-		},
-		{
-			id: "ED409DA1",
-			period: "Releases since 2.3.0",
-			fingerprint: "2BE7 4AAB 3EE7 54DF B9C8 0D33 18A3 48AE ED40 9DA1",
-			link: `${base}/gpgkeys/DOVECOT-REPO-GPG-2.3`
-		}
-	];
+	// pgpData keys use relative paths; preface with base at render time.
+	const pgpKeys = $derived(pgpData.keys.map(k => ({ ...k, link: base + k.link })));
 </script>
 
 <svelte:head>
