@@ -6,6 +6,10 @@
     "packages/shared-ui",
     "pigeonhole"
   ],
+  "scripts": {
+    "build": "npm run --workspaces --if-present build",
+    "check": "npm run --workspaces --if-present check"
+  },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/enhanced-img": "^0.11.0",
