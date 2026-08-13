@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-	<title>Packages & Repositories - Dovecot</title>
+	<title>Download Dovecot</title>
 </svelte:head>
 
 <section class="py-12 px-gutter bg-grid-pattern transition-colors duration-300">
@@ -36,17 +36,19 @@
 		<!-- Header -->
 		<div class="text-center max-w-3xl mx-auto mb-12">
 			<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-				Official Software Repository
+				Download
 			</span>
 			<h1 class="font-headline-xl text-4xl text-on-background font-extrabold mt-4 mb-4">
-				Dovecot Repositories
+				Get Dovecot
 			</h1>
 			<p class="font-body-md text-on-surface-variant leading-relaxed">
-				We provide official pre-built packages of Dovecot Core and Pigeonhole Sieve for Debian, Ubuntu, Red Hat Enterprise Linux, and CentOS. These packages are cryptographically signed for security.
+				Download Dovecot via package repositories, source tarballs, Docker images, or the GitHub repository.
 			</p>
 
 
 		</div>
+
+		<h2 class="font-headline-xl text-2xl text-on-background font-bold mb-6 max-w-4xl mx-auto">Packages</h2>
 
 		<!-- Warning disclaimer -->
 		<div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 mb-6 max-w-4xl mx-auto flex gap-4 items-start">
@@ -54,7 +56,7 @@
 			<div>
 				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">Community Support Notice</h3>
 				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
-					These repositories provide packages as a benefit to the community. They are provided with no support, warranty, or SLAs. If you run into issues, please join our <a href="{base}/support" class="link-subtle font-bold">Community Mailing Lists</a>.
+					These repositories provide packages as a benefit to the community. They are provided with no official support, warranty, or SLAs. See <a href="{base}/support" class="link-subtle font-bold">Community support options</a>.
 				</p>
 			</div>
 		</div>
@@ -77,14 +79,9 @@
 				{#each pgpKeys as key}
 					<div class="p-4 bg-surface rounded-xl border border-outline-variant/20 space-y-2">
 						<div class="flex justify-between items-start flex-wrap gap-1 border-b border-outline-variant/10 pb-2">
-							<div>
-								<h4 class="font-mono text-xs font-bold text-on-background">
-									Key ID: {key.id}
-								</h4>
-								<span class="inline-block mt-1 text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full border border-secondary/20">
-									{key.period}
-								</span>
-							</div>
+							<span class="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full border border-secondary/20">
+								{key.period}
+							</span>
 							{#if key.link}
 								<a
 									href={key.link}
@@ -98,6 +95,10 @@
 						</div>
 
 						<div class="space-y-1">
+							<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Key ID</span>
+							<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
+								{key.id}
+							</code>
 							<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Fingerprint</span>
 							<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
 								{key.fingerprint}
@@ -113,7 +114,7 @@
 
 			<!-- Left Navigation Panel -->
 			<div class="lg:col-span-3 flex flex-col gap-2 bg-surface-container-low p-4 rounded-2xl border border-outline-variant/30">
-				<span class="text-xs uppercase font-bold tracking-wider px-3 mb-2 text-outline">Target Distribution</span>
+				<span class="text-xs uppercase font-bold tracking-wider px-3 mb-2 text-outline">Distribution</span>
 				{#each repoData.distributions as dist}
 					<button
 						onclick={() => activeDist = dist.id}
@@ -129,7 +130,7 @@
 			<div class="lg:col-span-9 space-y-6">
 
 				<!-- Version selector if not special -->
-				{#if !currentDist.isSpecial && currentDist.versions}
+				{#if currentDist.versions}
 					<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
 						<h2 class="font-headline-lg text-xl text-on-background font-bold capitalize">
 							{currentDist.name} Repository Guide
@@ -140,28 +141,14 @@
 									onclick={() => activeVersion = ver}
 									class="px-4 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer {activeVersion === ver ? 'bg-primary text-on-primary shadow' : 'text-on-surface-variant'}"
 								>
-									Dovecot {ver} {ver === '2.4' ? '(Latest)' : '(Legacy)'}
+									Dovecot {ver} {ver === '2.4' ? '(Latest)' : '(EOL)'}
 								</button>
 							{/each}
 						</div>
 					</div>
 				{/if}
 
-				<!-- Special Release / Candidate layout -->
-				{#if currentDist.isSpecial}
-					<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 space-y-4">
-						<h3 class="font-headline-md text-lg text-on-background font-bold">{currentDist.name}</h3>
-						<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-							{currentDist.description}
-						</p>
-						<div class="bg-primary/5 border border-primary/20 p-4 rounded-xl text-xs space-y-2 text-on-surface-variant">
-							<p class="font-semibold text-on-background">{currentDist.instructionTitle}</p>
-							<p>{currentDist.instructionText}</p>
-							<p class="font-mono bg-black/10 p-2 rounded text-primary select-all">{currentDist.instructionLink}</p>
-							<p class="text-xs">Please check the URL directly for current active candidate updates.</p>
-						</div>
-					</div>
-				{:else if currentDist.versions}
+				{#if currentDist.versions}
 					<div class="space-y-6">
 						{#each activeReleases as rel}
 							<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 space-y-4">
@@ -214,7 +201,7 @@
 								ariaLabel="Copy Installation Command"
 							/>
 								{#if currentDist.packages}
-									<div>
+									<div class="pt-4 border-t border-outline-variant">
 										<span class="block text-xs font-bold text-slate-500 mb-2">Available packages in repository</span>
 										{#each categorizedPackages as group}
 											<div class="mb-2 last:mb-0">
@@ -235,8 +222,9 @@
 			</div>
 		</div>
 
-		<!-- GitHub Source Code & Compiling section -->
+		<!-- Alternative Download Options -->
 		<div class="mt-16 pt-12 border-t border-outline-variant/30 max-w-4xl mx-auto">
+			<h2 class="font-headline-xl text-2xl text-on-background font-bold mb-6">Other Download Options</h2>
 			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
 				<div class="space-y-2 flex-1">
 					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
@@ -247,7 +235,7 @@
 						You can access the official Dovecot Core source repository directly on GitHub to view code history, clone, or contribute. For detailed compiling and building instructions from source tarballs, please refer to the official installation guide.
 					</p>
 				</div>
-				<div class="shrink-0 w-full md:max-w-[390px] flex flex-wrap gap-3">
+				<div class="shrink-0 w-full md:max-w-[390px] flex flex-wrap justify-center gap-3">
 					<a
 						href="https://dovecot.org/releases/"
 						target="_blank"
@@ -279,7 +267,7 @@
 			</div>
 		</div>
 
-		<!-- Docker Hub Images section -->
+		<!-- Docker Hub Images -->
 		<div class="pt-6 max-w-4xl mx-auto">
 			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
 				<div class="space-y-2 flex-1">
@@ -305,16 +293,16 @@
 			</div>
 		</div>
 
-		<!-- Imaptest supporting utility section -->
+		<!-- Imaptest -->
 		<div class="pt-6 max-w-4xl mx-auto">
 			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
 				<div class="space-y-2 flex-1">
 					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-						Supporting Utility
+						Testing
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold">ImapTest benchmarking & verification tool</h2>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-						ImapTest is a testing tool for IMAP servers. Although provided by the Dovecot development team, it is developed as a separate utility and is not packaged as part of the core Dovecot mail server itself. Source code and issue tracking are hosted publicly on GitHub.
+						ImapTest is a testing tool for IMAP and POP3 servers. Although provided by the Dovecot development team, it is developed as a separate utility and is not packaged as part of the core Dovecot mail server itself. Source code and issue tracking are hosted publicly on GitHub.
 					</p>
 				</div>
 				<div class="shrink-0 w-full md:w-auto">
