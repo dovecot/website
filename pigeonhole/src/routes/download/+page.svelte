@@ -125,7 +125,7 @@
 							<a 
 								href={releases.stable.news} 
 								target="_blank" 
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
 							>
 								<span aria-hidden="true" class="material-symbols-outlined text-sm">description</span>
@@ -144,7 +144,7 @@
 							<p class="text-xs text-on-surface-variant leading-relaxed">
 								Pre-built packages of Dovecot Sieve can be installed directly from the Dovecot package repository.
 							</p>
-							<a href="https://repo.dovecot.org/" target="_blank" rel="noreferrer" class="inline-flex text-xs font-bold link-subtle items-center gap-1 pt-2">
+							<a href="https://repo.dovecot.org/" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-bold link-subtle items-center gap-1 pt-2">
 								Visit package repository <span aria-hidden="true" class="material-symbols-outlined text-xs">arrow_forward</span>
 							</a>
 						</div>
@@ -157,7 +157,7 @@
 							<p class="text-xs text-on-surface-variant leading-relaxed">
 								Official Docker image comes with full Pigeonhole Sieve support.
 							</p>
-							<a href="https://hub.docker.com/r/dovecot/dovecot" target="_blank" rel="noreferrer" class="inline-flex text-xs font-bold link-subtle items-center gap-1 pt-2">
+							<a href="https://hub.docker.com/r/dovecot/dovecot" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-bold link-subtle items-center gap-1 pt-2">
 								View on Docker Hub <span aria-hidden="true" class="material-symbols-outlined text-xs">arrow_forward</span>
 							</a>
 						</div>
@@ -201,7 +201,7 @@
 									<a 
 										href={rel.news} 
 										target="_blank" 
-										rel="noreferrer"
+										rel="noopener noreferrer"
 										class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
 									>
 										<span aria-hidden="true" class="material-symbols-outlined text-xs">description</span>
@@ -228,7 +228,7 @@
 						/>
 						
 						<p class="text-xs text-on-surface-variant leading-relaxed">
-							Refer to the <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/main/README" target="_blank" rel="noreferrer" class="link-subtle font-bold">README</a> and <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/main/INSTALL" target="_blank" rel="noreferrer" class="link-subtle font-bold">INSTALL</a> instructions files inside the repository for custom compilation flags and setup details.
+							Refer to the <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/main/README" target="_blank" rel="noopener noreferrer" class="link-subtle font-bold">README</a> and <a href="https://raw.githubusercontent.com/dovecot/pigeonhole/main/INSTALL" target="_blank" rel="noopener noreferrer" class="link-subtle font-bold">INSTALL</a> instructions files inside the repository for custom compilation flags and setup details.
 						</p>
 					</div>
 				</div>
@@ -260,7 +260,7 @@
 										<a 
 											href={key.link} 
 											target="_blank" 
-											rel="noreferrer"
+											rel="noopener noreferrer"
 											class="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded font-semibold hover:underline"
 										>
 											Download Key
