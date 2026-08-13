@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import repoData from '$lib/data/repositories.json';
+	import packageCategories from '$lib/data/package-categories.json';
 	import { CodeBlock, GitHubIcon } from '@dovecot/shared-ui';
 
 	let activeDist = $state('debian');
@@ -11,6 +12,15 @@
 
 	// Extract active releases
 	let activeReleases = $derived.by(() => (currentDist?.versions as Record<string, any[]> | undefined)?.[activeVersion] ?? []);
+
+	const categoryOrder = Object.keys(packageCategories);
+
+	let categorizedPackages = $derived.by(() => {
+		const allPkgs = new Set(currentDist.packages ?? []);
+		return categoryOrder
+			.map((cat: string) => ({ category: cat, packages: (packageCategories as Record<string, string[]>)[cat].filter((p: string) => allPkgs.has(p)) }))
+			.filter(g => g.packages.length > 0);
+	});
 
 	const pgpKeys = [
 		{
@@ -87,8 +97,8 @@
 								</span>
 							</div>
 							{#if key.link}
-								<a 
-									href={key.link} 
+								<a
+									href={key.link}
 									target="_blank"
 									rel="noopener noreferrer"
 									class="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded font-semibold hover:underline"
@@ -214,16 +224,21 @@
 								copyId={currentDist.id + '_install'}
 								ariaLabel="Copy Installation Command"
 							/>
-							{#if currentDist.packages}
-								<div>
-									<span class="block text-xs font-bold text-slate-500 mb-2">Available packages in repository</span>
-									<div class="flex flex-wrap gap-1.5">
-										{#each currentDist.packages as pkg}
-											<span class="font-mono text-xs bg-surface-container-high text-on-surface px-2 py-0.5 rounded border border-outline-variant/20">{pkg}</span>
+								{#if currentDist.packages}
+									<div>
+										<span class="block text-xs font-bold text-slate-500 mb-2">Available packages in repository</span>
+										{#each categorizedPackages as group}
+											<div class="mb-2 last:mb-0">
+												<span class="block text-xs font-semibold text-on-surface-variant mb-1">{group.category}</span>
+												<div class="flex flex-wrap gap-1.5">
+													{#each group.packages as pkg}
+														<span class="font-mono text-xs bg-surface-container-high text-on-surface px-2 py-0.5 rounded border border-outline-variant/20">{pkg}</span>
+													{/each}
+												</div>
+											</div>
 										{/each}
 									</div>
-								</div>
-							{/if}
+								{/if}
 						</div>
 					</div>
 				{/if}
