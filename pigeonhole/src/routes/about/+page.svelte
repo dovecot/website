@@ -1,36 +1,36 @@
 <script lang="ts">
 	const rfcExtensions = [
-		{ name: "encoded-character", rfc: "RFC 5228; Section 2.4.2.4", link: "http://tools.ietf.org/html/rfc5228#section-2.4.2.4" },
-		{ name: "fileinto", rfc: "RFC 5228; Section 4.1", link: "http://tools.ietf.org/html/rfc5228#section-4.1" },
-		{ name: "envelope", rfc: "RFC 5228; Section 5.4", link: "http://tools.ietf.org/html/rfc5228#section-5.4" },
-		{ name: "copy", rfc: "RFC 3894", link: "http://tools.ietf.org/html/rfc3894/" },
-		{ name: "body", rfc: "RFC 5173", link: "http://tools.ietf.org/html/rfc5173/" },
-		{ name: "environment", rfc: "RFC 5183", version: "v0.4.0+", link: "http://tools.ietf.org/html/rfc5183/" },
-		{ name: "variables", rfc: "RFC 5229", link: "http://tools.ietf.org/html/rfc5229/" },
-		{ name: "vacation", rfc: "RFC 5230", link: "http://tools.ietf.org/html/rfc5230/" },
-		{ name: "vacation-seconds", rfc: "RFC 6131", version: "v0.2.3+", link: "http://tools.ietf.org/html/rfc6131" },
-		{ name: "relational", rfc: "RFC 5231", link: "http://tools.ietf.org/html/rfc5231/" },
-		{ name: "imap4flags", rfc: "RFC 5232", link: "http://tools.ietf.org/html/rfc5232/" },
-		{ name: "subaddress", rfc: "RFC 5233", link: "http://tools.ietf.org/html/rfc5233/" },
-		{ name: "spamtest", rfc: "RFC 5235", version: "v0.1.16+", link: "http://tools.ietf.org/html/rfc5235/" },
-		{ name: "virustest", rfc: "RFC 5235", version: "v0.1.16+", link: "http://tools.ietf.org/html/rfc5235/" },
-		{ name: "date", rfc: "RFC 5260; Section 4", version: "v0.1.12+", link: "http://tools.ietf.org/html/rfc5260#section-4" },
-		{ name: "index", rfc: "RFC 5260; Section 6", version: "v0.4.7+", link: "http://tools.ietf.org/html/rfc5260#section-6" },
-		{ name: "editheader", rfc: "RFC 5293", version: "v0.3.0+", link: "http://tools.ietf.org/html/rfc5293/" },
-		{ name: "reject", rfc: "RFC 5429; Section 2.2", link: "http://tools.ietf.org/html/rfc5429#section-2.2" },
-		{ name: "enotify", rfc: "RFC 5435", version: "v0.1.3+", link: "http://tools.ietf.org/html/rfc5435/" },
-		{ name: "mailto (enotify)", rfc: "RFC 5436", version: "v0.1.3+", link: "http://tools.ietf.org/html/rfc5436/" },
-		{ name: "ihave", rfc: "RFC 5463", version: "v0.2.4+", link: "http://tools.ietf.org/html/rfc5463" },
-		{ name: "mailbox", rfc: "RFC 5490; Section 3", version: "v0.1.10+", link: "http://tools.ietf.org/html/rfc5490#section-3" },
-		{ name: "mboxmetadata", rfc: "RFC 5490", version: "v0.4.7+", link: "http://tools.ietf.org/html/rfc5490" },
-		{ name: "servermetadata", rfc: "RFC 5490", version: "v0.4.7+", link: "http://tools.ietf.org/html/rfc5490" },
-		{ name: "foreverypart", rfc: "RFC 5703; Section 3", version: "v0.4.10+", link: "http://tools.ietf.org/html/rfc5703#section-3" },
-		{ name: "mime", rfc: "RFC 5703; Section 4", version: "v0.4.10+", link: "http://tools.ietf.org/html/rfc5703#section-4" },
-		{ name: "extracttext", rfc: "RFC 5703; Section 7", version: "v0.4.12+", link: "http://tools.ietf.org/html/rfc5703#section-7" },
-		{ name: "include", rfc: "RFC 6609", version: "v0.4.0+", link: "http://tools.ietf.org/html/rfc6609" },
+		{ name: "encoded-character", rfc: "RFC 5228; Section 2.4.2.4", link: "https://tools.ietf.org/html/rfc5228#section-2.4.2.4" },
+		{ name: "fileinto", rfc: "RFC 5228; Section 4.1", link: "https://tools.ietf.org/html/rfc5228#section-4.1" },
+		{ name: "envelope", rfc: "RFC 5228; Section 5.4", link: "https://tools.ietf.org/html/rfc5228#section-5.4" },
+		{ name: "copy", rfc: "RFC 3894", link: "https://tools.ietf.org/html/rfc3894/" },
+		{ name: "body", rfc: "RFC 5173", link: "https://tools.ietf.org/html/rfc5173/" },
+		{ name: "environment", rfc: "RFC 5183", version: "v0.4.0+", link: "https://tools.ietf.org/html/rfc5183/" },
+		{ name: "variables", rfc: "RFC 5229", link: "https://tools.ietf.org/html/rfc5229/" },
+		{ name: "vacation", rfc: "RFC 5230", link: "https://tools.ietf.org/html/rfc5230/" },
+		{ name: "vacation-seconds", rfc: "RFC 6131", version: "v0.2.3+", link: "https://tools.ietf.org/html/rfc6131" },
+		{ name: "relational", rfc: "RFC 5231", link: "https://tools.ietf.org/html/rfc5231/" },
+		{ name: "imap4flags", rfc: "RFC 5232", link: "https://tools.ietf.org/html/rfc5232/" },
+		{ name: "subaddress", rfc: "RFC 5233", link: "https://tools.ietf.org/html/rfc5233/" },
+		{ name: "spamtest", rfc: "RFC 5235", version: "v0.1.16+", link: "https://tools.ietf.org/html/rfc5235/" },
+		{ name: "virustest", rfc: "RFC 5235", version: "v0.1.16+", link: "https://tools.ietf.org/html/rfc5235/" },
+		{ name: "date", rfc: "RFC 5260; Section 4", version: "v0.1.12+", link: "https://tools.ietf.org/html/rfc5260#section-4" },
+		{ name: "index", rfc: "RFC 5260; Section 6", version: "v0.4.7+", link: "https://tools.ietf.org/html/rfc5260#section-6" },
+		{ name: "editheader", rfc: "RFC 5293", version: "v0.3.0+", link: "https://tools.ietf.org/html/rfc5293/" },
+		{ name: "reject", rfc: "RFC 5429; Section 2.2", link: "https://tools.ietf.org/html/rfc5429#section-2.2" },
+		{ name: "enotify", rfc: "RFC 5435", version: "v0.1.3+", link: "https://tools.ietf.org/html/rfc5435/" },
+		{ name: "mailto (enotify)", rfc: "RFC 5436", version: "v0.1.3+", link: "https://tools.ietf.org/html/rfc5436/" },
+		{ name: "ihave", rfc: "RFC 5463", version: "v0.2.4+", link: "https://tools.ietf.org/html/rfc5463" },
+		{ name: "mailbox", rfc: "RFC 5490; Section 3", version: "v0.1.10+", link: "https://tools.ietf.org/html/rfc5490#section-3" },
+		{ name: "mboxmetadata", rfc: "RFC 5490", version: "v0.4.7+", link: "https://tools.ietf.org/html/rfc5490" },
+		{ name: "servermetadata", rfc: "RFC 5490", version: "v0.4.7+", link: "https://tools.ietf.org/html/rfc5490" },
+		{ name: "foreverypart", rfc: "RFC 5703; Section 3", version: "v0.4.10+", link: "https://tools.ietf.org/html/rfc5703#section-3" },
+		{ name: "mime", rfc: "RFC 5703; Section 4", version: "v0.4.10+", link: "https://tools.ietf.org/html/rfc5703#section-4" },
+		{ name: "extracttext", rfc: "RFC 5703; Section 7", version: "v0.4.12+", link: "https://tools.ietf.org/html/rfc5703#section-7" },
+		{ name: "include", rfc: "RFC 6609", version: "v0.4.0+", link: "https://tools.ietf.org/html/rfc6609" },
 		{ name: "imapsieve", rfc: "RFC 6785", version: "v0.4.14+", link: "https://tools.ietf.org/html/rfc6785" },
-		{ name: "duplicate", rfc: "RFC 7352", version: "v0.4.3+", link: "http://tools.ietf.org/html/rfc7352" },
-		{ name: "regex", rfc: "draft v08", link: "http://tools.ietf.org/html/draft-murchison-sieve-regex-08/" }
+		{ name: "duplicate", rfc: "RFC 7352", version: "v0.4.3+", link: "https://tools.ietf.org/html/rfc7352" },
+		{ name: "regex", rfc: "draft v08", link: "https://tools.ietf.org/html/draft-murchison-sieve-regex-08/" }
 	];
 
 	const dovecotExtensions = [
@@ -44,19 +44,19 @@
 
 	const otherExtensions = {
 		deprecated: [
-			{ name: "imapflags", rfc: "obsolete draft", version: "v0.1.3+", link: "http://tools.ietf.org/html/draft-melnikov-sieve-imapflags-03" },
-			{ name: "notify", rfc: "obsolete draft", version: "v0.1.15+", link: "http://tools.ietf.org/html/draft-martin-sieve-notify-01" }
+			{ name: "imapflags", rfc: "obsolete draft", version: "v0.1.3+", link: "https://tools.ietf.org/html/draft-melnikov-sieve-imapflags-03" },
+			{ name: "notify", rfc: "obsolete draft", version: "v0.1.15+", link: "https://tools.ietf.org/html/draft-martin-sieve-notify-01" }
 		],
 		underDev: [
-			{ name: "ereject", rfc: "RFC 5429; Section 2.1", link: "http://tools.ietf.org/html/rfc5429#section-2.1", status: "implemented, but currently equal to reject" },
-			{ name: "xmpp (enotify)", rfc: "RFC 5437", link: "http://tools.ietf.org/html/rfc5437/", status: "under development, will become available as plugin" }
+			{ name: "ereject", rfc: "RFC 5429; Section 2.1", link: "https://tools.ietf.org/html/rfc5429#section-2.1", status: "implemented, but currently equal to reject" },
+			{ name: "xmpp (enotify)", rfc: "RFC 5437", link: "https://tools.ietf.org/html/rfc5437/", status: "under development, will become available as plugin" }
 		],
 		planned: [
-			{ name: "replace", rfc: "RFC 5703; Section 5", link: "http://tools.ietf.org/html/rfc5703#section-5" },
-			{ name: "enclose", rfc: "RFC 5703; Section 6", link: "http://tools.ietf.org/html/rfc5703#section-6" },
-			{ name: "envelope-dsn / redirect-dsn", rfc: "RFC 6009", link: "http://tools.ietf.org/html/rfc6009", note: "depends on lib-smtp changes in Dovecot" },
-			{ name: "extlists", rfc: "RFC 6134", link: "http://tools.ietf.org/html/rfc6134" },
-			{ name: "convert", rfc: "RFC 6558", link: "http://tools.ietf.org/html/rfc6558" }
+			{ name: "replace", rfc: "RFC 5703; Section 5", link: "https://tools.ietf.org/html/rfc5703#section-5" },
+			{ name: "enclose", rfc: "RFC 5703; Section 6", link: "https://tools.ietf.org/html/rfc5703#section-6" },
+			{ name: "envelope-dsn / redirect-dsn", rfc: "RFC 6009", link: "https://tools.ietf.org/html/rfc6009", note: "depends on lib-smtp changes in Dovecot" },
+			{ name: "extlists", rfc: "RFC 6134", link: "https://tools.ietf.org/html/rfc6134" },
+			{ name: "convert", rfc: "RFC 6558", link: "https://tools.ietf.org/html/rfc6558" }
 		]
 	};
 </script>
@@ -76,7 +76,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 font-body-md text-on-surface-variant leading-relaxed text-sm md:text-base">
 			<div class="space-y-4">
 				<p>
-					<strong>Pigeonhole</strong> adds support for the <a href="http://www.sieve.info" target="_blank" rel="noreferrer" class="link-subtle font-semibold">Sieve language</a> (<a href="http://tools.ietf.org/html/rfc5228/" target="_blank" rel="noreferrer" class="link-subtle">RFC 5228</a>) and the <a href="http://tools.ietf.org/html/rfc5804" target="_blank" rel="noreferrer" class="link-subtle font-semibold">ManageSieve protocol</a> (<a href="http://tools.ietf.org/html/rfc5804" target="_blank" rel="noreferrer" class="link-subtle">RFC 5804</a>) to the <a href="https://dovecot.org/" target="_blank" rel="noreferrer" class="link-subtle font-semibold">Dovecot Secure IMAP Server</a>.
+					<strong>Pigeonhole</strong> adds support for the <a href="http://www.sieve.info" target="_blank" rel="noopener noreferrer" class="link-subtle font-semibold">Sieve language</a> (<a href="https://tools.ietf.org/html/rfc5228/" target="_blank" rel="noopener noreferrer" class="link-subtle">RFC 5228</a>) and the <a href="https://tools.ietf.org/html/rfc5804" target="_blank" rel="noopener noreferrer" class="link-subtle font-semibold">ManageSieve protocol</a> (<a href="https://tools.ietf.org/html/rfc5804" target="_blank" rel="noopener noreferrer" class="link-subtle">RFC 5804</a>) to the <a href="https://dovecot.org/" target="_blank" rel="noopener noreferrer" class="link-subtle font-semibold">Dovecot Secure IMAP Server</a>.
 				</p>
 				<p>
 					Literally, a <em>pigeonhole</em> is a recess within a dovecot where pigeons nest. It also refers to a series of small, open compartments in a cabinet used for sorting mail. As a verb, "to pigeonhole" describes the act of placing an item into one of these compartments.
@@ -129,7 +129,7 @@
 						<a 
 							href={ext.link} 
 							target="_blank" 
-							rel="noreferrer"
+							rel="noopener noreferrer"
 							class="flex flex-col p-3 rounded-xl bg-surface hover:bg-surface-dim border border-outline-variant/30 transition-all hover:scale-[1.01] hover:border-primary/50 group"
 						>
 							<div class="flex justify-between items-center">
@@ -155,7 +155,7 @@
 						<h3 class="font-headline-lg text-lg text-on-background font-bold">ManageSieve</h3>
 					</div>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-						The <strong>ManageSieve protocol</strong> (<a href="http://tools.ietf.org/html/rfc5804" target="_blank" rel="noreferrer" class="link-subtle">RFC 5804</a>) is fully supported, allowing secure remote script uploads and management.
+						The <strong>ManageSieve protocol</strong> (<a href="https://tools.ietf.org/html/rfc5804" target="_blank" rel="noopener noreferrer" class="link-subtle">RFC 5804</a>) is fully supported, allowing secure remote script uploads and management.
 					</p>
 				</div>
 
@@ -172,7 +172,7 @@
 						{#each dovecotExtensions as ext}
 							<div class="p-3 bg-surface rounded-xl border border-outline-variant/20 space-y-1">
 								<div class="flex justify-between items-center">
-									<a href={ext.link} target="_blank" rel="noreferrer" class="font-mono text-xs font-bold link-subtle">
+									<a href={ext.link} target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold link-subtle">
 										{ext.name}
 									</a>
 									<span class="text-[11px] bg-slate-100 text-on-surface-variant px-1.5 py-0.5 rounded font-mono font-bold">{ext.version}</span>
@@ -199,7 +199,7 @@
 							<ul class="space-y-1.5 pl-3 list-disc">
 								{#each otherExtensions.underDev as item}
 									<li>
-										<a href={item.link} target="_blank" rel="noreferrer" class="font-mono text-[11px] underline hover:text-primary">{item.name}</a>: <span class="italic">{item.status}</span>
+										<a href={item.link} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] underline hover:text-primary">{item.name}</a>: <span class="italic">{item.status}</span>
 									</li>
 								{/each}
 							</ul>
@@ -211,7 +211,7 @@
 							<ul class="space-y-1 pl-3 list-disc">
 								{#each otherExtensions.planned as item}
 									<li>
-										<a href={item.link} target="_blank" rel="noreferrer" class="font-mono text-[11px] underline hover:text-primary">{item.name}</a> ({item.rfc})
+										<a href={item.link} target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] underline hover:text-primary">{item.name}</a> ({item.rfc})
 										{#if item.note}
 											- <span class="italic text-xs text-amber-600">{item.note}</span>
 										{/if}
