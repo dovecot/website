@@ -208,16 +208,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "rc",
-      "name": "Release Candidates",
-      "icon": "science",
-      "isSpecial": true,
-      "description": "If you want to test upcoming releases, you can point to the release candidate package repository index.",
-      "instructionTitle": "Generic RC Instructions:",
-      "instructionText": "For release candidates, follow instructions for the given distribution above, but replace the repository location to point into:",
-      "instructionLink": "https://repo.dovecot.org/rc/"
     }
   ]
 }
