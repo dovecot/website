@@ -315,13 +315,13 @@
 				</div>
 				<div class="shrink-0 w-full md:w-auto">
 					<a
-						href="https://github.com/dovecot/imaptest"
+						href="https://dovecot.github.io/imaptest/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
 					>
-						<GitHubIcon iconClass="w-4 h-4 fill-current" />
-						Get ImapTest on GitHub
+						<span aria-hidden="true" class="material-symbols-outlined text-base">speed</span>
+						ImapTest
 					</a>
 				</div>
 			</div>
