@@ -1,30 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import repoData from '$lib/data/repositories.json';
-	import packageCategories from '$lib/data/package-categories.json';
-	import pgpData from '$lib/data/pgp-keys.json';
-	import { CodeBlock, GitHubIcon } from '@dovecot/shared-ui';
-
-	let activeDist = $state('debian');
-	let activeVersion = $state('2.4'); // '2.4' or '2.3'
-
-	// Helper to find the current active distribution
-	let currentDist = $derived(repoData.distributions.find(d => d.id === activeDist) || repoData.distributions[0]);
-
-	// Extract active releases
-	let activeReleases = $derived.by(() => (currentDist?.versions as Record<string, any[]> | undefined)?.[activeVersion] ?? []);
-
-	const categoryOrder = Object.keys(packageCategories);
-
-	let categorizedPackages = $derived.by(() => {
-		const allPkgs = new Set(currentDist.packages ?? []);
-		return categoryOrder
-			.map((cat: string) => ({ category: cat, packages: (packageCategories as Record<string, string[]>)[cat].filter((p: string) => allPkgs.has(p)) }))
-			.filter(g => g.packages.length > 0);
-	});
-
-	// pgpData keys use relative paths; preface with base at render time.
-	const pgpKeys = $derived(pgpData.keys.map(k => ({ ...k, link: base + k.link })));
+	import RepoSection from './RepoSection.svelte';
+	import { GitHubIcon } from '@dovecot/shared-ui';
 </script>
 
 <svelte:head>
@@ -44,8 +21,6 @@
 			<p class="font-body-md text-on-surface-variant leading-relaxed">
 				Download Dovecot via package repositories, source tarballs, Docker images, or the GitHub repository.
 			</p>
-
-
 		</div>
 
 		<!-- Config Upgrader -->
@@ -57,7 +32,7 @@
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold">Configuration Upgrader</h2>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-						Migrate your Dovecot 2.3 configuration to 2.4 automatically. The online tool converts dovecot.conf and related config files — just paste your config and get the updated output.
+						Migrate your Dovecot CE 2.3 configuration to 2.4 automatically. The online tool converts dovecot.conf and related config files — just paste your config and get the updated output.
 					</p>
 				</div>
 				<div class="shrink-0 w-full md:w-auto">
@@ -87,164 +62,28 @@
 			</div>
 		</div>
 
-		<!-- PGP Signing Keys Section -->
-		<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 max-w-4xl mx-auto mb-12 space-y-4">
-			<div class="flex items-center gap-3">
-				<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
-					<span aria-hidden="true" class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-				</div>
-				<div>
-					<h3 class="font-headline-lg text-lg text-on-background font-bold">PGP Signing Keys</h3>
-					<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
-						Use these GPG public keys to verify downloaded repository metadata and packages:
-					</p>
-				</div>
-			</div>
+		<!-- PGP + Repo section -->
+		<RepoSection version="2.4" pgpKeyId="4EDC5219">
+			{#snippet navExtra()}
+				<div class="border-t border-outline-variant/20 my-2"></div>
+				<a
+					class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-left text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer"
+					href="{base}/download/eol"
+				>
+					<span aria-hidden="true" class="material-symbols-outlined text-lg">archive</span>
+					End of Life (2.3)
+				</a>
+			{/snippet}
+		</RepoSection>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				{#each pgpKeys as key}
-					<div class="p-4 bg-surface rounded-xl border border-outline-variant/20 space-y-2">
-						<div class="flex justify-between items-start flex-wrap gap-1 border-b border-outline-variant/10 pb-2">
-							<span class="text-xs font-semibold bg-secondary/10 text-secondary px-2 py-0.5 rounded-full border border-secondary/20">
-								{key.period}
-							</span>
-							{#if key.link}
-								<a
-									href={key.link}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded font-semibold hover:underline"
-								>
-									Download Key
-								</a>
-							{/if}
-						</div>
-
-						<div class="space-y-1">
-							<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Key ID</span>
-							<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
-								{key.id}
-							</code>
-							<span class="block text-[11px] uppercase tracking-wider font-bold text-outline">Fingerprint</span>
-							<code class="block text-xs font-mono p-2 bg-black/10 text-on-surface-variant rounded select-all break-all leading-normal">
-								{key.fingerprint}
-							</code>
-						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
-
-		<!-- Main Repo Setup Grid Layout -->
-		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-			<!-- Left Navigation Panel -->
-			<div class="lg:col-span-3 flex flex-col gap-2 bg-surface-container-low p-4 rounded-2xl border border-outline-variant/30">
-				<span class="text-xs uppercase font-bold tracking-wider px-3 mb-2 text-outline">Distribution</span>
-				{#each repoData.distributions as dist}
-					<button
-						onclick={() => activeDist = dist.id}
-						class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-left text-sm font-semibold transition-all cursor-pointer {activeDist === dist.id ? 'bg-primary text-on-primary shadow' : 'hover:bg-surface-container-high text-on-surface-variant'}"
-					>
-						<span aria-hidden="true" class="material-symbols-outlined text-lg">{dist.icon || 'terminal'}</span>
-						{dist.name}
-					</button>
-				{/each}
-			</div>
-
-			<!-- Right Content Panel -->
-			<div class="lg:col-span-9 space-y-6">
-
-				<!-- Version selector if not special -->
-				{#if currentDist.versions}
-					<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
-						<h2 class="font-headline-lg text-xl text-on-background font-bold capitalize">
-							{currentDist.name} Repository Guide
-						</h2>
-						<div class="flex bg-surface-container p-1 rounded-lg border border-outline-variant/30">
-							{#each Object.keys(currentDist.versions).sort().reverse() as ver}
-								<button
-									onclick={() => activeVersion = ver}
-									class="px-4 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer {activeVersion === ver ? 'bg-primary text-on-primary shadow' : 'text-on-surface-variant'}"
-								>
-									Dovecot {ver} {ver === '2.4' ? '(Latest)' : '(EOL)'}
-								</button>
-							{/each}
-						</div>
-					</div>
-				{/if}
-
-				{#if currentDist.versions}
-					<div class="space-y-6">
-						{#each activeReleases as rel}
-							<div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 space-y-4">
-								<div class="flex justify-between items-start gap-4">
-									<h3 class="font-headline-md text-lg text-on-background font-bold">{rel.codename}</h3>
-									{#if rel.warning}
-										<span class="bg-amber-500/10 text-amber-600 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-500/20">{rel.warning}</span>
-									{/if}
-								</div>
-
-								<!-- Step 1: GPG Key if present -->
-								{#if rel.gpgCmd && rel.gpgPath}
-									<CodeBlock
-										label={'1. Setup GPG keyring (' + rel.gpgPath + ')'}
-										code={rel.gpgCmd}
-										copyId={rel.codename + '_gpg'}
-										ariaLabel="Copy GPG Command"
-									/>
-								{/if}
-
-								<!-- Step 2: Sources list if present -->
-								{#if rel.sourcesContent && rel.sourcesPath}
-									<CodeBlock
-										label={'2. Configure sources config path file (' + rel.sourcesPath + ')'}
-										code={rel.sourcesContent}
-										copyId={rel.codename + '_sources'}
-										ariaLabel="Copy Sources Configuration"
-									/>
-								{/if}
-
-								<!-- Repo configuration for RHEL / CentOS -->
-								{#if rel.repoContent && rel.repoPath}
-									<CodeBlock
-										label={'Configure repo path file (' + rel.repoPath + ')'}
-										code={rel.repoContent}
-										copyId={rel.codename + '_repo'}
-										ariaLabel="Copy Repo Setup"
-									/>
-								{/if}
-							</div>
-						{/each}
-
-						<!-- Standard installation commands -->
-						<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 space-y-4">
-							<h3 class="font-headline-md text-sm font-bold text-on-background">Installation & Package commands</h3>
-							<CodeBlock
-								label="Update repository database and install packages:"
-								code={currentDist.installCmd}
-								copyId={currentDist.id + '_install'}
-								ariaLabel="Copy Installation Command"
-							/>
-								{#if currentDist.packages}
-									<div class="pt-4 border-t border-outline-variant">
-										<span class="block text-xs font-bold text-slate-500 mb-2">Available packages in repository</span>
-										{#each categorizedPackages as group}
-											<div class="mb-2 last:mb-0">
-												<span class="block text-xs font-semibold text-on-surface-variant mb-1">{group.category}</span>
-												<div class="flex flex-wrap gap-1.5">
-													{#each group.packages as pkg}
-														<span class="font-mono text-xs bg-surface-container-high text-on-surface px-2 py-0.5 rounded border border-outline-variant/20">{pkg}</span>
-													{/each}
-												</div>
-											</div>
-										{/each}
-									</div>
-								{/if}
-						</div>
-					</div>
-				{/if}
-
+		<!-- EOL Packages Link -->
+		<div class="mt-8 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 max-w-4xl mx-auto flex gap-4 items-start">
+			<span aria-hidden="true" class="material-symbols-outlined text-amber-500 text-2xl shrink-0">warning</span>
+			<div class="flex-1">
+				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">End of Life Packages</h3>
+				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
+					See: <a class="font-semibold underline" href="{base}/download/eol">Dovecot CE 2.3 Packages</a>.
+				</p>
 			</div>
 		</div>
 
