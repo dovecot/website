@@ -38,7 +38,7 @@
         ],
         "2.3": [
           {
-            "codename": "Bullseye (11) with Dovecot 2.3",
+            "codename": "Bullseye (11) with Dovecot CE 2.3",
             "warning": "Last released version is 2.3.21.1",
             "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
             "gpgPath": "/usr/share/keyrings/dovecot.gpg",
@@ -169,7 +169,7 @@
         ],
         "2.3": [
           {
-            "codename": "RHEL 8 with Dovecot 2.3",
+            "codename": "RHEL 8 with Dovecot CE 2.3",
             "warning": "Last released version is 2.3.21.1",
             "repoPath": "/etc/yum.repos.d/dovecot.repo",
             "repoContent": "[dovecot-2.3.21.1]\nname=Dovecot 2.3.21.1 RHEL $releasever - $basearch\nbaseurl=http://repo.dovecot.org/ce-2.3.21.1/rhel/$releasever/RPMS/$basearch\ngpgkey=https://repo.dovecot.org/DOVECOT-REPO-GPG-2.3\ngpgcheck=1\nenabled=1"
