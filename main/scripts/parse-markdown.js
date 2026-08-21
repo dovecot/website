@@ -26,7 +26,7 @@ const outputSecurity = path.join(projectRoot, 'src/lib/data/security.json');
 
 const dateSort = (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime();
 
-function parseMarkdownDir(dirPath, outputFile, fields, postProcess) {
+function parseMarkdownDir(dirPath, outputFile, fields) {
 	const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.md'));
 	const items = files.map(file => {
 		const content = fs.readFileSync(path.join(dirPath, file), 'utf8');
@@ -35,7 +35,7 @@ function parseMarkdownDir(dirPath, outputFile, fields, postProcess) {
 	});
 
 	items.sort(dateSort);
-	if (postProcess) postProcess(items);
+
 	fs.writeFileSync(outputFile, JSON.stringify(items, null, 2));
 	console.log(`Generated ${outputFile} with ${items.length} items.`);
 }
@@ -69,16 +69,9 @@ export function parseMarkdown() {
 					date: normalizeDate(dateStr),
 					title,
 					desc,
-					isNew: false,
 					isSecurity,
 					href: externalLink || `/news/${id}`
 				};
-			},
-			items => {
-				const newestRelease = items.find(item => item.type === 'Release');
-				if (newestRelease) {
-					newestRelease.isNew = true;
-				}
 			}
 		);
 	}
@@ -105,8 +98,6 @@ export function parseMarkdown() {
 				title,
 				severity,
 				date: normalizeDate(dateStr),
-				affected: data.affected || 'Versions prior to release fixes',
-				fixed: data.fixed || 'Refer to advisory link',
 				description: excerpt || body.trim() || `Security advisory regarding ${title}.`,
 				link
 			};
