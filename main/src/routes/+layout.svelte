@@ -57,5 +57,6 @@
 		copyrightName="Open-Xchange Oy"
 		githubUrl="https://github.com/dovecot/website/"
 		contactUrl="/contact"
+		proUrl="https://www.dovecotpro.com/"
 	/>
 </div>

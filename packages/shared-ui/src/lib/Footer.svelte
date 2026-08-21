@@ -5,11 +5,13 @@
 	let {
 		copyrightName = 'Open-Xchange Oy',
 		githubUrl = 'https://github.com/dovecot/website/',
-		contactUrl = ''
+		contactUrl = '',
+		proUrl = ''
 	} = $props<{
 		copyrightName?: string;
 		githubUrl?: string;
 		contactUrl?: string;
+		proUrl?: string;
 	}>();
 
 	function resolveHref(href: string) {
@@ -20,9 +22,17 @@
 <footer class="bg-surface-container-lowest border-t border-outline-variant/30 transition-colors duration-300 w-full">
 	<div class="max-w-container-max mx-auto px-gutter py-8 flex flex-col md:flex-row justify-between items-center gap-4">
 		<div class="text-body-md text-on-surface-variant">
-			<span>© {new Date().getFullYear()} {copyrightName}</span>
+			<span>© {new Date().getFullYear()} <a href="https://ox.io/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">{copyrightName}</a></span>
 		</div>
 		<div class="flex items-center gap-6">
+			{#if proUrl}
+				<a
+					href={proUrl}
+					class="text-body-md text-on-surface-variant hover:text-primary transition-colors"
+				>
+					Dovecot Pro
+				</a>
+			{/if}
 			<a
 				href={resolveHref('/legal')}
 				class="text-body-md text-on-surface-variant hover:text-primary transition-colors"
