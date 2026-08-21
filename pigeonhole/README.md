@@ -1,43 +1,32 @@
 # Pigeonhole Website
 
-This is the production-ready SvelteKit implementation of the Pigeonhole (Sieve Support for Dovecot) Website. It uses Svelte 5 (runes) and Tailwind CSS v4.
+Sieve Support for Dovecot. Svelte 5 (runes) + Tailwind CSS v4.
 
-## How to Install, Build, Test, and View the Project
+## Quick start
 
-Follow these steps to set up and run the Pigeonhole Website locally.
-
-### 🛠️ Prerequisites
-Ensure you have **Node.js (v18+)** and **npm** installed on your machine.
-
-### 📥 1. Installation
-Install the project dependencies:
-```bash
+```
 npm install
+npm run dev        # http://localhost:5173
+npm run check      # lint + type-check
+npm run build      # production build
+npm run preview    # preview production build, http://localhost:4173
 ```
 
-### 💻 2. Running Locally (Dev Mode)
-To view the site with hot-reloading enabled during development:
-```bash
-npm run dev
-```
-Once started, open **[http://localhost:5173](http://localhost:5173)** in your browser to view the project.
+## Doing a release
 
-### 🧪 3. Testing & Validation
-To test code syntax, run linter checks, and check Svelte/TypeScript static type safety:
-```bash
-npm run check
-```
+1. **Update `src/lib/data/releases.json`** — bump the `stable` entry (version,
+   tarball, sig, news URL) and move the old stable to `legacy` if needed.
+2. Build, deploy, done.
 
-### 📦 4. Building for Production
-To compile and build a production-optimized package bundle:
-```bash
-npm run build
-```
+## Data files
 
-### 🌐 5. Previewing the Production Build
-To view and run the built production bundle locally:
-```bash
-npm run preview
-```
-Once started, open the printed localhost URL (default: **[http://localhost:4173](http://localhost:4173)**) to view the compiled production site.
+All content lives under `src/lib/data/` — read the JSON files directly for schema details:
 
+| File | Used for |
+|---|---|
+| `features.json` | feature cards |
+| `releases.json` | release download data |
+| `pgp-keys.json` | PGP key display |
+| `slides.json` | presentation/slides data |
+| `rfc-extensions.json` | RFC extension listings |
+| `dovecot-extensions.json` | Dovecot extension listings |
