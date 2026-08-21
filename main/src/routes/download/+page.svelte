@@ -88,9 +88,9 @@
 		</div>
 
 		<!-- Alternative Download Options -->
-		<div class="mt-16 pt-12 border-t border-outline-variant/30 max-w-4xl mx-auto">
+		<div class="pt-6 max-w-4xl mx-auto">
 			<h2 class="font-headline-xl text-2xl text-on-background font-bold mb-6">Other Download Options</h2>
-			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
+			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
 				<div class="space-y-2 flex-1">
 					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
 						Source Code
