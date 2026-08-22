@@ -75,11 +75,11 @@
 </script>
 
 <!-- Hero Section -->
-<section class="relative pt-8 pb-10 px-gutter overflow-hidden bg-grid-pattern transition-colors duration-300">
+<section class="relative pt-10 pb-10 px-gutter overflow-hidden bg-grid-pattern transition-colors duration-300">
 	<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background z-0 pointer-events-none"></div>
 
 	<!-- Slide Container (relative, overlays) -->
-	<div class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center min-h-[500px] lg:min-h-[550px]">
+	<div class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
 		<!-- Left: Text Content Grid (cross-faded) -->
 		<div class="grid grid-cols-1 grid-rows-1 items-start w-full">
 			{#each slides as slide, idx}
@@ -142,7 +142,7 @@
 
 		<!-- Right: Graphic Grid (cross-faded with zoom effect) & Arrows underneath -->
 		<div class="flex flex-col items-center gap-4 w-full">
-			<div class="relative w-full h-[400px] lg:h-[500px] grid grid-cols-1 grid-rows-1 justify-center items-center">
+			<div class="relative w-full grid grid-cols-1 grid-rows-1 justify-center items-center">
 				<div class="absolute inset-0 bg-primary-container/10 rounded-full blur-3xl scale-150 -z-10"></div>
 				{#each slides as slide, idx}
 					<div class="col-start-1 row-start-1 flex justify-center items-center transition-all duration-700 ease-in-out transform {activeSlide === idx ? 'opacity-100 scale-100 z-10 pointer-events-auto' : 'opacity-0 scale-95 z-0 pointer-events-none'}" aria-hidden={activeSlide !== idx}>
