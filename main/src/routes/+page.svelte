@@ -25,7 +25,7 @@
 			description: "Dovecot Community Edition is the world's most trusted open-source email server. Secure by design and fully standards-compliant, it delivers exceptional performance with effortless migration and self-healing reliability.",
 			image: logoSrc,
 			imageAlt: "Dovecot Logo",
-			imageClass: ""
+			imageClass: "max-w-l"
 		},
 		{
 			tagText: "",
