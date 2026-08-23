@@ -22,7 +22,7 @@ export default defineConfig({
     presetWebFonts({
 	provider: 'bunny',
 	fonts: {
-	  sans: 'OpenSans',
+	  sans: 'Open Sans',
 	},
     })
   ],
@@ -36,7 +36,7 @@ export default defineConfig({
       problue: 'rgb(75, 155, 215)',
     },
     fontFamily: {
-      sans: [ 'OpenSans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      sans: [ 'Open Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
     },
     fontSize: {
       base: '16px',
