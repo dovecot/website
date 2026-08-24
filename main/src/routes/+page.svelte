@@ -8,7 +8,7 @@
 	import anniversaryImgSrc from '$lib/assets/anniversary.png?enhanced';
 	import { GitHubIcon } from '@dovecot/shared-ui';
 
-	const proLogoSrc = "https://www.dovecotpro.com/hs-fs/hubfs/Dovecot%20Pro%20logo%20web%20header.png";
+	import proLogoSrc from '$lib/assets/pro-logo.png?enhanced';
 
 	let activeSlide = $state(0);
 	let intervalId: any;
@@ -183,7 +183,7 @@
 	<div class="max-w-container-max mx-auto px-gutter py-gutter md:py-12 flex flex-col md:flex-row items-center justify-between gap-gutter relative z-10">
 		<div class="flex-1">
 			<div class="bg-white/10 backdrop-blur-sm inline-block p-4 rounded-xl mb-6 border border-white/10">
-				<img alt="Dovecot Pro" class="h-10 w-auto object-contain" src={proLogoSrc}>
+				<enhanced:img alt="Dovecot Pro" class="h-10 w-auto object-contain" src={proLogoSrc} />
 			</div>
 			<h2 class="font-['Space_Grotesk',sans-serif] text-2xl md:text-4xl font-medium tracking-[0.02em] leading-tight text-white mb-4">Need Enterprise-Grade Scalability?</h2>
 			<p class="font-['Ubuntu_Sans',sans-serif] text-base md:text-lg leading-[1.75] text-white/85 max-w-2xl">
