@@ -2,6 +2,7 @@
 
 @import 'tailwindcss';
 @source "../../../packages/shared-ui/src/**/*.svelte";
+@import "../../../packages/shared-ui/src/lib/layout.css";
 @plugin '@tailwindcss/forms';
 
 @theme {
@@ -52,31 +53,6 @@
   --color-surface-dim: #dadad9;
   --color-outline-variant: #bdc9c6;
   --color-outline: #6e7a77;
-
-  --radius-default: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-full: 9999px;
-
-  --spacing-margin-mobile: 16px;
-  --spacing-gutter: 24px;
-  --spacing-base: 4px;
-  --spacing-container-max: 1280px;
-  --spacing-margin-desktop: 64px;
-
-  --font-label-md: "Inter", sans-serif;
-  --font-headline-lg-mobile: "Manrope", sans-serif;
-  --font-body-md: "Inter", sans-serif;
-  --font-headline-xl: "Manrope", sans-serif;
-  --font-headline-lg: "Manrope", sans-serif;
-  --font-body-sm: "Inter", sans-serif;
-
-  --font-size-label-md: 12px;
-  --font-size-headline-lg-mobile: 24px;
-  --font-size-body-md: 16px;
-  --font-size-headline-xl: 48px;
-  --font-size-headline-lg: 32px;
-  --font-size-body-sm: 14px;
 }
 
 /* Custom Grid Background Pattern */
@@ -85,57 +61,4 @@
   background-image:
     linear-gradient(to right, rgba(0, 106, 96, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 106, 96, 0.04) 1px, transparent 1px);
-}
-
-/* Smooth active state transitions — avoid 'all' to keep focus rings instant (WCAG 2.4.7) */
-a, button {
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Keep focus visible — instant outline, no animation */
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Custom scrollbar to match theme */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-surface-container);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-outline-variant);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary-container);
-}
-
-@utility link-subtle {
-  @apply underline decoration-dotted decoration-primary/50 hover:text-primary transition-colors;
-}
-
-/* From fonts.googleapis.com */
-.material-symbols {
-  font-family: 'Material Symbols';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
 }
