@@ -33,7 +33,7 @@
 			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
 				<div class="space-y-3">
 					<div class="inline-flex items-center gap-2 bg-error/10 text-error px-3 py-1 rounded-full text-xs font-bold uppercase">
-						<span aria-hidden="true" class="material-symbols-outlined text-sm">shield</span>
+						<span aria-hidden="true" class="material-symbols text-sm">shield</span>
 						Reporting Vulnerabilities
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold">Found a Security Bug?</h2>
@@ -57,7 +57,7 @@
 			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
 				<div class="space-y-3">
 					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">
-						<span aria-hidden="true" class="material-symbols-outlined text-sm">bug_report</span>
+						<span aria-hidden="true" class="material-symbols text-sm">bug_report</span>
 						General Bugs
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold">General Bug Reporting</h2>
@@ -86,7 +86,7 @@
 				<!-- Search (WCAG 1.3.1, 1.3.5) -->
 				<form role="search" class="relative flex-grow max-w-md" onsubmit={(e) => e.preventDefault()}>
 					<label for="security-search" class="sr-only">Search advisories</label>
-					<span aria-hidden="true" class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+					<span aria-hidden="true" class="material-symbols absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
 					<input
 						id="security-search"
 						type="search"
@@ -115,7 +115,7 @@
 		<div class="space-y-4">
 			{#if filteredAdvisories.length === 0}
 				<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-12 text-center text-on-surface-variant">
-					<span aria-hidden="true" class="material-symbols-outlined text-4xl block mb-2">find_in_page</span>
+					<span aria-hidden="true" class="material-symbols text-4xl block mb-2">find_in_page</span>
 					No advisories match your search or filter requirements.
 				</div>
 			{:else}
@@ -149,7 +149,7 @@
 									class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/60 text-on-surface px-3 py-1.5 rounded-lg font-semibold hover:-translate-y-0.5 active:translate-y-0 transition-all text-[11px] cursor-pointer"
 								>
 									View Full Advisory
-									<span aria-hidden="true" class="material-symbols-outlined text-xs">north_east</span>
+									<span aria-hidden="true" class="material-symbols text-xs">north_east</span>
 								</a>
 							</div>
 						{/if}
