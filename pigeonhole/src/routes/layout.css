@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
++@import url('https://fonts.bunny.net/css?family=inter:400,500,600,700|manrope:600,700,800|material-symbols:100,200,300,400,500,600,700');
 
 @import 'tailwindcss';
 @source "../../../packages/shared-ui/src/**/*.svelte";
@@ -52,7 +52,7 @@
   --color-surface-dim: #dadad9;
   --color-outline-variant: #bdc9c6;
   --color-outline: #6e7a77;
-  
+
   --radius-default: 0.25rem;
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
@@ -121,4 +121,21 @@ a:focus-visible, button:focus-visible {
 
 @utility link-subtle {
   @apply underline decoration-dotted decoration-primary/50 hover:text-primary transition-colors;
+}
+
+/* From fonts.googleapis.com */
+.material-symbols {
+  font-family: 'Material Symbols';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
 }

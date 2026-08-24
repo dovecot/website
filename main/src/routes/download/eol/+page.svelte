@@ -16,7 +16,7 @@
 					class="inline-flex items-center text-primary font-semibold hover:text-primary-container transition-colors"
 					href="{base}/download"
 				>
-					<span aria-hidden="true" class="material-symbols-outlined mr-1 text-sm">arrow_back</span>
+					<span aria-hidden="true" class="material-symbols mr-1 text-sm">arrow_back</span>
 					Back to Download
 				</a>
 			</div>
@@ -27,7 +27,7 @@
 
 		<!-- EOL Warning -->
 		<div class="bg-error/10 border border-error/30 rounded-2xl p-6 mb-8 max-w-4xl mx-auto flex gap-4 items-start">
-			<span aria-hidden="true" class="material-symbols-outlined text-error text-2xl shrink-0">error</span>
+			<span aria-hidden="true" class="material-symbols text-error text-2xl shrink-0">error</span>
 			<div>
 				<h3 class="font-headline-md text-sm font-bold text-on-surface mb-1">End of Life — No Updates</h3>
 				<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
