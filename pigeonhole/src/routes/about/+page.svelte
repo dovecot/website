@@ -48,7 +48,7 @@
 	<div class="max-w-container-max mx-auto">
 		<div class="text-center mb-12 flex flex-col items-center">
 			<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary shadow-sm">
-				<span aria-hidden="true" class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">integration_instructions</span>
+				<span aria-hidden="true" class="material-symbols text-4xl" style="font-variation-settings: 'FILL' 1;">integration_instructions</span>
 			</div>
 			<h2 class="font-headline-xl text-3xl md:text-5xl text-on-background font-extrabold tracking-tight mb-4">Standards & Extensions Support</h2>
 			<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
@@ -93,7 +93,7 @@
 				<!-- ManageSieve Protocol -->
 				<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 space-y-3">
 					<div class="flex items-center gap-3">
-						<span aria-hidden="true" class="material-symbols-outlined text-primary text-2xl">dns</span>
+						<span aria-hidden="true" class="material-symbols text-primary text-2xl">dns</span>
 						<h3 class="font-headline-lg text-lg text-on-background font-bold">ManageSieve</h3>
 					</div>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">

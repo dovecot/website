@@ -109,9 +109,9 @@
 				aria-controls="mobile-nav"
 			>
 				{#if mobileMenuOpen}
-					<span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: 'FILL' 0;">close</span>
+					<span class="material-symbols" aria-hidden="true" style="font-variation-settings: 'FILL' 0;">close</span>
 				{:else}
-					<span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: 'FILL' 0;">menu</span>
+					<span class="material-symbols" aria-hidden="true" style="font-variation-settings: 'FILL' 0;">menu</span>
 				{/if}
 			</button>
 		</div>
