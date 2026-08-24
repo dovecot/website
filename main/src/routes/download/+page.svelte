@@ -42,7 +42,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<span aria-hidden="true" class="material-symbols-outlined text-base">upgrade</span>
+						<span aria-hidden="true" class="material-symbols text-base">upgrade</span>
 						Config Upgrader
 					</a>
 				</div>
@@ -53,7 +53,7 @@
 
 		<!-- Warning disclaimer -->
 		<div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 mb-6 max-w-4xl mx-auto flex gap-4 items-start">
-			<span aria-hidden="true" class="material-symbols-outlined text-amber-500 text-2xl shrink-0">warning</span>
+			<span aria-hidden="true" class="material-symbols text-amber-500 text-2xl shrink-0">warning</span>
 			<div>
 				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">Community Support Notice</h3>
 				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
@@ -70,7 +70,7 @@
 					class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-left text-sm font-semibold text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all cursor-pointer"
 					href="{base}/download/eol"
 				>
-					<span aria-hidden="true" class="material-symbols-outlined text-lg">archive</span>
+					<span aria-hidden="true" class="material-symbols text-lg">archive</span>
 					End of Life (2.3)
 				</a>
 			{/snippet}
@@ -78,7 +78,7 @@
 
 		<!-- EOL Packages Link -->
 		<div class="mt-8 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 max-w-4xl mx-auto flex gap-4 items-start">
-			<span aria-hidden="true" class="material-symbols-outlined text-amber-500 text-2xl shrink-0">warning</span>
+			<span aria-hidden="true" class="material-symbols text-amber-500 text-2xl shrink-0">warning</span>
 			<div class="flex-1">
 				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">End of Life Packages</h3>
 				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
@@ -107,7 +107,7 @@
 						rel="noopener noreferrer"
 						class="w-fit inline-flex items-center justify-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface font-semibold px-5 py-3 rounded-lg text-sm transition-all cursor-pointer"
 					>
-						<span aria-hidden="true" class="material-symbols-outlined text-base">download</span>
+						<span aria-hidden="true" class="material-symbols text-base">download</span>
 						Source Tarballs
 					</a>
 					<a
@@ -126,7 +126,7 @@
 						class="w-fit inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-5 py-3 rounded-lg text-sm shadow hover:shadow-md transition-all cursor-pointer"
 					>
 						Installation Guide
-						<span aria-hidden="true" class="material-symbols-outlined text-xs">open_in_new</span>
+						<span aria-hidden="true" class="material-symbols text-xs">open_in_new</span>
 					</a>
 				</div>
 			</div>
@@ -151,7 +151,7 @@
 						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
 					>
-						<span aria-hidden="true" class="material-symbols-outlined text-base">grid_view</span>
+						<span aria-hidden="true" class="material-symbols text-base">grid_view</span>
 						Docker Hub Images
 					</a>
 				</div>
@@ -177,7 +177,7 @@
 						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
 					>
-						<span aria-hidden="true" class="material-symbols-outlined text-base">speed</span>
+						<span aria-hidden="true" class="material-symbols text-base">speed</span>
 						ImapTest
 					</a>
 				</div>

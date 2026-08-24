@@ -25,7 +25,7 @@
 			aria-label={ariaLabel}
 			aria-live="polite"
 		>
-			<span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px">{copiedStates[copyId] ? 'check' : 'content_copy'}</span>
+			<span class="material-symbols" aria-hidden="true" style="font-size:16px">{copiedStates[copyId] ? 'check' : 'content_copy'}</span>
 		</button>
 		<!-- Screen reader copy feedback (WCAG 4.1.2) -->
 		<div aria-live="polite" class="sr-only">
