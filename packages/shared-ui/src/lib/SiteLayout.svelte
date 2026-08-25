@@ -4,7 +4,7 @@
 	import type { Snippet } from 'svelte';
 
 	export interface SiteLayoutProps {
-		logoSrc: string;
+		logoSrc: any;
 		logoAlt?: string;
 		logoTitle: string;
 		logoSubtitle?: string;
