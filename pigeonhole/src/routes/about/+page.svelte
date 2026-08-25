@@ -17,6 +17,9 @@
 		
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 font-body-md text-on-surface-variant leading-relaxed text-sm md:text-base">
 			<div class="space-y-4">
+				<div class="flex justify-center mb-4">
+					<enhanced:img alt="Pigeonhole Logo" class="h-36 w-auto" src="$lib/assets/pigeonhole_logo.png" />
+				</div>
 				<p>
 					<strong>Pigeonhole</strong> adds support for the <a href="http://www.sieve.info" target="_blank" rel="noopener noreferrer" class="link-subtle font-semibold">Sieve language</a> (<a href="https://tools.ietf.org/html/rfc5228/" target="_blank" rel="noopener noreferrer" class="link-subtle">RFC 5228</a>) and the <a href="https://tools.ietf.org/html/rfc5804" target="_blank" rel="noopener noreferrer" class="link-subtle font-semibold">ManageSieve protocol</a> (<a href="https://tools.ietf.org/html/rfc5804" target="_blank" rel="noopener noreferrer" class="link-subtle">RFC 5804</a>) to the <a href="https://dovecot.org/" target="_blank" rel="noopener noreferrer" class="link-subtle font-semibold">Dovecot Secure IMAP Server</a>.
 				</p>
