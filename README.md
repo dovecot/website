@@ -39,15 +39,12 @@ Every environment deploys from both `main` and `develop`.
 Each environment supplies `HOST` and `REMOTEPATH` as environment variables and
 `DEPLOY_KEY` as an environment secret. `REMOTEPATH` is the base directory; the
 branch name is appended to it, so each site keeps its `main` and `develop`
-copies side by side; <https://wwwdev.dovecot.org> is served from the `dovecot`
-environment's `develop` one.
+copies side by side under `/home/website/public_html/<component>/<branch>`;
+<https://wwwdev.dovecot.org> is served from the `dovecot` environment's
+`develop` one.
 
 A missing `DEPLOY_KEY`, `HOST` or `REMOTEPATH` makes that environment's deploy
 step skip silently.
-
-The `repo` deployment deliberately omits rsync's `--delete`: its target is a
-package repository, and deleting remote files not present in `repo/` would
-destroy the archive.
 
 ### Subdirectory Deployments (`BASE_PATH`)
 

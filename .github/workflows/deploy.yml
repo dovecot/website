@@ -78,7 +78,7 @@ jobs:
     - name: Deploy
       uses: dovecot/rsync-deployments@v2.0.3
       with:
-        FLAGS: -azr
+        FLAGS: -azr --delete
         HOST: ${{ env.HOST }}
         USER: website
         LOCALPATH: /repo/.
