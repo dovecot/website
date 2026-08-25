@@ -12,15 +12,9 @@
 	<div class="max-w-container-max mx-auto">
 		<!-- Header -->
 		<div class="text-center max-w-3xl mx-auto mb-12">
-			<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-				Download
-			</span>
 			<h1 class="font-headline-xl text-4xl text-on-background font-extrabold mt-4 mb-4">
-				Get Dovecot
+				Download
 			</h1>
-			<p class="font-body-md text-on-surface-variant leading-relaxed">
-				Download Dovecot via package repositories, source tarballs, Docker images, or the GitHub repository.
-			</p>
 		</div>
 
 		<!-- Config Upgrader -->
