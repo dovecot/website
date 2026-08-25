@@ -59,7 +59,7 @@
 
 	<Footer
 		{copyrightName}
-		{githubUrl}
+		githubUrl="https://github.com/dovecot/website"
 		{contactUrl}
 		{proUrl}
 	/>
