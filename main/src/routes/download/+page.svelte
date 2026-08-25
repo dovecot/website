@@ -56,7 +56,7 @@
 			<span aria-hidden="true" class="material-symbols text-amber-500 text-2xl shrink-0">warning</span>
 			<div>
 				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">Community Support Notice</h3>
-				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
+				<p class="font-body-md text-sm text-amber-700 leading-relaxed">
 					These repositories provide packages as a benefit to the community. They are provided with no official support, warranty, or SLAs. See <a href="{base}/support" class="link-subtle font-bold">Community support options</a>.
 				</p>
 			</div>
@@ -81,7 +81,7 @@
 			<span aria-hidden="true" class="material-symbols text-amber-500 text-2xl shrink-0">warning</span>
 			<div class="flex-1">
 				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">End of Life Packages</h3>
-				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
+				<p class="font-body-md text-sm text-amber-700 leading-relaxed">
 					See: <a class="font-semibold underline" href="{base}/download/eol">Dovecot CE 2.3 Packages</a>.
 				</p>
 			</div>

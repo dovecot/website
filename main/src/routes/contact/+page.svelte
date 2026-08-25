@@ -33,7 +33,7 @@
 
 		<div class="text-center mt-12 bg-surface-container-low p-6 rounded-xl border border-outline-variant/40">
 			<p class="font-semibold mb-2 text-lg text-on-background">Looking for technical help?</p>
-			<a href="{base}/support" class="inline-flex items-center gap-1.5 bg-primary text-on-primary text-xs font-semibold px-4 py-2 rounded-lg hover:bg-primary/95 transition-colors">
+			<a href="{base}/support" class="inline-flex items-center gap-1.5 bg-primary text-on-primary text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary/95 transition-colors">
 				<span aria-hidden="true" class="material-symbols text-sm">contact_support</span>
 				Go to Support Page
 			</a>

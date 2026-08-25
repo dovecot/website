@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<h3 class="font-headline-lg text-lg text-on-background font-bold">PGP Signing Key</h3>
-			<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+			<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
 				Use this GPG public key to verify downloaded repository metadata and packages{pgpNote ? ` ${pgpNote}` : ''}:
 			</p>
 		</div>
