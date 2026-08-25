@@ -39,7 +39,6 @@ jobs:
         REMOTEPATH: ${{ vars.REMOTEPATH }}
 
   pigeonhole:
-    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     environment: pigeonhole
     steps:
@@ -71,7 +70,6 @@ jobs:
         REMOTEPATH: ${{ vars.REMOTEPATH }}
 
   repo:
-    if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     environment: repo
     steps:
