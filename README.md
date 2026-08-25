@@ -36,15 +36,15 @@ Deployment is driven by GitHub Actions environments, one per site:
 
 Every environment deploys from both `main` and `develop`.
 
-Each environment supplies `HOST` and `REMOTEPATH` as environment variables and
-`DEPLOY_KEY` as an environment secret. `REMOTEPATH` is the base directory; the
+Each environment supplies `HOST`, `USER` and `REMOTEPATH` as environment
+variables and `DEPLOY_KEY` as an environment secret. `REMOTEPATH` is the base directory; the
 branch name is appended to it, so each site keeps its `main` and `develop`
 copies side by side under `/home/website/public_html/<component>/<branch>`;
 <https://wwwdev.dovecot.org> is served from the `dovecot` environment's
 `develop` one.
 
-A missing `DEPLOY_KEY`, `HOST` or `REMOTEPATH` makes that environment's deploy
-step skip silently.
+A missing `DEPLOY_KEY`, `HOST`, `USER` or `REMOTEPATH` makes that environment's
+deploy step skip silently.
 
 ### Subdirectory Deployments (`BASE_PATH`)
 

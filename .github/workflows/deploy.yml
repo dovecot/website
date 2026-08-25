@@ -28,14 +28,16 @@ jobs:
       with:
         FLAGS: -azr --delete
         HOST: ${{ env.HOST }}
-        USER: website
+        USER: ${{ env.DEPLOY_USER }}
         LOCALPATH: /main/build/.
         REMOTEPATH: ${{ env.REMOTEPATH }}/${{ github.ref_name }}
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      if: env.DEPLOY_KEY && env.HOST && env.REMOTEPATH
+      if: env.DEPLOY_KEY && env.HOST && env.DEPLOY_USER && env.REMOTEPATH
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         HOST: ${{ vars.HOST }}
+        # Not named USER: that would shadow the container's own USER.
+        DEPLOY_USER: ${{ vars.USER }}
         REMOTEPATH: ${{ vars.REMOTEPATH }}
 
   pigeonhole:
@@ -59,14 +61,16 @@ jobs:
       with:
         FLAGS: -azr --delete
         HOST: ${{ env.HOST }}
-        USER: website
+        USER: ${{ env.DEPLOY_USER }}
         LOCALPATH: /pigeonhole/build/.
         REMOTEPATH: ${{ env.REMOTEPATH }}/${{ github.ref_name }}
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      if: env.DEPLOY_KEY && env.HOST && env.REMOTEPATH
+      if: env.DEPLOY_KEY && env.HOST && env.DEPLOY_USER && env.REMOTEPATH
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         HOST: ${{ vars.HOST }}
+        # Not named USER: that would shadow the container's own USER.
+        DEPLOY_USER: ${{ vars.USER }}
         REMOTEPATH: ${{ vars.REMOTEPATH }}
 
   repo:
@@ -80,12 +84,14 @@ jobs:
       with:
         FLAGS: -azr --delete
         HOST: ${{ env.HOST }}
-        USER: website
+        USER: ${{ env.DEPLOY_USER }}
         LOCALPATH: /repo/.
         REMOTEPATH: ${{ env.REMOTEPATH }}/${{ github.ref_name }}
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      if: env.DEPLOY_KEY && env.HOST && env.REMOTEPATH
+      if: env.DEPLOY_KEY && env.HOST && env.DEPLOY_USER && env.REMOTEPATH
       env:
         DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         HOST: ${{ vars.HOST }}
+        # Not named USER: that would shadow the container's own USER.
+        DEPLOY_USER: ${{ vars.USER }}
         REMOTEPATH: ${{ vars.REMOTEPATH }}
