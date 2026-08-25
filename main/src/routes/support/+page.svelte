@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { GitHubIcon } from '@dovecot/shared-ui';
 </script>
 
 <svelte:head>
@@ -12,9 +13,6 @@
 			<h1 class="font-headline-xl text-4xl text-on-background font-extrabold mb-4">
 				Support & Community
 			</h1>
-			<p class="font-body-md text-on-surface-variant">
-				Ask the community, subscribe to mailing lists, or submit software bug reports.
-			</p>
 		</div>
 
 		<!-- Support Channels -->
@@ -48,16 +46,16 @@
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold mb-3">Report Issues</h2>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
-						Encountered a Dovecot bug? Report general bugs on GitHub or security issues via our security notification process.
+						Encountered a Dovecot bug? Report general bugs on the <span class="font-bold">Dovecot Mailing List</span> or security issues via our security notification process.
 					</p>
 				</div>
 				<a
-					href="https://github.com/dovecot/core/issues"
+					href="https://dovecot.org/mailman/listinfo/dovecot"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
 				>
-					Submit GitHub Issue
+					Submit Issue via Mailing List
 				</a>
 				<a
 					href="{base}/security"
@@ -87,6 +85,28 @@
 					class="inline-flex items-center justify-center bg-white hover:bg-surface-container-low text-primary border border-outline-variant/60 font-semibold px-4 py-2.5 rounded-lg shadow-sm transition-all"
 				>
 					Connect on IRC
+				</a>
+			</div>
+
+			<!-- Code Submission -->
+			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
+				<div>
+					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 text-primary">
+						<span aria-hidden="true" class="material-symbols text-2xl">code</span>
+					</div>
+					<h2 class="font-headline-lg text-xl text-on-background font-bold mb-3">Code Submission</h2>
+					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+						Contribute to Dovecot by submitting pull requests through our <a href="https://github.com/dovecot" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:text-primary-container transition-colors">GitHub organization</a>.
+					</p>
+				</div>
+				<a
+					href="https://github.com/dovecot/core/pulls"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 font-body-md text-body-md text-white px-6 py-3 rounded-lg shadow-sm transition-colors cursor-pointer gap-2"
+				>
+					<GitHubIcon iconClass="w-5 h-5 fill-current" />
+					GitHub Pull Requests
 				</a>
 			</div>
 		</div>
