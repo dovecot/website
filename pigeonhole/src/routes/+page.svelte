@@ -188,7 +188,7 @@
 </section>
 
 <!-- Open Source -->
-<section class="py-10 px-gutter border-t border-outline-variant/30">
+<section class="py-6 px-gutter border-t border-b border-outline-variant/30">
 	<div class="max-w-container-max mx-auto flex justify-center items-center gap-3">
 		<div class="w-8 h-8 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
 			<span aria-hidden="true" class="material-symbols text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
