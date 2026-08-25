@@ -105,7 +105,7 @@
 				<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 space-y-4">
 					<div>
 						<h3 class="font-headline-lg text-lg text-on-background font-bold mb-1">Dovecot Specific Extensions</h3>
-						<p class="font-body-md text-xs text-on-surface-variant">
+						<p class="font-body-md text-sm text-on-surface-variant">
 							Proprietary extensions enabling custom command execution and integration (disabled by default).
 						</p>
 					</div>
