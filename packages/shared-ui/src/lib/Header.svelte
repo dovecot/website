@@ -74,14 +74,14 @@
 				{@const resolved = resolveHref(item.href)}
 				{@const isActive = page.url.pathname === resolved}
 				<a
-					class="h-full flex items-center relative font-body-md text-body-md hover:text-primary-fixed transition-all duration-200 cursor-pointer active:opacity-80 {isActive ? 'text-primary-fixed-dim font-semibold' : 'text-on-primary'}"
+					class="font-body-md text-body-md hover:text-primary-fixed transition-all duration-200 cursor-pointer active:opacity-80 relative {isActive ? 'text-primary-fixed-dim font-semibold' : 'text-on-primary'}"
 					href={resolved}
 					{...item.target ? { target: item.target, rel: 'noopener noreferrer' } : {}}
 					{...isActive ? { 'aria-current': 'page' } : {}}
 				>
 					{item.name}
 					{#if isActive}
-						<div class="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-fixed-dim"></div>
+						<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-primary-fixed-dim"></span>
 					{/if}
 				</a>
 			{/each}
