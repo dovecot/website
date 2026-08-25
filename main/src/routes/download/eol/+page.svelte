@@ -30,7 +30,7 @@
 			<span aria-hidden="true" class="material-symbols text-error text-2xl shrink-0">error</span>
 			<div>
 				<h3 class="font-headline-md text-sm font-bold text-on-surface mb-1">End of Life — No Updates</h3>
-				<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+				<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
 					Dovecot CE 2.3 is
 					<a
 						class="text-primary font-semibold hover:text-primary-container transition-colors"
