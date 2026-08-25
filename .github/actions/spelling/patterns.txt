@@ -78,3 +78,34 @@ public key [0-9A-F]{8,}\b
 # Ignore links to mailing list
 https://dovecot.org/mailman3/\S*
 https://dovecot.org/pipermail/\S*
+
+# Automatically suggested patterns
+
+# hit-count: 41 file-count: 1
+# in check-spelling@v0.0.22+, printf markers aren't automatically consumed
+# printf markers
+(?<!\\)\\[nrt](?=[a-z]{2,})
+
+# hit-count: 41 file-count: 1
+# alternate printf markers if you run into latex and friends
+(?<!\\)\\[nrt](?=[a-z]{2,})(?=.*['"`])
+
+# hit-count: 4 file-count: 4
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+
+# hit-count: 4 file-count: 4
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 2 file-count: 2
+# Repeated letters
+\b([a-z])\g{-1}{2,}\b
+
+# hit-count: 1 file-count: 1
+# css url wrappings
+\burl\([^)]+\)
+
+# hit-count: 1 file-count: 1
+# regex choice
+\((?:\?:|)[^)|]+\|[^)|][^)]*\)
