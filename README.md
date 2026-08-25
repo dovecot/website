@@ -28,16 +28,19 @@ Local testing can be accomplished via `npm run -w <website> dev`.
 
 Deployment is driven by GitHub Actions environments, one per site:
 
-| Environment  | Branch            | Source           |
-|--------------|-------------------|------------------|
-| `dovecot`    | `main`, `develop` | `main/build`     |
-| `pigeonhole` | `main`            | `pigeonhole/build` |
-| `repo`       | `main`            | `repo/` (copied as-is) |
+| Environment  | Source                 |
+|--------------|------------------------|
+| `dovecot`    | `main/build`           |
+| `pigeonhole` | `pigeonhole/build`     |
+| `repo`       | `repo/` (copied as-is) |
+
+Every environment deploys from both `main` and `develop`.
 
 Each environment supplies `HOST` and `REMOTEPATH` as environment variables and
 `DEPLOY_KEY` as an environment secret. `REMOTEPATH` is the base directory; the
-branch name is appended to it, so `dovecot` deploys `main` and `develop` side by
-side and <https://wwwdev.dovecot.org> is served from the `develop` one.
+branch name is appended to it, so each site keeps its `main` and `develop`
+copies side by side; <https://wwwdev.dovecot.org> is served from the `dovecot`
+environment's `develop` one.
 
 A missing `DEPLOY_KEY`, `HOST` or `REMOTEPATH` makes that environment's deploy
 step skip silently.
