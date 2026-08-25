@@ -28,17 +28,19 @@ Local testing can be accomplished via `npm run -w <website> dev`.
 
 Deployment is driven by GitHub Actions environments, one per site:
 
-| Environment  | Branch    | Source           |
-|--------------|-----------|------------------|
-| `dovecot`    | `main`    | `main/build`     |
-| `dovecot-dev`| `develop` | `main/build`     |
-| `pigeonhole` | `main`    | `pigeonhole/build` |
-| `repo`       | `main`    | `repo/` (copied as-is) |
+| Environment  | Branch            | Source           |
+|--------------|-------------------|------------------|
+| `dovecot`    | `main`, `develop` | `main/build`     |
+| `pigeonhole` | `main`            | `pigeonhole/build` |
+| `repo`       | `main`            | `repo/` (copied as-is) |
 
 Each environment supplies `HOST` and `REMOTEPATH` as environment variables and
-`DEPLOY_KEY` as an environment secret. A missing `DEPLOY_KEY` makes that
-environment's deploy step skip silently, as does a missing `HOST` or
-`REMOTEPATH`.
+`DEPLOY_KEY` as an environment secret. `REMOTEPATH` is the base directory; the
+branch name is appended to it, so `dovecot` deploys `main` and `develop` side by
+side and <https://wwwdev.dovecot.org> is served from the `develop` one.
+
+A missing `DEPLOY_KEY`, `HOST` or `REMOTEPATH` makes that environment's deploy
+step skip silently.
 
 The `repo` deployment deliberately omits rsync's `--delete`: its target is a
 package repository, and deleting remote files not present in `repo/` would
