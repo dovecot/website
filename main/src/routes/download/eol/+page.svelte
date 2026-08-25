@@ -51,15 +51,18 @@
 		<!-- Dovecot Pro Banner -->
 		<div class="bg-gradient-to-r from-[#0e0d10] via-[#2d1543] to-[#3c036d] relative overflow-hidden rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
 			<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#861be4]/20 via-transparent to-transparent pointer-events-none"></div>
+			<div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+				<enhanced:img alt="" class="w-[200px] opacity-[0.06] blur-[1px] select-none" src="$lib/assets/pro-logo.png" />
+			</div>
 			<div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
 				<div class="flex-1">
 					<h3 class="font-['Space_Grotesk',sans-serif] text-base font-medium tracking-[0.02em] text-white mb-1">Extended Support for Dovecot 2.3</h3>
-					<p class="font-['Ubuntu_Sans',sans-serif] text-xs md:text-sm leading-relaxed text-white/85">
+					<p class="font-['Ubuntu_Sans',sans-serif] text-sm leading-relaxed text-white/85">
 						Extended support for Dovecot 2.3 is available in Dovecot Pro.
 					</p>
 				</div>
 				<a
-					class="font-['Space_Grotesk',sans-serif] text-sm font-medium tracking-[0.02em] shrink-0 inline-flex items-center justify-center bg-[#861be4] hover:bg-[#4a117b] text-white px-6 py-2.5 rounded-[14px] transition-all shadow-lg shadow-[#861be4]/30 hover:shadow-[#861be4]/50 cursor-pointer border border-white/10"
+					class="font-['Space_Grotesk',sans-serif] text-sm font-medium tracking-[0.02em] shrink-0 inline-flex items-center justify-center bg-[#861be4]/50 hover:bg-[#4a117b]/70 text-white px-6 py-2.5 rounded-[14px] transition-all shadow-lg shadow-[#861be4]/30 hover:shadow-[#861be4]/50 cursor-pointer border border-white/10"
 					href="https://www.dovecotpro.com"
 					target="_blank"
 					rel="noopener noreferrer"
