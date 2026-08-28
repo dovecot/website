@@ -42,7 +42,7 @@ redhat:
 ubuntu:
   resolute:
     title: "Resolute Raccoon (26.04 LTS)"
-    codename: noble
+    codename: resolute
     keyring: true
     format: sources
     dovecot_version: latest
