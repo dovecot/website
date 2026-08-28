@@ -40,6 +40,13 @@ redhat:
     dovecot_version: 2.4.1
     signed_by: DOVECOT-REPO-GPG-2.3
 ubuntu:
+  resolute:
+    title: "Resolute Raccoon (26.04 LTS)"
+    codename: noble
+    keyring: true
+    format: sources
+    dovecot_version: latest
+    signed_by: DOVECOT-REPO-GPG-2.4
   noble:
     title: "Noble (24.04 LTS)"
     codename: noble
@@ -52,7 +59,7 @@ ubuntu:
     codename: jammy
     keyring: true
     format: list
-    dovecot_version: latest
+    dovecot_version: 2.4.4
     signed_by: DOVECOT-REPO-GPG-2.4
 debian_2_3:
   bullseye:
