@@ -87,6 +87,13 @@
       "versions": {
         "2.4": [
           {
+            "codename": "Resolute (26.04 LTS)",
+            "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
+            "gpgPath": "/usr/share/keyrings/dovecot.gpg",
+            "sourcesPath": "/etc/apt/sources.list.d/dovecot.sources",
+            "sourcesContent": "Types: deb\nURIs: https://repo.dovecot.org/ce-2.4-latest/ubuntu/resolute\nSuites: resolute\nComponents: main\nSigned-By: /usr/share/keyrings/dovecot.gpg"
+          },
+          {
             "codename": "Noble (24.04 LTS)",
             "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
             "gpgPath": "/usr/share/keyrings/dovecot.gpg",
@@ -95,6 +102,7 @@
           },
           {
             "codename": "Jammy (22.04 LTS)",
+            "warning": "Last released version is 2.4.4",
             "gpgCmd": "curl https://repo.dovecot.org/DOVECOT-REPO-GPG-2.4 | gpg --dearmor -o /usr/share/keyrings/dovecot.gpg",
             "gpgPath": "/usr/share/keyrings/dovecot.gpg",
             "sourcesPath": "/etc/apt/sources.list.d/dovecot.list",
