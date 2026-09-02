@@ -1,10 +1,10 @@
 {
   "stable": {
-    "version": "v2.4.3",
-    "dovecotVersion": "v2.4.3",
-    "tarball": "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.3.tar.gz",
-    "sig": "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.3.tar.gz.sig",
-    "news": "https://raw.githubusercontent.com/dovecot/pigeonhole/2.4.3/NEWS"
+    "version": "v2.4.5",
+    "dovecotVersion": "v2.4.5",
+    "tarball": "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.5.tar.gz",
+    "sig": "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.5.tar.gz.sig",
+    "news": "https://raw.githubusercontent.com/dovecot/pigeonhole/2.4.5/NEWS"
   },
   "legacy": [
     {
