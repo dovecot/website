@@ -18,14 +18,12 @@
   --font-body-md: "Inter", sans-serif;
   --font-headline-xl: "Manrope", sans-serif;
   --font-headline-lg: "Manrope", sans-serif;
-  --font-body-sm: "Inter", sans-serif;
 
   --font-size-label-md: 12px;
   --font-size-headline-lg-mobile: 24px;
   --font-size-body-md: 16px;
   --font-size-headline-xl: 48px;
   --font-size-headline-lg: 32px;
-  --font-size-body-sm: 14px;
 }
 
 /* Smooth active state transitions — avoid 'all' to keep focus rings instant (WCAG 2.4.7) */
