@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 @source "../../src/**/*.svelte";
-@plugin '@tailwindcss/forms';
 
 @theme {
   --radius-default: 0.25rem;
