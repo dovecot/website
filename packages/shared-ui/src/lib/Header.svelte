@@ -17,7 +17,6 @@
 		logoTitleClass = 'text-white',
 		logoSubtitleClass = 'text-white/60 font-light',
 		logoImgClass = 'h-8 w-auto',
-		logoHref = '/',
 		navItems = [],
 		githubUrl = 'https://github.com/dovecot/core/'
 	} = $props<{
@@ -28,7 +27,6 @@
 		logoTitleClass?: string;
 		logoSubtitleClass?: string;
 		logoImgClass?: string;
-		logoHref?: string;
 		navItems: NavItem[];
 		githubUrl?: string;
 	}>();
@@ -56,7 +54,7 @@
 <header class="bg-inverse-surface border-b border-white/10 shadow-lg w-full sticky top-0 z-50 transition-colors duration-300">
 	<div class="flex justify-between items-center w-full px-gutter h-16 max-w-container-max mx-auto">
 		<!-- Logo -->
-		<a class="flex items-center gap-3 hover:scale-[1.02] active:scale-98 transition-transform" href={resolveHref(logoHref)}>
+		<a class="flex items-center gap-3 hover:scale-[1.02] active:scale-98 transition-transform" href={resolveHref('/')}>
 			<div class="h-8 w-auto flex items-center">
 				<enhanced:img alt={logoAlt} class="{logoImgClass} object-contain brightness-100" src={logoSrc} />
 			</div>
