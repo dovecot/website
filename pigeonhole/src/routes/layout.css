@@ -3,7 +3,6 @@
 @import 'tailwindcss';
 @source "../../../packages/shared-ui/src/**/*.svelte";
 @import "../../../packages/shared-ui/src/lib/layout.css";
-@plugin '@tailwindcss/forms';
 
 @theme {
   --color-on-surface: #1a1c1c;
