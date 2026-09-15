@@ -10,13 +10,11 @@
 	let {
 		version,            // '2.4' | '2.3'
 		pgpKeyId,           // key id to show
-		copyIdSuffix = '',  // appended to copy IDs
 		pgpNote,            // custom text after "packages" in PGP description
 		navExtra,           // optional extra nav links snippet
 	}: {
 		version: string;
 		pgpKeyId: string;
-		copyIdSuffix?: string;
 		pgpNote?: string;
 		navExtra?: Snippet;
 	} = $props();
@@ -140,7 +138,6 @@
 						<CodeBlock
 							label={'1. Setup GPG keyring (' + rel.gpgPath + ')'}
 							code={rel.gpgCmd}
-							copyId={rel.codename + '_gpg' + copyIdSuffix}
 							ariaLabel="Copy GPG Command"
 						/>
 					{/if}
@@ -149,7 +146,6 @@
 						<CodeBlock
 							label={'2. Configure sources config path file (' + rel.sourcesPath + ')'}
 							code={rel.sourcesContent}
-							copyId={rel.codename + '_sources' + copyIdSuffix}
 							ariaLabel="Copy Sources Configuration"
 						/>
 					{/if}
@@ -158,7 +154,6 @@
 						<CodeBlock
 							label={'Configure repo path file (' + rel.repoPath + ')'}
 							code={rel.repoContent}
-							copyId={rel.codename + '_repo' + copyIdSuffix}
 							ariaLabel="Copy Repo Setup"
 						/>
 					{/if}
@@ -170,7 +165,6 @@
 				<CodeBlock
 					label="Update repository database and install packages:"
 					code={currentDist.installCmd}
-					copyId={currentDist.id + '_install' + copyIdSuffix}
 					ariaLabel="Copy Installation Command"
 				/>
 				{#if currentDist.packages}

@@ -78,7 +78,6 @@
 		<RepoSection
 			version="2.3"
 			pgpKeyId="ED409DA1"
-			copyIdSuffix="_eol"
 			pgpNote="for Dovecot CE 2.3"
 		/>
 	</div>
