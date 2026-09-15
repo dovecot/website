@@ -117,7 +117,7 @@
 
 	<!-- Mobile Dropdown Drawer -->
 	{#if mobileMenuOpen}
-		<nav id="mobile-nav" bind:this={mobileNavRef} class="md:hidden bg-inverse-surface/95 backdrop-blur-md border-t border-white/10 px-gutter py-4 flex flex-col gap-4 animate-fade-in absolute w-full left-0 shadow-xl" aria-label="Mobile navigation">
+		<nav id="mobile-nav" bind:this={mobileNavRef} class="md:hidden bg-inverse-surface/95 backdrop-blur-md border-t border-white/10 px-gutter py-4 flex flex-col gap-4 absolute w-full left-0 shadow-xl" aria-label="Mobile navigation">
 			{#each navItems as item}
 				{@const resolved = resolveHref(item.href)}
 				{@const isActive = page.url.pathname === resolved}
