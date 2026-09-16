@@ -43,7 +43,7 @@
 				</div>
 				<div class="mt-6">
 					<a
-						href="https://vdp.open-xchange.com/"
+						href="https://yeswehack.com/programs/dovecot"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center bg-error hover:bg-error/90 text-white font-semibold px-6 py-3 rounded-lg shadow transition-colors text-sm cursor-pointer"
