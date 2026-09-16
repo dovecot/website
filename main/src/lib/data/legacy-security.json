@@ -1,0 +1,149 @@
+[
+  {
+    "id": "CVE-2022-30550",
+    "severity": "high",
+    "date": "06 Jul 2022",
+    "description": "Privilege escalation possible in dovecot when similar master and non-master passdbs are used",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2022-July/000477.html"
+  },
+  {
+    "id": "CVE-2020-28200",
+    "severity": "high",
+    "date": "21 Jun 2021",
+    "description": "Sieve excessive resource usage",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2021-June/000460.html"
+  },
+  {
+    "id": "CVE-2021-29157",
+    "severity": "moderate",
+    "date": "21 Jun 2021",
+    "description": "oauth2 JWT local validation path traversal",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2021-June/000461.html"
+  },
+  {
+    "id": "CVE-2021-33515",
+    "severity": "moderate",
+    "date": "21 Jun 2021",
+    "description": "SMTP Submission service STARTTLS injection",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2021-June/000462.html"
+  },
+  {
+    "id": "CVE-2020-24386",
+    "severity": "moderate",
+    "date": "04 Jan 2021",
+    "description": "IMAP hibernation allows accessing other peoples mail",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2021-January/000450.html"
+  },
+  {
+    "id": "CVE-2020-25275",
+    "severity": "moderate",
+    "date": "04 Jan 2021",
+    "description": "MIME parsing crashes with particular messages",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2021-January/000451.html"
+  },
+  {
+    "id": "CVE-2020-12100",
+    "severity": "high",
+    "date": "12 Aug 2020",
+    "description": "Receiving mail with deeply nested MIME parts leads to resource exhaustion",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-August/000441.html"
+  },
+  {
+    "id": "CVE-2020-12673",
+    "severity": "moderate",
+    "date": "12 Aug 2020",
+    "description": "Specially crafted NTLM package can crash auth service",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-August/000442.html"
+  },
+  {
+    "id": "CVE-2020-12674",
+    "severity": "moderate",
+    "date": "12 Aug 2020",
+    "description": "Specially crafted RPA authentication message crashes auth",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-August/000443.html"
+  },
+  {
+    "id": "CVE-2020-10957",
+    "severity": "moderate",
+    "date": "18 May 2020",
+    "description": "Sending malformed NOOP command causes crash in submission, submission-login or lmtp service.",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-May/000438.html"
+  },
+  {
+    "id": "CVE-2020-10958",
+    "severity": "moderate",
+    "date": "18 May 2020",
+    "description": "Sending command followed by sufficient number of newlines triggers a use-after-free bug that might crash submission-login, submission or lmtp service.",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-May/000438.html"
+  },
+  {
+    "id": "CVE-2020-10967",
+    "severity": "moderate",
+    "date": "18 May 2020",
+    "description": "Sending mail with empty quoted localpart causes submission or lmtp component to crash.",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-May/000438.html"
+  },
+  {
+    "id": "CVE-2020-7046",
+    "severity": "moderate",
+    "date": "12 Feb 2020",
+    "description": "Truncated UTF-8 can be used to DoS submission-login and lmtp processes",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-February/000431.html"
+  },
+  {
+    "id": "CVE-2020-7957",
+    "severity": "moderate",
+    "date": "12 Feb 2020",
+    "description": "Specially crafted mail can crash snippet generation",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2020-February/000430.html"
+  },
+  {
+    "id": "CVE-2019-19722",
+    "severity": "moderate",
+    "date": "13 Dec 2019",
+    "description": "Critical vulnerability in Dovecot",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2019-December/000426.html"
+  },
+  {
+    "id": "CVE-2019-11500",
+    "severity": "moderate",
+    "date": "28 Aug 2019",
+    "description": "IMAP and ManageSieve protocol parsers do not properly handle NUL byte when scanning data in quoted strings",
+    "link": "https://dovecot.org/pipermail/dovecot-news/2019-August/000418.html"
+  },
+  {
+    "id": "CVE-2019-11494",
+    "severity": "moderate",
+    "date": "30 Apr 2019",
+    "description": "Submission-login crashes with signal 11 due to null pointer access when authentication is aborted by disconnecting",
+    "link": "https://dovecot.org/list/dovecot-news/2019-April/000409.html"
+  },
+  {
+    "id": "CVE-2019-11499",
+    "severity": "moderate",
+    "date": "30 Apr 2019",
+    "description": "Submission-login crashes when authentication is started over TLS secured channel and invalid authentication message is sent",
+    "link": "https://dovecot.org/list/dovecot-news/2019-April/000410.html"
+  },
+  {
+    "id": "CVE-2019-10691",
+    "severity": "moderate",
+    "date": "18 Apr 2019",
+    "description": "JSON encoder in Dovecot 2.3 incorrectly assert-crashes when encountering invalid UTF-8 characters",
+    "link": "https://dovecot.org/list/dovecot-news/2019-April/000406.html"
+  },
+  {
+    "id": "CVE-2019-7524",
+    "severity": "moderate",
+    "date": "28 Mar 2019",
+    "description": "Buffer overflow when reading extension header from dovecot index files",
+    "link": "https://dovecot.org/list/dovecot-news/2019-March/000403.html"
+  },
+  {
+    "id": "CVE-2019-3814",
+    "severity": "moderate",
+    "date": "05 Feb 2019",
+    "description": "Suitable client certificate can be used to login as other user",
+    "link": "https://dovecot.org/list/dovecot/2019-February/114575.html"
+  }
+]
