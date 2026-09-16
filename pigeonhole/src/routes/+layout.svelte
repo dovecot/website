@@ -16,6 +16,7 @@
 		{ name: 'Download', href: '/download' },
 		{ name: 'Documentation', href: 'https://doc.dovecot.org/', target: '_blank' },
 		{ name: 'Support', href: '/support' },
+		{ name: 'Security', href: '/security' },
 		{ name: 'Dovecot', href: 'https://dovecot.org/', target: '_blank' }
 	];
 </script>
