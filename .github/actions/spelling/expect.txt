@@ -1,6 +1,7 @@
 Admins
 Bento
-CVEs
+coreutils
+csaf
 DFBB
 Dists
 gpgkeys
@@ -13,7 +14,6 @@ onsubmit
 openemailsurvey
 prerender
 proactively
-rce
 sitemap
 SLAs
 splitscreen
