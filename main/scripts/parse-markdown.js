@@ -20,9 +20,7 @@ function normalizeDate(dateStr) {
 
 const projectRoot = path.resolve(__dirname, '..');
 const newsDir = path.join(projectRoot, 'src/lib/data/news');
-const securityDir = path.join(projectRoot, 'src/lib/data/security');
 const outputNews = path.join(projectRoot, 'src/lib/data/news.json');
-const outputSecurity = path.join(projectRoot, 'src/lib/data/security.json');
 
 const dateSort = (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime();
 
@@ -43,7 +41,7 @@ function parseMarkdownDir(dirPath, outputFile, fields) {
 export function parseMarkdown() {
 	fs.mkdirSync(path.join(projectRoot, 'src/lib/data'), { recursive: true });
 
-	// --- 1. Parse News ---
+	// Parse News
 	if (fs.existsSync(newsDir)) {
 		parseMarkdownDir(newsDir, outputNews,
 			(file, data, body) => {
@@ -75,34 +73,6 @@ export function parseMarkdown() {
 			}
 		);
 	}
-
-	// --- 2. Parse CVEs ---
-	if (fs.existsSync(securityDir)) {
-		parseMarkdownDir(securityDir, outputSecurity, (file, data, body) => {
-			const id = file.replace('.md', '');
-			const title = data.title || id;
-			const excerpt = data.excerpt || '';
-			const link = data.link || '';
-			const dateStr = data.date || 'Unknown Date';
-
-			let severity = 'moderate';
-			const text = `${title} ${excerpt}`.toLowerCase();
-			if (text.includes('remote code execution') || text.includes('privilege escalation') || text.includes('rce') || text.includes('high severity')) {
-				severity = 'high';
-			} else if (text.includes('low severity') || text.includes('minor')) {
-				severity = 'low';
-			}
-
-			return {
-				id,
-				title,
-				severity,
-				date: normalizeDate(dateStr),
-				description: excerpt || body.trim() || `Security advisory regarding ${title}.`,
-				link
-			};
-		});
-	}
 }
 
 export function parseMarkdownPlugin() {
@@ -113,11 +83,11 @@ export function parseMarkdownPlugin() {
 		},
 		configureServer(server) {
 			const watcher = server.watcher;
-			watcher.add([newsDir, securityDir]);
+			watcher.add([newsDir]);
 			
 			const onChange = (filePath) => {
 				const relativePath = path.normalize(filePath);
-				if (relativePath.startsWith(newsDir) || relativePath.startsWith(securityDir)) {
+				if (relativePath.startsWith(newsDir)) {
 					if (relativePath.endsWith('.md')) {
 						server.config.logger.info(`[parse-markdown] Markdown file changed: ${path.basename(filePath)}. Regenerating JSON...`);
 						try {
