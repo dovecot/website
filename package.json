@@ -17,7 +17,7 @@
     "@sveltejs/vite-plugin-svelte": "^7.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "gray-matter": "^4.0.3",
-    "svelte": "^5.57.0",
+    "svelte": "^5.57.1",
     "svelte-check": "^4.7.6",
     "svelte-sitemap": "^4.0.4",
     "tailwindcss": "^4.3.3",
