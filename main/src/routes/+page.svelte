@@ -11,11 +11,11 @@
 
 	const slides = [
 		{
-			badge: "The Secure, High Performance Email Server",
+			badge: "The Secure, High Performance Email Backend",
 			badgeClass: "text-primary",
 			badgeIcon: "",
-			headline: "Powering over <a href='https://openemailsurvey.org/' class='link-subtle'>75%</a> of the World’s Email Servers.",
-			description: "Dovecot Community Edition is the world's most trusted open-source email server. Secure by design and fully standards-compliant, it delivers exceptional performance with effortless migration and self-healing reliability.",
+			headline: "Powering over <a href='https://openemailsurvey.org/' class='link-subtle'>75%</a> of the World’s Email Backends.",
+			description: "Dovecot Community Edition is the world's most trusted open-source email server. Secure by design and fully standards-compliant, it delivers exceptional performance with battle-tested migration and self-healing reliability.",
 			image: logoSrc,
 			imageAlt: "Dovecot Logo",
 			imageClass: "max-w-l"
@@ -25,7 +25,7 @@
 			badgeClass: "text-tertiary",
 			badgeIcon: "workspace_premium",
 			headline: "A Quarter Century of Keeping the World Connected.",
-			description: "Since our first release in 2002, Dovecot has set the benchmark for fast, secure, and compliant mail servers. We celebrate 25 years of open-source excellence, shaped by the community and trusted by millions worldwide. Thank you to the global community of developers and administrators who have trusted and built with us during this time.",
+			description: "Since our first release in 2002, Dovecot has set the benchmark for fast, secure, and compliant mail servers. We enter our 25th year of open-source excellence, shaped by the community and trusted by millions worldwide. Thank you to the global community of developers and administrators who have trusted and built with us during this time.",
 			image: anniversaryImgSrc,
 			imageAlt: "Dovecot 25th Anniversary Graphic",
 			imageClass: "shadow-lg border border-outline-variant/30"
