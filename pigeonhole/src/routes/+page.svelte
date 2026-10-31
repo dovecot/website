@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import artworkSrc from '$lib/assets/pigeonhole_artwork.jpg?enhanced';
-	import { GitHubIcon, HeroCarousel } from '@dovecot/shared-ui';
-	import rawSlides from '$lib/data/slides.json';
+	import { GitHubIcon, Hero } from '@dovecot/shared-ui';
 	import rawFeatures from '$lib/data/features.json';
 
-	const slides = rawSlides.map(slide => ({ ...slide, image: artworkSrc }));
 	const features = rawFeatures;
 </script>
 
@@ -47,7 +45,18 @@
 {/snippet}
 
 <!-- Hero Section -->
-<HeroCarousel slides={slides} title={heroTitle} actions={heroActions} />
+<Hero
+	badge="Sieve Mail Filtering"
+	badgeClass="text-primary"
+	badgeIcon="filter_alt"
+	headline="Sorting and filing email messages with absolute precision and safety."
+	description="<strong>Pigeonhole</strong> adds <a href='http://www.sieve.info/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Sieve mail filtering</a> and the <a href='https://tools.ietf.org/html/rfc5804' target='_blank' rel='noopener noreferrer' class='link-subtle'>ManageSieve protocol</a> to <a href='https://dovecot.org/' target='_blank' rel='noopener noreferrer' class='link-subtle'>Dovecot</a>. Securely compile and execute mail filters at delivery time, keeping your mail store organized and safe."
+	image={artworkSrc}
+	imageAlt="Pigeonhole Sorting Illustration"
+	imageClass="shadow-2xl border border-outline-variant/30"
+	title={heroTitle}
+	actions={heroActions}
+/>
 
 <!-- Features Grid Section -->
 <section class="py-16 px-gutter bg-surface">
