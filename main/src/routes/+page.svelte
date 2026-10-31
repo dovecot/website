@@ -78,7 +78,7 @@
 		<div class="flex-1 max-w-2xl">
 			<h2 class="font-['Space_Grotesk',sans-serif] text-2xl md:text-4xl font-medium tracking-[0.02em] leading-tight text-white mb-4">From Mail Server to Mail Infrastructure</h2>
 			<p class="font-['Ubuntu_Sans',sans-serif] text-base md:text-lg leading-[1.75] text-white/85">
-				Stop piecing together your architecture. Dovecot Pro seamlessly evolves the core power of Dovecot into a fully supported, comprehensive, high-availability platform. Get the rock-solid stability, architectural optimization, and dynamic scalability required by the world's most demanding service providers.
+				Stop piecing together your architecture. Dovecot Pro seamlessly evolves the core power of Dovecot into a fully supported, high-availability platform designed to cut carrier-grade TCO by 45%+. Get the architectural optimization, cloud object storage integration, and dynamic scalability required by the world's largest service providers - without the overhead of custom DIY clustering.
 			</p>
 		</div>
 		<div class="shrink-0">
