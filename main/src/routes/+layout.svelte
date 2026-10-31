@@ -22,11 +22,11 @@
 
 <svelte:head>
 	<link rel="icon" href="{base}/favicon.ico" />
-	<title>Dovecot — The Secure, High Performance Email Server</title>
+	<title>Dovecot — The Secure, High Performance Email Backend</title>
 	<meta name="description" content="Dovecot is the world's most trusted open-source email server. Secure, fast, and fully standards-compliant IMAP and POP3 server." />
 
 	<!-- Open Graph -->
-	<meta property="og:title" content="Dovecot — The Secure, High Performance Email Server" />
+	<meta property="og:title" content="Dovecot — The Secure, High Performance Email Backend" />
 	<meta property="og:description" content="Dovecot is the world's most trusted open-source email server. Secure, fast, and fully standards-compliant IMAP and POP3 server." />
 	<meta property="og:image" content="https://dovecot.org/favicon.ico" />
 	<meta property="og:type" content="website" />
