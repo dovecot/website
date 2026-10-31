@@ -4,7 +4,6 @@
 	const updates = newsData.slice(0, 3);
 
 	import logoSrc from '$lib/assets/logo.png?enhanced';
-	import anniversaryImgSrc from '$lib/assets/anniversary.png?enhanced';
 	import { GitHubIcon, HeroCarousel } from '@dovecot/shared-ui';
 
 	import proLogoSrc from '$lib/assets/pro-logo.png?enhanced';
@@ -19,16 +18,6 @@
 			image: logoSrc,
 			imageAlt: "Dovecot Logo",
 			imageClass: "max-w-l"
-		},
-		{
-			badge: "Celebrating 25 Years",
-			badgeClass: "text-tertiary",
-			badgeIcon: "workspace_premium",
-			headline: "A Quarter Century of Keeping the World Connected.",
-			description: "Since our first release in 2002, Dovecot has set the benchmark for fast, secure, and compliant mail servers. We celebrate 25 years of open-source excellence, shaped by the community and trusted by millions worldwide. Thank you to the global community of developers and administrators who have trusted and built with us during this time.",
-			image: anniversaryImgSrc,
-			imageAlt: "Dovecot 25th Anniversary Graphic",
-			imageClass: "shadow-lg border border-outline-variant/30"
 		}
 	];
 </script>
@@ -63,6 +52,16 @@
 				Documentation
 			</a>
 {/snippet}
+
+<!-- 25th Anniversary Trust Banner -->
+<aside aria-label="25th Anniversary Announcement" class="bg-surface-container-low border-b border-outline-variant/30 py-2.5 px-gutter">
+	<div class="max-w-container-max mx-auto flex items-center justify-center gap-2 text-xs md:text-sm text-on-surface-variant text-center">
+		<span class="material-symbols text-tertiary text-base" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+		<span class="font-semibold text-on-surface">Celebrating 25 Years</span>
+		<span class="hidden sm:inline text-outline-variant">&bull;</span>
+		<span>A Quarter Century of Keeping the World Connected (2002–2027)</span>
+	</div>
+</aside>
 
 <!-- Hero Section -->
 <HeroCarousel slides={slides} title={heroTitle} actions={heroActions} />
