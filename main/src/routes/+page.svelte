@@ -4,22 +4,9 @@
 	const updates = newsData.slice(0, 3);
 
 	import logoSrc from '$lib/assets/logo.png?enhanced';
-	import { GitHubIcon, HeroCarousel } from '@dovecot/shared-ui';
+	import { GitHubIcon, Hero } from '@dovecot/shared-ui';
 
 	import proLogoSrc from '$lib/assets/pro-logo.png?enhanced';
-
-	const slides = [
-		{
-			badge: "The Secure, High Performance Email Server",
-			badgeClass: "text-primary",
-			badgeIcon: "",
-			headline: "Powering over <a href='https://openemailsurvey.org/' class='link-subtle'>75%</a> of the World’s Email Servers.",
-			description: "Dovecot Community Edition is the world's most trusted open-source email server. Secure by design and fully standards-compliant, it delivers exceptional performance with effortless migration and self-healing reliability.",
-			image: logoSrc,
-			imageAlt: "Dovecot Logo",
-			imageClass: "max-w-l"
-		}
-	];
 </script>
 
 {#snippet heroTitle()}
@@ -64,7 +51,17 @@
 </aside>
 
 <!-- Hero Section -->
-<HeroCarousel slides={slides} title={heroTitle} actions={heroActions} />
+<Hero
+	badge="The Secure, High Performance Email Server"
+	badgeClass="text-primary"
+	headline="Powering over <a href='https://openemailsurvey.org/' class='link-subtle'>75%</a> of the World’s Email Servers."
+	description="Dovecot Community Edition is the world's most trusted open-source email server. Secure by design and fully standards-compliant, it delivers exceptional performance with effortless migration and self-healing reliability."
+	image={logoSrc}
+	imageAlt="Dovecot Logo"
+	imageClass="max-w-l"
+	title={heroTitle}
+	actions={heroActions}
+/>
 
 <!-- Dovecot Pro Promo Section -->
 <section class="bg-gradient-to-r from-[#0e0d10] via-[#2d1543] to-[#3c036d] relative overflow-hidden">
