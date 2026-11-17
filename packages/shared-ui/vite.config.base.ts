@@ -3,6 +3,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
+import Icons from 'unplugin-icons/vite';
 import type { PluginOption, UserConfig } from 'vite';
 
 /**
@@ -26,7 +27,7 @@ export async function createViteConfig(overrides: UserConfig = {}): Promise<User
 			}
 		})
 	]);
-	const plugins: PluginOption[] = [...tw, ...img, ...kit];
+	const plugins: PluginOption[] = [...tw, ...img, ...kit, Icons({ compiler: 'svelte' })];
 	return {
 		plugins,
 		...overrides

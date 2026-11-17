@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from './Icon.svelte';
 	let { label, code, ariaLabel = 'Copy Code' } = $props<{
 		label: string;
 		code: string;
@@ -24,7 +25,7 @@
 			aria-label={ariaLabel}
 			aria-live="polite"
 		>
-			<span class="material-symbols" aria-hidden="true" style="font-size:16px">{copied ? 'check' : 'content_copy'}</span>
+			<Icon name={copied ? 'check' : 'content_copy'} style="font-size:16px" />
 		</button>
 		<!-- Screen reader copy feedback (WCAG 4.1.2) -->
 		<div aria-live="polite" class="sr-only">

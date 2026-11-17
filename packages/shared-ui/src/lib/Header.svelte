@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from './Icon.svelte';
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import GitHubIcon from './GitHubIcon.svelte';
@@ -107,9 +108,9 @@
 				aria-controls="mobile-nav"
 			>
 				{#if mobileMenuOpen}
-					<span class="material-symbols" aria-hidden="true" style="font-variation-settings: 'FILL' 0;">close</span>
+					<Icon name="close" class="text-2xl" />
 				{:else}
-					<span class="material-symbols" aria-hidden="true" style="font-variation-settings: 'FILL' 0;">menu</span>
+					<Icon name="menu" class="text-2xl" />
 				{/if}
 			</button>
 		</div>

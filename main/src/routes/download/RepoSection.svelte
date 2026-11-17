@@ -3,7 +3,7 @@
 	import repoData from '$lib/data/repositories.json';
 	import packageCategories from '$lib/data/package-categories.json';
 	import pgpData from '$lib/data/pgp-keys.json';
-	import { CodeBlock } from '@dovecot/shared-ui';
+	import { CodeBlock, Icon, type IconName } from '@dovecot/shared-ui';
 
 	import type { Snippet } from 'svelte';
 
@@ -56,7 +56,7 @@
 <div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 max-w-xl mx-auto mb-12 space-y-4">
 	<div class="flex items-center gap-3">
 		<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
-			<span aria-hidden="true" class="material-symbols text-2xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+			<Icon name="verified_user" class="text-2xl" />
 		</div>
 		<div>
 			<h3 class="font-headline-lg text-lg text-on-background font-bold">PGP Signing Key</h3>
@@ -106,7 +106,7 @@
 				onclick={() => activeDist = dist.id}
 				class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-left text-sm font-semibold transition-all cursor-pointer {activeDist === dist.id ? 'bg-primary text-on-primary shadow' : 'hover:bg-surface-container-high text-on-surface-variant'}"
 			>
-				<span aria-hidden="true" class="material-symbols text-lg">{dist.icon || 'terminal'}</span>
+				<Icon name={(dist.icon || 'terminal') as IconName} class="text-lg" />
 				{dist.name}
 			</button>
 		{/each}

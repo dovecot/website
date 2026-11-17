@@ -5,8 +5,8 @@ csaf
 DFBB
 Dists
 gpgkeys
-idx
 ircs
+keyof
 listinfo
 noopener
 noreferrer
@@ -18,4 +18,5 @@ sitemap
 SLAs
 splitscreen
 TCO
+unplugin
 yeswehack

@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import releases from '$lib/data/releases.json';
 	import pgpKeys from '$lib/data/pgp-keys.json';
-	import { GitHubIcon } from '@dovecot/shared-ui';
+	import { GitHubIcon, Icon } from '@dovecot/shared-ui';
 </script>
 
 <svelte:head>
@@ -28,7 +28,7 @@
 
 		<!-- Package Installation Notice -->
 		<div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 mb-6 max-w-4xl mx-auto flex gap-4 items-start">
-			<span aria-hidden="true" class="material-symbols text-amber-500 text-2xl shrink-0">warning</span>
+			<Icon name="warning" class="text-amber-500 text-2xl shrink-0" />
 			<div>
 				<h3 class="font-headline-md text-sm font-bold text-amber-800 mb-1">Community Support Notice</h3>
 				<p class="font-body-md text-xs text-amber-700 leading-relaxed">
@@ -40,7 +40,7 @@
 		<!-- Package Installation -->
 		<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 max-w-4xl mx-auto mb-12 space-y-6">
 			<div class="flex items-center gap-3">
-				<span aria-hidden="true" class="material-symbols text-primary text-3xl">dns</span>
+				<Icon name="dns" class="text-primary text-3xl" />
 				<h2 class="font-headline-xl text-2xl text-on-background font-bold">Package Installation</h2>
 			</div>
 
@@ -55,7 +55,7 @@
 					rel="noopener noreferrer"
 					class="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-5 py-3 rounded-lg text-sm shadow hover:shadow-md transition-all cursor-pointer"
 				>
-					<span aria-hidden="true" class="material-symbols text-base">dns</span>
+					<Icon name="dns" class="text-base" />
 					Dovecot Download Page
 				</a>
 				<a
@@ -64,7 +64,7 @@
 					rel="noopener noreferrer"
 					class="inline-flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface font-semibold px-5 py-3 rounded-lg text-sm transition-all cursor-pointer"
 				>
-					<span aria-hidden="true" class="material-symbols text-base">folder_open</span>
+					<Icon name="folder_open" class="text-base" />
 					Browse Repository
 				</a>
 			</div>
@@ -73,7 +73,7 @@
 			<div class="border-t border-outline-variant/30 pt-6 space-y-4">
 				<div class="flex items-center gap-3">
 					<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
-						<span aria-hidden="true" class="material-symbols text-xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+						<Icon name="verified_user" class="text-xl" />
 					</div>
 					<div>
 						<h3 class="font-headline-lg text-lg text-on-background font-bold">PGP Signing Keys</h3>
@@ -127,7 +127,7 @@
 		<!-- Stable Release -->
 		<div class="bg-surface-container-low p-6 md:p-8 rounded-2xl border border-outline-variant/40 max-w-4xl mx-auto mb-6 space-y-6">
 			<div class="flex items-center gap-3">
-				<span aria-hidden="true" class="material-symbols text-primary text-3xl">download</span>
+				<Icon name="download" class="text-primary text-3xl" />
 				<h3 class="font-headline-xl text-2xl text-on-background font-bold">Stable Release</h3>
 			</div>
 
@@ -149,14 +149,14 @@
 						href={releases.stable.tarball}
 						class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-primary hover:bg-primary/95 text-on-primary transition-all shadow-sm"
 					>
-						<span aria-hidden="true" class="material-symbols text-sm">download</span>
+						<Icon name="download" class="text-sm" />
 						Download Sources
 					</a>
 					<a
 						href={releases.stable.sig}
 						class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
 					>
-						<span aria-hidden="true" class="material-symbols text-sm">enhanced_encryption</span>
+						<Icon name="enhanced_encryption" class="text-sm" />
 						PGP Signature
 					</a>
 					<a
@@ -165,7 +165,7 @@
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant text-on-surface transition-all"
 					>
-						<span aria-hidden="true" class="material-symbols text-sm">description</span>
+						<Icon name="description" class="text-sm" />
 						Change Log
 					</a>
 				</div>
@@ -187,14 +187,14 @@
 								href={rel.tarball}
 								class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
 							>
-								<span aria-hidden="true" class="material-symbols text-xs">download</span>
+								<Icon name="download" class="text-xs" />
 								Sources
 							</a>
 							<a
 								href={rel.sig}
 								class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
 							>
-								<span aria-hidden="true" class="material-symbols text-xs">lock</span>
+								<Icon name="lock" class="text-xs" />
 								Signature
 							</a>
 							<a
@@ -203,7 +203,7 @@
 								rel="noopener noreferrer"
 								class="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-container-highest border border-outline-variant/50 text-on-surface transition-all"
 							>
-								<span aria-hidden="true" class="material-symbols text-xs">description</span>
+								<Icon name="description" class="text-xs" />
 								News
 							</a>
 						</div>
@@ -258,7 +258,7 @@
 						rel="noopener noreferrer"
 						class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-on-primary font-semibold px-6 py-3 rounded-lg shadow hover:shadow-md transition-all text-sm cursor-pointer"
 					>
-						<span aria-hidden="true" class="material-symbols text-base">grid_view</span>
+						<Icon name="grid_view" class="text-base" />
 						Docker Hub Images
 					</a>
 				</div>

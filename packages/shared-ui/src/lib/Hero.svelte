@@ -1,10 +1,11 @@
 <script lang="ts">
+	import Icon, { type IconName } from './Icon.svelte';
 	import type { Snippet } from 'svelte';
 
 	export interface HeroProps {
 		badge?: string;
 		badgeClass?: string;
-		badgeIcon?: string;
+		badgeIcon?: IconName;
 		headline: string;
 		description: string;
 		image: any;
@@ -44,7 +45,7 @@
 						<div class="inline-block bg-surface-container-highest px-3 py-1 rounded-full border border-outline-variant/30">
 							<span class="font-label-md text-label-md tracking-widest uppercase flex items-center gap-1.5 {badgeClass}">
 								{#if badgeIcon}
-									<span aria-hidden="true" class="material-symbols text-sm" style="font-variation-settings: 'FILL' 1;">{badgeIcon}</span>
+									<Icon name={badgeIcon} class="text-sm" />
 								{/if}
 								{badge}
 							</span>

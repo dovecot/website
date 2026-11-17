@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import artworkSrc from '$lib/assets/pigeonhole_artwork.jpg?enhanced';
-	import { GitHubIcon, Hero } from '@dovecot/shared-ui';
+	import { GitHubIcon, Hero, Icon, type IconName } from '@dovecot/shared-ui';
 	import rawFeatures from '$lib/data/features.json';
 
 	const features = rawFeatures;
@@ -22,7 +22,7 @@
 				class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-body-md text-body-md font-semibold px-6 py-3 rounded-lg transition-colors shadow-sm cursor-pointer gap-2"
 				href="{base}/download"
 			>
-				<span aria-hidden="true" class="material-symbols text-xl">download</span>
+				<Icon name="download" class="text-xl" />
 				Download
 			</a>
 			<a
@@ -63,7 +63,7 @@
 	<div class="max-w-container-max mx-auto">
 		<div class="text-center mb-12 flex flex-col items-center">
 			<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary shadow-sm">
-				<span aria-hidden="true" class="material-symbols text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
+				<Icon name="star" class="text-4xl" />
 			</div>
 			<h2 class="font-headline-xl text-3xl md:text-5xl text-on-background font-extrabold tracking-tight mb-4">Key Features</h2>
 			<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
@@ -74,7 +74,7 @@
 			{#each features as feat}
 				<div class="bg-surface-container-lowest rounded-2xl p-gutter border border-outline-variant shadow-[0px_4px_20px_rgba(26,31,43,0.02)] hover:shadow-[0px_8px_30px_rgba(26,31,43,0.06)] transition-shadow duration-300">
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
-						<span aria-hidden="true" class="material-symbols text-3xl" style="font-variation-settings: 'FILL' 1;">{feat.icon}</span>
+						<Icon name={feat.icon as IconName} class="text-3xl" />
 					</div>
 					<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-3">{feat.title}</h3>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">{feat.desc}</p>
@@ -88,7 +88,7 @@
 <section class="py-6 px-gutter border-t border-b border-outline-variant/30">
 	<div class="max-w-container-max mx-auto flex justify-center items-center gap-3">
 		<div class="w-8 h-8 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-			<span aria-hidden="true" class="material-symbols text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+			<Icon name="verified" class="text-xl" />
 		</div>
 		<p class="font-body-md text-base text-on-surface-variant text-center">
 			Pigeonhole is open source, distributed under the
