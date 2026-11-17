@@ -4,7 +4,7 @@
 	const updates = newsData.slice(0, 3);
 
 	import logoSrc from '$lib/assets/logo.png?enhanced';
-	import { GitHubIcon, Hero } from '@dovecot/shared-ui';
+	import { GitHubIcon, Hero, Icon } from '@dovecot/shared-ui';
 
 	import proLogoSrc from '$lib/assets/pro-logo.png?enhanced';
 </script>
@@ -20,7 +20,7 @@
 				class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-body-md text-body-md font-semibold px-6 py-3 rounded-lg transition-colors shadow-sm cursor-pointer gap-2"
 				href="{base}/download"
 			>
-				<span aria-hidden="true" class="material-symbols text-xl">download</span>
+				<Icon name="download" class="text-xl" />
 				Download
 			</a>
 			<a
@@ -43,7 +43,7 @@
 <!-- 25th Anniversary Trust Banner -->
 <aside aria-label="25th Anniversary Announcement" class="bg-surface-container-low border-b border-outline-variant/30 py-2.5 px-gutter">
 	<div class="max-w-container-max mx-auto flex items-center justify-center gap-2 text-xs md:text-sm text-on-surface-variant text-center">
-		<span class="material-symbols text-tertiary text-base" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+		<Icon name="workspace_premium" class="text-tertiary text-base" />
 		<span class="font-semibold text-on-surface">Celebrating 25 Years</span>
 		<span class="hidden sm:inline text-outline-variant">&bull;</span>
 		<span>A Quarter Century of Keeping the World Connected (2002–2027)</span>
@@ -96,7 +96,7 @@
 		<div class="flex justify-between items-end mb-gutter">
 			<h2 class="font-headline-xl text-3xl md:text-4xl text-on-background font-extrabold tracking-tight">Latest Updates</h2>
 			<a class="hidden sm:inline-flex items-center text-primary font-semibold hover:text-primary-container transition-colors" href="{base}/news">
-				View all news <span aria-hidden="true" class="material-symbols ml-1 text-sm">arrow_forward</span>
+				View all news <Icon name="arrow_forward" class="ml-1 text-sm" />
 			</a>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
@@ -122,14 +122,14 @@
 						</h3>
 					</div>
 					<div class="mt-6 flex justify-end">
-						<span aria-hidden="true" class="material-symbols text-outline group-hover:text-primary transition-colors">north_east</span>
+						<Icon name="north_east" class="text-2xl text-outline group-hover:text-primary transition-colors" />
 					</div>
 				</a>
 			{/each}
 		</div>
 		<div class="mt-6 text-center sm:hidden">
 			<a class="inline-flex items-center text-primary font-semibold hover:text-primary-container transition-colors" href="{base}/news">
-				View all news <span aria-hidden="true" class="material-symbols ml-1 text-sm">arrow_forward</span>
+				View all news <Icon name="arrow_forward" class="ml-1 text-sm" />
 			</a>
 		</div>
 	</div>
@@ -139,7 +139,7 @@
 <section class="py-6 px-gutter border-t border-b border-outline-variant/30">
 	<div class="max-w-container-max mx-auto flex justify-center items-center gap-3">
 		<div class="w-8 h-8 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-			<span aria-hidden="true" class="material-symbols text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+			<Icon name="verified" class="text-xl" />
 		</div>
 		<p class="font-body-md text-base text-on-surface-variant text-center">
 			Dovecot Community Edition is open source, distributed under the

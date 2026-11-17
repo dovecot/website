@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Icon } from '@dovecot/shared-ui';
 	import newsItems from '$lib/data/news.json';
 	import { page } from '$app/state';
 
@@ -50,7 +51,7 @@
 			<!-- Search (WCAG 1.3.1, 1.3.5) -->
 			<form role="search" class="relative flex-grow max-w-md" onsubmit={(e) => e.preventDefault()}>
 				<label for="news-search" class="sr-only">Search news</label>
-				<span aria-hidden="true" class="material-symbols absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+				<Icon name="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" />
 				<input
 					id="news-search"
 					type="search"
@@ -78,7 +79,7 @@
 		<div class="max-w-3xl mx-auto flex flex-col gap-6">
 			{#if filteredNews.length === 0}
 				<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-12 text-center text-on-surface-variant">
-					<span aria-hidden="true" class="material-symbols text-4xl block mb-2">find_in_page</span>
+					<Icon name="find_in_page" class="text-4xl block mb-2" />
 					No news items match your search or category selection.
 				</div>
 			{:else}
@@ -108,7 +109,7 @@
 							</p>
 						</div>
 						<div class="mt-6 flex justify-end">
-							<span aria-hidden="true" class="material-symbols text-outline group-hover:text-primary transition-colors">north_east</span>
+							<Icon name="north_east" class="text-2xl text-outline group-hover:text-primary transition-colors" />
 						</div>
 					</a>
 				{/each}

@@ -7,6 +7,6 @@
 
 ## Rules
 
-- **Icons**: Use Google's Material Symbols Outlined font. Use the `material-symbols` class so the source font can be easily swapped (`<span class="material-symbols">icon_name</span>`).
+- **Icons**: Use the `<Icon name="icon_name" />` component from `@dovecot/shared-ui` (backed by `unplugin-icons` / `@iconify-json/material-symbols`). Register new icons in `packages/shared-ui/src/lib/Icon.svelte`.
 - **A11y**: Use `<span>`/`<p>` instead of `<label>` for static visual wrapping to pass accessibility checks.
 - **TypeScript**: Safely cast dynamic dictionary index references (e.g. `versions[activeVersion]`) inside a `$derived.by` block to prevent build compile errors.

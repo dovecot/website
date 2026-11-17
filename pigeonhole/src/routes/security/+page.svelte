@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { Icon } from '@dovecot/shared-ui';
+</script>
+
 <svelte:head>
 	<title>Security - Pigeonhole</title>
 </svelte:head>
@@ -20,7 +24,7 @@
 			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
 				<div class="space-y-3">
 					<div class="inline-flex items-center gap-2 bg-error/10 text-error px-3 py-1 rounded-full text-xs font-bold uppercase">
-						<span aria-hidden="true" class="material-symbols text-sm">shield</span>
+						<Icon name="shield" class="text-sm" />
 						Reporting Vulnerabilities
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold">Found a Security Bug?</h2>
@@ -44,7 +48,7 @@
 			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
 				<div class="space-y-3">
 					<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">
-						<span aria-hidden="true" class="material-symbols text-sm">bug_report</span>
+						<Icon name="bug_report" class="text-sm" />
 						General Bugs
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold">General Bug Reporting</h2>

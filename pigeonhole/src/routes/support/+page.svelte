@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { Icon } from '@dovecot/shared-ui';
+</script>
+
 <svelte:head>
 	<title>Support & Contact - Pigeonhole</title>
 </svelte:head>
@@ -19,7 +23,7 @@
 			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
 				<div>
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 text-primary">
-						<span aria-hidden="true" class="material-symbols text-2xl">mail</span>
+						<Icon name="mail" class="text-2xl" />
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold mb-3">Community Mailing Lists</h2>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
@@ -42,7 +46,7 @@
 			<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
 				<div>
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 text-primary">
-						<span aria-hidden="true" class="material-symbols text-2xl">person</span>
+						<Icon name="person" class="text-2xl" />
 					</div>
 					<h2 class="font-headline-lg text-xl text-on-background font-bold mb-3">Direct Contact</h2>
 					<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">

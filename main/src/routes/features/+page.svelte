@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Icon, type IconName } from '@dovecot/shared-ui';
 	import features from '$lib/data/features.json';
 </script>
 
@@ -18,7 +19,7 @@
 			{#each features as feat}
 				<div class="bg-surface-container-lowest rounded-2xl p-gutter border border-outline-variant shadow-[0px_4px_20px_rgba(26,31,43,0.02)] hover:shadow-[0px_8px_30px_rgba(26,31,43,0.06)] transition-shadow duration-300">
 					<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
-						<span aria-hidden="true" class="material-symbols text-3xl" style="font-variation-settings: 'FILL' 1;">{feat.icon}</span>
+						<Icon name={feat.icon as IconName} class="text-3xl" />
 					</div>
 					<h3 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-3">{feat.title}</h3>
 					<p class="font-body-md text-body-md text-on-surface-variant">{@html feat.desc}</p>
