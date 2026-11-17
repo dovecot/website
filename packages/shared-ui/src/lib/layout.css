@@ -1,5 +1,12 @@
-@import 'tailwindcss';
-@source "../../src/**/*.svelte";
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/manrope/latin-600.css';
+@import '@fontsource/manrope/latin-700.css';
+@import '@fontsource/manrope/latin-800.css';
+@import '@fontsource/space-grotesk/latin-500.css';
+@import '@fontsource/ubuntu-sans/latin-400.css';
+@import '@fontsource/material-symbols/latin-400.css';
 
 @theme {
   --radius-default: 0.25rem;
